@@ -1,6 +1,15 @@
 # Parte 4 — Casos de teste automatizados em TDD (NextBank)
 
-Linguagem: Python 3. Ferramentas: PyTest, pytest-cov, radon (e Locust a partir da meta M5).
+Linguagem: Python 3. 
+
+## Ferramentas utilizadas
+
+| Ferramenta | O que faz | Onde aparece no projeto |
+|---|---|---|
+| **PyTest** | Framework de testes para Python. Descobre e executa os testes automaticamente e mostra quais passaram ou falharam. | Todas as fases do TDD (Red, Green, Refactor) |
+| **pytest-cov** | Plugin do PyTest que mede a cobertura de código, ou seja, quanto do código foi executado pelos testes (linhas e ramificações). | Relatório de cobertura na fase Refactor |
+| **radon** | Analisa o código sem executá-lo e calcula métricas, como a complexidade ciclomática, que indica quantos caminhos de decisão uma função tem. Quanto maior, mais difícil de testar e manter. | Análise de `nextbank/login.py` |
+| **Locust** | Ferramenta de teste de carga e desempenho. Simula muitos usuários acessando o sistema ao mesmo tempo para medir tempo de resposta e pontos de falha. | A partir da meta M5 |
 
 ## Estrutura
 ```
