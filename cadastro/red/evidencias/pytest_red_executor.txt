@@ -1,0 +1,1620 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.2, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\Mateus-pc\AppData\Local\Programs\Python\Python314\python.exe
+rootdir: C:\Users\Mateus-pc\OneDrive\6 Semestre\Teste e Qualidade de Software\Projeto\Parte4_TDD\cadastro\red
+configfile: pytest.ini
+testpaths: tests
+plugins: cov-7.1.0, anyio-4.14.2, langsmith-0.11.0, locust-2.47.0
+collecting ... collected 135 items
+
+tests/test_cadastro.py::test_ct_c01_cadastro_valido_e_login_funciona FAILED [  0%]
+tests/test_cadastro.py::test_ct_c01_dados_guardados_e_saldo_zero FAILED  [  1%]
+tests/test_cadastro.py::test_ct_c01_log_sem_senha_e_com_cpf_mascarado FAILED [  2%]
+tests/test_cadastro.py::test_ct_c02_cpf_formato_invalido[123] FAILED     [  2%]
+tests/test_cadastro.py::test_ct_c02_cpf_formato_invalido[abc.def.ghi-jk] FAILED [  3%]
+tests/test_cadastro.py::test_ct_c02_cpf_formato_invalido[390.533.447-0] FAILED [  4%]
+tests/test_cadastro.py::test_ct_c02_cpf_formato_invalido[390.533.447-055] FAILED [  5%]
+tests/test_cadastro.py::test_ct_c03_cpf_digitos_verificadores_invalidos[390.533.447-06] FAILED [  5%]
+tests/test_cadastro.py::test_ct_c03_cpf_digitos_verificadores_invalidos[111.111.111-11] FAILED [  6%]
+tests/test_cadastro.py::test_ct_c03_cpf_digitos_verificadores_invalidos[12345678900] FAILED [  7%]
+tests/test_cadastro.py::test_ct_c04_cpf_duplicado_recusado_e_conta_intacta FAILED [  8%]
+tests/test_cadastro.py::test_ct_c05_mesmo_cpf_com_e_sem_mascara[390.533.447-05-39053344705] FAILED [  8%]
+tests/test_cadastro.py::test_ct_c05_mesmo_cpf_com_e_sem_mascara[39053344705-390.533.447-05] FAILED [  9%]
+tests/test_cadastro.py::test_ct_c06_senha_sem_maiuscula FAILED           [ 10%]
+tests/test_cadastro.py::test_ct_c07_senha_sem_minuscula FAILED           [ 11%]
+tests/test_cadastro.py::test_ct_c08_senha_sem_numero FAILED              [ 11%]
+tests/test_cadastro.py::test_ct_c09_senha_sem_caractere_especial FAILED  [ 12%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[!] FAILED [ 13%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[$] FAILED [ 14%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[%] FAILED [ 14%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[^] FAILED [ 15%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[&] FAILED [ 16%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[*] FAILED [ 17%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[(] FAILED [ 17%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[)] FAILED [ 18%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[-] FAILED [ 19%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[_] FAILED [ 20%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[=] FAILED [ 20%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[+] FAILED [ 21%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[[] FAILED [ 22%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[]] FAILED [ 22%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[{] FAILED [ 23%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[}] FAILED [ 24%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[;] FAILED [ 25%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[:] FAILED [ 25%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[,] FAILED [ 26%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[.] FAILED [ 27%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[?] FAILED [ 28%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[/] FAILED [ 28%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[~] FAILED [ 29%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[|] FAILED [ 30%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[<] FAILED [ 31%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito['] FAILED [ 31%]
+tests/test_cadastro.py::test_ct_c09_espaco_nao_conta_como_caractere_especial FAILED [ 32%]
+tests/test_cadastro.py::test_ct_c10_senha_curta FAILED                   [ 33%]
+tests/test_cadastro.py::test_ct_c10_senha_com_64_caracteres_e_aceita FAILED [ 34%]
+tests/test_cadastro.py::test_ct_c10_senha_com_65_caracteres_e_recusada FAILED [ 34%]
+tests/test_cadastro.py::test_ct_c11_confirmacao_de_senha_diferente FAILED [ 35%]
+tests/test_cadastro.py::test_ct_c10_senha_e_preservada_exatamente_como_digitada[Senha@123 ] FAILED [ 36%]
+tests/test_cadastro.py::test_ct_c10_senha_e_preservada_exatamente_como_digitada[Senha @123] FAILED [ 37%]
+tests/test_cadastro.py::test_ct_c12_nome_celular_ou_email_invalido[nome-Jo-NOME_INVALIDO] FAILED [ 37%]
+tests/test_cadastro.py::test_ct_c12_nome_celular_ou_email_invalido[nome-Joao123-NOME_INVALIDO] FAILED [ 38%]
+tests/test_cadastro.py::test_ct_c12_nome_celular_ou_email_invalido[nome-Ana.Maria-NOME_INVALIDO] FAILED [ 39%]
+tests/test_cadastro.py::test_ct_c12_nome_celular_ou_email_invalido[celular-1191234567-CELULAR_INVALIDO] FAILED [ 40%]
+tests/test_cadastro.py::test_ct_c12_nome_celular_ou_email_invalido[celular-11812345678-CELULAR_INVALIDO] FAILED [ 40%]
+tests/test_cadastro.py::test_ct_c12_nome_celular_ou_email_invalido[celular-11a12345678-CELULAR_INVALIDO] FAILED [ 41%]
+tests/test_cadastro.py::test_ct_c12_nome_celular_ou_email_invalido[email-maria.exemplo.com-EMAIL_INVALIDO] FAILED [ 42%]
+tests/test_cadastro.py::test_ct_c12_nome_celular_ou_email_invalido[email-maria@-EMAIL_INVALIDO] FAILED [ 42%]
+tests/test_cadastro.py::test_ct_c12_email_dominio_sem_ponto_recusado FAILED [ 43%]
+tests/test_cadastro.py::test_ct_c12_nome_aceita_acentos_hifen_apostrofo_e_espacos[Jos\xe9 da Silva] FAILED [ 44%]
+tests/test_cadastro.py::test_ct_c12_nome_aceita_acentos_hifen_apostrofo_e_espacos[\xc2ngela M\xfcller Concei\xe7\xe3o] FAILED [ 45%]
+tests/test_cadastro.py::test_ct_c12_nome_aceita_acentos_hifen_apostrofo_e_espacos[Ana-Clara] FAILED [ 45%]
+tests/test_cadastro.py::test_ct_c12_nome_aceita_acentos_hifen_apostrofo_e_espacos[D'\xc1vila] FAILED [ 46%]
+tests/test_cadastro.py::test_ct_c12_nome_aceita_acentos_hifen_apostrofo_e_espacos[Ana Maria] FAILED [ 47%]
+tests/test_cadastro.py::test_ct_c12_nome_aceita_acentos_hifen_apostrofo_e_espacos[Ana] FAILED [ 48%]
+tests/test_cadastro.py::test_ct_c12_nome_espacos_duplos_internos_sao_colapsados FAILED [ 48%]
+tests/test_cadastro.py::test_ct_c12_nome_com_espacos_nas_pontas_e_guardado_sem_eles[  Jos\xe9 da Silva] FAILED [ 49%]
+tests/test_cadastro.py::test_ct_c12_nome_com_espacos_nas_pontas_e_guardado_sem_eles[Jos\xe9 da Silva  ] FAILED [ 50%]
+tests/test_cadastro.py::test_ct_c12_nome_com_espacos_nas_pontas_e_guardado_sem_eles[   Jos\xe9 da Silva   ] FAILED [ 51%]
+tests/test_cadastro.py::test_ct_c12_nome_minimo_de_3_conta_apos_normalizar_espacos[ Jo ] FAILED [ 51%]
+tests/test_cadastro.py::test_ct_c12_nome_minimo_de_3_conta_apos_normalizar_espacos[  Jo] FAILED [ 52%]
+tests/test_cadastro.py::test_ct_c12_nome_minimo_de_3_conta_apos_normalizar_espacos[J  o] FAILED [ 53%]
+tests/test_cadastro.py::test_ct_c12_nome_minimo_de_3_conta_apos_normalizar_espacos[ J o ] FAILED [ 54%]
+tests/test_cadastro.py::test_ct_c12_nome_com_espacos_nas_pontas_e_3_letras_e_aceito FAILED [ 54%]
+tests/test_cadastro.py::test_ct_c12_nome_com_100_caracteres_e_aceito FAILED [ 55%]
+tests/test_cadastro.py::test_ct_c12_nome_com_101_caracteres_e_recusado FAILED [ 56%]
+tests/test_cadastro.py::test_ct_c12_nome_deve_comecar_e_terminar_com_letra[---] FAILED [ 57%]
+tests/test_cadastro.py::test_ct_c12_nome_deve_comecar_e_terminar_com_letra['''] FAILED [ 57%]
+tests/test_cadastro.py::test_ct_c12_nome_deve_comecar_e_terminar_com_letra[-Ana] FAILED [ 58%]
+tests/test_cadastro.py::test_ct_c12_nome_deve_comecar_e_terminar_com_letra[Ana-] FAILED [ 59%]
+tests/test_cadastro.py::test_ct_c12_nome_deve_comecar_e_terminar_com_letra[Ana'] FAILED [ 60%]
+tests/test_cadastro.py::test_ct_c12_celular_aceita_com_e_sem_mascara_e_normaliza[(11) 91234-5678] FAILED [ 60%]
+tests/test_cadastro.py::test_ct_c12_celular_aceita_com_e_sem_mascara_e_normaliza[11912345678] FAILED [ 61%]
+tests/test_cadastro.py::test_ct_c12_celular_aceita_com_e_sem_mascara_e_normaliza[(11)912345678] FAILED [ 62%]
+tests/test_cadastro.py::test_ct_c12_celular_aceita_com_e_sem_mascara_e_normaliza[11 91234-5678] FAILED [ 62%]
+tests/test_cadastro.py::test_ct_c12_ordem_de_validacao_com_dois_erros[alterados0-CPF_INVALIDO] FAILED [ 63%]
+tests/test_cadastro.py::test_ct_c12_ordem_de_validacao_com_dois_erros[alterados1-NOME_INVALIDO] FAILED [ 64%]
+tests/test_cadastro.py::test_ct_c12_ordem_de_validacao_com_dois_erros[alterados2-NOME_INVALIDO] FAILED [ 65%]
+tests/test_cadastro.py::test_ct_c12_ordem_de_validacao_com_dois_erros[alterados3-CELULAR_INVALIDO] FAILED [ 65%]
+tests/test_cadastro.py::test_ct_c12_ordem_de_validacao_com_dois_erros[alterados4-CELULAR_INVALIDO] FAILED [ 66%]
+tests/test_cadastro.py::test_ct_c12_ordem_de_validacao_com_dois_erros[alterados5-EMAIL_INVALIDO] FAILED [ 67%]
+tests/test_cadastro.py::test_ct_c12_ordem_de_validacao_com_dois_erros[alterados6-SENHA_FRACA] FAILED [ 68%]
+tests/test_cadastro.py::test_ct_c04_cpf_duplicado_tem_prioridade_sobre_senha_fraca FAILED [ 68%]
+tests/test_cadastro.py::test_ct_c04_cpf_duplicado_tem_prioridade_sobre_nome_celular_email_confirmacao[nome_invalido] FAILED [ 69%]
+tests/test_cadastro.py::test_ct_c04_cpf_duplicado_tem_prioridade_sobre_nome_celular_email_confirmacao[celular_invalido] FAILED [ 70%]
+tests/test_cadastro.py::test_ct_c04_cpf_duplicado_tem_prioridade_sobre_nome_celular_email_confirmacao[email_invalido] FAILED [ 71%]
+tests/test_cadastro.py::test_ct_c04_cpf_duplicado_tem_prioridade_sobre_nome_celular_email_confirmacao[confirmacao_diferente] FAILED [ 71%]
+tests/test_cadastro.py::test_ct_c04_cpf_invalido_vem_antes_de_duplicado FAILED [ 72%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[-nome] FAILED [ 73%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[-cpf] FAILED [ 74%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[-celular] FAILED [ 74%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[-email] FAILED [ 75%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[-senha] FAILED [ 76%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[-confirmacao_senha] FAILED [ 77%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[   -nome] FAILED [ 77%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[   -cpf] FAILED [ 78%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[   -celular] FAILED [ 79%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[   -email] FAILED [ 80%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[   -senha] FAILED [ 80%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[   -confirmacao_senha] FAILED [ 81%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[None-nome] FAILED [ 82%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[None-cpf] FAILED [ 82%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[None-celular] FAILED [ 83%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[None-email] FAILED [ 84%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[None-senha] FAILED [ 85%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[None-confirmacao_senha] FAILED [ 85%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[123-nome] FAILED [ 86%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[123-cpf] FAILED [ 87%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[123-celular] FAILED [ 88%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[123-email] FAILED [ 88%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[123-senha] FAILED [ 89%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[123-confirmacao_senha] FAILED [ 90%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[valor4-nome] FAILED [ 91%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[valor4-cpf] FAILED [ 91%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[valor4-celular] FAILED [ 92%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[valor4-email] FAILED [ 93%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[valor4-senha] FAILED [ 94%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[valor4-confirmacao_senha] FAILED [ 94%]
+tests/test_cadastro.py::test_ct_c13_entrada_invalida_vem_antes_de_qualquer_outra_validacao[alterados0] FAILED [ 95%]
+tests/test_cadastro.py::test_ct_c13_entrada_invalida_vem_antes_de_qualquer_outra_validacao[alterados1] FAILED [ 96%]
+tests/test_cadastro.py::test_ct_c13_entrada_invalida_vem_antes_de_qualquer_outra_validacao[alterados2] FAILED [ 97%]
+tests/test_cadastro.py::test_ct_c13_entrada_invalida_vem_antes_de_qualquer_outra_validacao[alterados3] FAILED [ 97%]
+tests/test_cadastro.py::test_ct_c13_entrada_invalida_vem_antes_de_qualquer_outra_validacao[alterados4] FAILED [ 98%]
+tests/test_cadastro.py::test_ct_c13_entrada_invalida_vem_antes_de_cpf_duplicado FAILED [ 99%]
+tests/test_cadastro.py::test_ct_c13_todos_os_campos_none FAILED          [100%]
+
+================================== FAILURES ===================================
+________________ test_ct_c01_cadastro_valido_e_login_funciona _________________
+tests\test_cadastro.py:87: in test_ct_c01_cadastro_valido_e_login_funciona
+    res = cadastrar(svc)
+          ^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+__________________ test_ct_c01_dados_guardados_e_saldo_zero ___________________
+tests\test_cadastro.py:95: in test_ct_c01_dados_guardados_e_saldo_zero
+    cadastrar(svc)
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+________________ test_ct_c01_log_sem_senha_e_com_cpf_mascarado ________________
+tests\test_cadastro.py:105: in test_ct_c01_log_sem_senha_e_com_cpf_mascarado
+    res = cadastrar(svc)
+          ^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+____________________ test_ct_c02_cpf_formato_invalido[123] ____________________
+tests\test_cadastro.py:116: in test_ct_c02_cpf_formato_invalido
+    assert_recusado(cadastrar(svc, cpf=cpf), CPF_INVALIDO)
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+______________ test_ct_c02_cpf_formato_invalido[abc.def.ghi-jk] _______________
+tests\test_cadastro.py:116: in test_ct_c02_cpf_formato_invalido
+    assert_recusado(cadastrar(svc, cpf=cpf), CPF_INVALIDO)
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+_______________ test_ct_c02_cpf_formato_invalido[390.533.447-0] _______________
+tests\test_cadastro.py:116: in test_ct_c02_cpf_formato_invalido
+    assert_recusado(cadastrar(svc, cpf=cpf), CPF_INVALIDO)
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+______________ test_ct_c02_cpf_formato_invalido[390.533.447-055] ______________
+tests\test_cadastro.py:116: in test_ct_c02_cpf_formato_invalido
+    assert_recusado(cadastrar(svc, cpf=cpf), CPF_INVALIDO)
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+_______ test_ct_c03_cpf_digitos_verificadores_invalidos[390.533.447-06] _______
+tests\test_cadastro.py:123: in test_ct_c03_cpf_digitos_verificadores_invalidos
+    assert_recusado(cadastrar(svc, cpf=cpf), CPF_INVALIDO)
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+_______ test_ct_c03_cpf_digitos_verificadores_invalidos[111.111.111-11] _______
+tests\test_cadastro.py:123: in test_ct_c03_cpf_digitos_verificadores_invalidos
+    assert_recusado(cadastrar(svc, cpf=cpf), CPF_INVALIDO)
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+________ test_ct_c03_cpf_digitos_verificadores_invalidos[12345678900] _________
+tests\test_cadastro.py:123: in test_ct_c03_cpf_digitos_verificadores_invalidos
+    assert_recusado(cadastrar(svc, cpf=cpf), CPF_INVALIDO)
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+_____________ test_ct_c04_cpf_duplicado_recusado_e_conta_intacta ______________
+tests\test_cadastro.py:131: in test_ct_c04_cpf_duplicado_recusado_e_conta_intacta
+    cadastrar(svc)
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+_____ test_ct_c05_mesmo_cpf_com_e_sem_mascara[390.533.447-05-39053344705] _____
+tests\test_cadastro.py:146: in test_ct_c05_mesmo_cpf_com_e_sem_mascara
+    assert cadastrar(svc, cpf=primeiro).status == CONTA_CRIADA
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+_____ test_ct_c05_mesmo_cpf_com_e_sem_mascara[39053344705-390.533.447-05] _____
+tests\test_cadastro.py:146: in test_ct_c05_mesmo_cpf_com_e_sem_mascara
+    assert cadastrar(svc, cpf=primeiro).status == CONTA_CRIADA
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+_______________________ test_ct_c06_senha_sem_maiuscula _______________________
+tests\test_cadastro.py:157: in test_ct_c06_senha_sem_maiuscula
+    assert_recusado(cadastrar(svc, senha="senha@123", confirmacao_senha="senha@123"), SENHA_FRACA)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+_______________________ test_ct_c07_senha_sem_minuscula _______________________
+tests\test_cadastro.py:163: in test_ct_c07_senha_sem_minuscula
+    assert_recusado(cadastrar(svc, senha="SENHA@123", confirmacao_senha="SENHA@123"), SENHA_FRACA)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+________________________ test_ct_c08_senha_sem_numero _________________________
+tests\test_cadastro.py:169: in test_ct_c08_senha_sem_numero
+    assert_recusado(cadastrar(svc, senha="Senha@abc", confirmacao_senha="Senha@abc"), SENHA_FRACA)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+__________________ test_ct_c09_senha_sem_caractere_especial ___________________
+tests\test_cadastro.py:175: in test_ct_c09_senha_sem_caractere_especial
+    assert_recusado(cadastrar(svc, senha="Senha1234", confirmacao_senha="Senha1234"), SENHA_FRACA)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+__________ test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[!] __________
+tests\test_cadastro.py:183: in test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito
+    assert cadastrar(svc, senha=senha, confirmacao_senha=senha).status == CONTA_CRIADA
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+__________ test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[$] __________
+tests\test_cadastro.py:183: in test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito
+    assert cadastrar(svc, senha=senha, confirmacao_senha=senha).status == CONTA_CRIADA
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+__________ test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[%] __________
+tests\test_cadastro.py:183: in test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito
+    assert cadastrar(svc, senha=senha, confirmacao_senha=senha).status == CONTA_CRIADA
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+__________ test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[^] __________
+tests\test_cadastro.py:183: in test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito
+    assert cadastrar(svc, senha=senha, confirmacao_senha=senha).status == CONTA_CRIADA
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+__________ test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[&] __________
+tests\test_cadastro.py:183: in test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito
+    assert cadastrar(svc, senha=senha, confirmacao_senha=senha).status == CONTA_CRIADA
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+__________ test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[*] __________
+tests\test_cadastro.py:183: in test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito
+    assert cadastrar(svc, senha=senha, confirmacao_senha=senha).status == CONTA_CRIADA
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+__________ test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[(] __________
+tests\test_cadastro.py:183: in test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito
+    assert cadastrar(svc, senha=senha, confirmacao_senha=senha).status == CONTA_CRIADA
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+__________ test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[)] __________
+tests\test_cadastro.py:183: in test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito
+    assert cadastrar(svc, senha=senha, confirmacao_senha=senha).status == CONTA_CRIADA
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+__________ test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[-] __________
+tests\test_cadastro.py:183: in test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito
+    assert cadastrar(svc, senha=senha, confirmacao_senha=senha).status == CONTA_CRIADA
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+__________ test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[_] __________
+tests\test_cadastro.py:183: in test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito
+    assert cadastrar(svc, senha=senha, confirmacao_senha=senha).status == CONTA_CRIADA
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+__________ test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[=] __________
+tests\test_cadastro.py:183: in test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito
+    assert cadastrar(svc, senha=senha, confirmacao_senha=senha).status == CONTA_CRIADA
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+__________ test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[+] __________
+tests\test_cadastro.py:183: in test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito
+    assert cadastrar(svc, senha=senha, confirmacao_senha=senha).status == CONTA_CRIADA
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+__________ test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[[] __________
+tests\test_cadastro.py:183: in test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito
+    assert cadastrar(svc, senha=senha, confirmacao_senha=senha).status == CONTA_CRIADA
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+__________ test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[]] __________
+tests\test_cadastro.py:183: in test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito
+    assert cadastrar(svc, senha=senha, confirmacao_senha=senha).status == CONTA_CRIADA
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+__________ test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[{] __________
+tests\test_cadastro.py:183: in test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito
+    assert cadastrar(svc, senha=senha, confirmacao_senha=senha).status == CONTA_CRIADA
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+__________ test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[}] __________
+tests\test_cadastro.py:183: in test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito
+    assert cadastrar(svc, senha=senha, confirmacao_senha=senha).status == CONTA_CRIADA
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+__________ test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[;] __________
+tests\test_cadastro.py:183: in test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito
+    assert cadastrar(svc, senha=senha, confirmacao_senha=senha).status == CONTA_CRIADA
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+__________ test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[:] __________
+tests\test_cadastro.py:183: in test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito
+    assert cadastrar(svc, senha=senha, confirmacao_senha=senha).status == CONTA_CRIADA
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+__________ test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[,] __________
+tests\test_cadastro.py:183: in test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito
+    assert cadastrar(svc, senha=senha, confirmacao_senha=senha).status == CONTA_CRIADA
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+__________ test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[.] __________
+tests\test_cadastro.py:183: in test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito
+    assert cadastrar(svc, senha=senha, confirmacao_senha=senha).status == CONTA_CRIADA
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+__________ test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[?] __________
+tests\test_cadastro.py:183: in test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito
+    assert cadastrar(svc, senha=senha, confirmacao_senha=senha).status == CONTA_CRIADA
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+__________ test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[/] __________
+tests\test_cadastro.py:183: in test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito
+    assert cadastrar(svc, senha=senha, confirmacao_senha=senha).status == CONTA_CRIADA
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+__________ test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[~] __________
+tests\test_cadastro.py:183: in test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito
+    assert cadastrar(svc, senha=senha, confirmacao_senha=senha).status == CONTA_CRIADA
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+__________ test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[|] __________
+tests\test_cadastro.py:183: in test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito
+    assert cadastrar(svc, senha=senha, confirmacao_senha=senha).status == CONTA_CRIADA
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+__________ test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[<] __________
+tests\test_cadastro.py:183: in test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito
+    assert cadastrar(svc, senha=senha, confirmacao_senha=senha).status == CONTA_CRIADA
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+__________ test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito['] __________
+tests\test_cadastro.py:183: in test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito
+    assert cadastrar(svc, senha=senha, confirmacao_senha=senha).status == CONTA_CRIADA
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+____________ test_ct_c09_espaco_nao_conta_como_caractere_especial _____________
+tests\test_cadastro.py:188: in test_ct_c09_espaco_nao_conta_como_caractere_especial
+    assert_recusado(cadastrar(svc, senha="Senha 1234", confirmacao_senha="Senha 1234"), SENHA_FRACA)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+___________________________ test_ct_c10_senha_curta ___________________________
+tests\test_cadastro.py:194: in test_ct_c10_senha_curta
+    assert_recusado(cadastrar(svc, senha="Sen@123", confirmacao_senha="Sen@123"), SENHA_FRACA)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+________________ test_ct_c10_senha_com_64_caracteres_e_aceita _________________
+tests\test_cadastro.py:202: in test_ct_c10_senha_com_64_caracteres_e_aceita
+    assert cadastrar(svc, senha=senha, confirmacao_senha=senha).status == CONTA_CRIADA
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+_______________ test_ct_c10_senha_com_65_caracteres_e_recusada ________________
+tests\test_cadastro.py:209: in test_ct_c10_senha_com_65_caracteres_e_recusada
+    assert_recusado(cadastrar(svc, senha=senha, confirmacao_senha=senha), SENHA_FRACA)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+_________________ test_ct_c11_confirmacao_de_senha_diferente __________________
+tests\test_cadastro.py:215: in test_ct_c11_confirmacao_de_senha_diferente
+    assert_recusado(cadastrar(svc, confirmacao_senha="Senha@124"), CONFIRMACAO_DIFERENTE)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+_____ test_ct_c10_senha_e_preservada_exatamente_como_digitada[Senha@123 ] _____
+tests\test_cadastro.py:222: in test_ct_c10_senha_e_preservada_exatamente_como_digitada
+    assert cadastrar(svc, senha=senha, confirmacao_senha=senha).status == CONTA_CRIADA
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+_____ test_ct_c10_senha_e_preservada_exatamente_como_digitada[Senha @123] _____
+tests\test_cadastro.py:222: in test_ct_c10_senha_e_preservada_exatamente_como_digitada
+    assert cadastrar(svc, senha=senha, confirmacao_senha=senha).status == CONTA_CRIADA
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+______ test_ct_c12_nome_celular_ou_email_invalido[nome-Jo-NOME_INVALIDO] ______
+tests\test_cadastro.py:240: in test_ct_c12_nome_celular_ou_email_invalido
+    assert_recusado(cadastrar(svc, **{campo: valor}), status)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+___ test_ct_c12_nome_celular_ou_email_invalido[nome-Joao123-NOME_INVALIDO] ____
+tests\test_cadastro.py:240: in test_ct_c12_nome_celular_ou_email_invalido
+    assert_recusado(cadastrar(svc, **{campo: valor}), status)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+__ test_ct_c12_nome_celular_ou_email_invalido[nome-Ana.Maria-NOME_INVALIDO] ___
+tests\test_cadastro.py:240: in test_ct_c12_nome_celular_ou_email_invalido
+    assert_recusado(cadastrar(svc, **{campo: valor}), status)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+_ test_ct_c12_nome_celular_ou_email_invalido[celular-1191234567-CELULAR_INVALIDO] _
+tests\test_cadastro.py:240: in test_ct_c12_nome_celular_ou_email_invalido
+    assert_recusado(cadastrar(svc, **{campo: valor}), status)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+_ test_ct_c12_nome_celular_ou_email_invalido[celular-11812345678-CELULAR_INVALIDO] _
+tests\test_cadastro.py:240: in test_ct_c12_nome_celular_ou_email_invalido
+    assert_recusado(cadastrar(svc, **{campo: valor}), status)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+_ test_ct_c12_nome_celular_ou_email_invalido[celular-11a12345678-CELULAR_INVALIDO] _
+tests\test_cadastro.py:240: in test_ct_c12_nome_celular_ou_email_invalido
+    assert_recusado(cadastrar(svc, **{campo: valor}), status)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+_ test_ct_c12_nome_celular_ou_email_invalido[email-maria.exemplo.com-EMAIL_INVALIDO] _
+tests\test_cadastro.py:240: in test_ct_c12_nome_celular_ou_email_invalido
+    assert_recusado(cadastrar(svc, **{campo: valor}), status)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+___ test_ct_c12_nome_celular_ou_email_invalido[email-maria@-EMAIL_INVALIDO] ___
+tests\test_cadastro.py:240: in test_ct_c12_nome_celular_ou_email_invalido
+    assert_recusado(cadastrar(svc, **{campo: valor}), status)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+________________ test_ct_c12_email_dominio_sem_ponto_recusado _________________
+tests\test_cadastro.py:246: in test_ct_c12_email_dominio_sem_ponto_recusado
+    assert_recusado(cadastrar(svc, email="maria@exemplo"), EMAIL_INVALIDO)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+_ test_ct_c12_nome_aceita_acentos_hifen_apostrofo_e_espacos[Jos\xe9 da Silva] _
+tests\test_cadastro.py:254: in test_ct_c12_nome_aceita_acentos_hifen_apostrofo_e_espacos
+    assert cadastrar(svc, nome=nome).status == CONTA_CRIADA
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+_ test_ct_c12_nome_aceita_acentos_hifen_apostrofo_e_espacos[\xc2ngela M\xfcller Concei\xe7\xe3o] _
+tests\test_cadastro.py:254: in test_ct_c12_nome_aceita_acentos_hifen_apostrofo_e_espacos
+    assert cadastrar(svc, nome=nome).status == CONTA_CRIADA
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+____ test_ct_c12_nome_aceita_acentos_hifen_apostrofo_e_espacos[Ana-Clara] _____
+tests\test_cadastro.py:254: in test_ct_c12_nome_aceita_acentos_hifen_apostrofo_e_espacos
+    assert cadastrar(svc, nome=nome).status == CONTA_CRIADA
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+____ test_ct_c12_nome_aceita_acentos_hifen_apostrofo_e_espacos[D'\xc1vila] ____
+tests\test_cadastro.py:254: in test_ct_c12_nome_aceita_acentos_hifen_apostrofo_e_espacos
+    assert cadastrar(svc, nome=nome).status == CONTA_CRIADA
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+____ test_ct_c12_nome_aceita_acentos_hifen_apostrofo_e_espacos[Ana Maria] _____
+tests\test_cadastro.py:254: in test_ct_c12_nome_aceita_acentos_hifen_apostrofo_e_espacos
+    assert cadastrar(svc, nome=nome).status == CONTA_CRIADA
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+_______ test_ct_c12_nome_aceita_acentos_hifen_apostrofo_e_espacos[Ana] ________
+tests\test_cadastro.py:254: in test_ct_c12_nome_aceita_acentos_hifen_apostrofo_e_espacos
+    assert cadastrar(svc, nome=nome).status == CONTA_CRIADA
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+___________ test_ct_c12_nome_espacos_duplos_internos_sao_colapsados ___________
+tests\test_cadastro.py:260: in test_ct_c12_nome_espacos_duplos_internos_sao_colapsados
+    assert cadastrar(svc, nome="Ana  Maria").status == CONTA_CRIADA
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+_ test_ct_c12_nome_com_espacos_nas_pontas_e_guardado_sem_eles[  Jos\xe9 da Silva] _
+tests\test_cadastro.py:267: in test_ct_c12_nome_com_espacos_nas_pontas_e_guardado_sem_eles
+    assert cadastrar(svc, nome=nome).status == CONTA_CRIADA
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+_ test_ct_c12_nome_com_espacos_nas_pontas_e_guardado_sem_eles[Jos\xe9 da Silva  ] _
+tests\test_cadastro.py:267: in test_ct_c12_nome_com_espacos_nas_pontas_e_guardado_sem_eles
+    assert cadastrar(svc, nome=nome).status == CONTA_CRIADA
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+_ test_ct_c12_nome_com_espacos_nas_pontas_e_guardado_sem_eles[   Jos\xe9 da Silva   ] _
+tests\test_cadastro.py:267: in test_ct_c12_nome_com_espacos_nas_pontas_e_guardado_sem_eles
+    assert cadastrar(svc, nome=nome).status == CONTA_CRIADA
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+______ test_ct_c12_nome_minimo_de_3_conta_apos_normalizar_espacos[ Jo ] _______
+tests\test_cadastro.py:274: in test_ct_c12_nome_minimo_de_3_conta_apos_normalizar_espacos
+    assert_recusado(cadastrar(svc, nome=nome), NOME_INVALIDO)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+______ test_ct_c12_nome_minimo_de_3_conta_apos_normalizar_espacos[  Jo] _______
+tests\test_cadastro.py:274: in test_ct_c12_nome_minimo_de_3_conta_apos_normalizar_espacos
+    assert_recusado(cadastrar(svc, nome=nome), NOME_INVALIDO)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+______ test_ct_c12_nome_minimo_de_3_conta_apos_normalizar_espacos[J  o] _______
+tests\test_cadastro.py:274: in test_ct_c12_nome_minimo_de_3_conta_apos_normalizar_espacos
+    assert_recusado(cadastrar(svc, nome=nome), NOME_INVALIDO)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+______ test_ct_c12_nome_minimo_de_3_conta_apos_normalizar_espacos[ J o ] ______
+tests\test_cadastro.py:274: in test_ct_c12_nome_minimo_de_3_conta_apos_normalizar_espacos
+    assert_recusado(cadastrar(svc, nome=nome), NOME_INVALIDO)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+_________ test_ct_c12_nome_com_espacos_nas_pontas_e_3_letras_e_aceito _________
+tests\test_cadastro.py:280: in test_ct_c12_nome_com_espacos_nas_pontas_e_3_letras_e_aceito
+    assert cadastrar(svc, nome=" Ana ").status == CONTA_CRIADA
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+________________ test_ct_c12_nome_com_100_caracteres_e_aceito _________________
+tests\test_cadastro.py:287: in test_ct_c12_nome_com_100_caracteres_e_aceito
+    assert cadastrar(svc, nome=nome).status == CONTA_CRIADA
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+_______________ test_ct_c12_nome_com_101_caracteres_e_recusado ________________
+tests\test_cadastro.py:293: in test_ct_c12_nome_com_101_caracteres_e_recusado
+    assert_recusado(cadastrar(svc, nome="A" * 101), NOME_INVALIDO)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+___________ test_ct_c12_nome_deve_comecar_e_terminar_com_letra[---] ___________
+tests\test_cadastro.py:300: in test_ct_c12_nome_deve_comecar_e_terminar_com_letra
+    assert_recusado(cadastrar(svc, nome=nome), NOME_INVALIDO)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+___________ test_ct_c12_nome_deve_comecar_e_terminar_com_letra['''] ___________
+tests\test_cadastro.py:300: in test_ct_c12_nome_deve_comecar_e_terminar_com_letra
+    assert_recusado(cadastrar(svc, nome=nome), NOME_INVALIDO)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+__________ test_ct_c12_nome_deve_comecar_e_terminar_com_letra[-Ana] ___________
+tests\test_cadastro.py:300: in test_ct_c12_nome_deve_comecar_e_terminar_com_letra
+    assert_recusado(cadastrar(svc, nome=nome), NOME_INVALIDO)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+__________ test_ct_c12_nome_deve_comecar_e_terminar_com_letra[Ana-] ___________
+tests\test_cadastro.py:300: in test_ct_c12_nome_deve_comecar_e_terminar_com_letra
+    assert_recusado(cadastrar(svc, nome=nome), NOME_INVALIDO)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+__________ test_ct_c12_nome_deve_comecar_e_terminar_com_letra[Ana'] ___________
+tests\test_cadastro.py:300: in test_ct_c12_nome_deve_comecar_e_terminar_com_letra
+    assert_recusado(cadastrar(svc, nome=nome), NOME_INVALIDO)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+__ test_ct_c12_celular_aceita_com_e_sem_mascara_e_normaliza[(11) 91234-5678] __
+tests\test_cadastro.py:307: in test_ct_c12_celular_aceita_com_e_sem_mascara_e_normaliza
+    assert cadastrar(svc, celular=celular).status == CONTA_CRIADA
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+____ test_ct_c12_celular_aceita_com_e_sem_mascara_e_normaliza[11912345678] ____
+tests\test_cadastro.py:307: in test_ct_c12_celular_aceita_com_e_sem_mascara_e_normaliza
+    assert cadastrar(svc, celular=celular).status == CONTA_CRIADA
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+___ test_ct_c12_celular_aceita_com_e_sem_mascara_e_normaliza[(11)912345678] ___
+tests\test_cadastro.py:307: in test_ct_c12_celular_aceita_com_e_sem_mascara_e_normaliza
+    assert cadastrar(svc, celular=celular).status == CONTA_CRIADA
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+___ test_ct_c12_celular_aceita_com_e_sem_mascara_e_normaliza[11 91234-5678] ___
+tests\test_cadastro.py:307: in test_ct_c12_celular_aceita_com_e_sem_mascara_e_normaliza
+    assert cadastrar(svc, celular=celular).status == CONTA_CRIADA
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+___ test_ct_c12_ordem_de_validacao_com_dois_erros[alterados0-CPF_INVALIDO] ____
+tests\test_cadastro.py:326: in test_ct_c12_ordem_de_validacao_com_dois_erros
+    assert_recusado(cadastrar(svc, **alterados), status)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+___ test_ct_c12_ordem_de_validacao_com_dois_erros[alterados1-NOME_INVALIDO] ___
+tests\test_cadastro.py:326: in test_ct_c12_ordem_de_validacao_com_dois_erros
+    assert_recusado(cadastrar(svc, **alterados), status)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+___ test_ct_c12_ordem_de_validacao_com_dois_erros[alterados2-NOME_INVALIDO] ___
+tests\test_cadastro.py:326: in test_ct_c12_ordem_de_validacao_com_dois_erros
+    assert_recusado(cadastrar(svc, **alterados), status)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+_ test_ct_c12_ordem_de_validacao_com_dois_erros[alterados3-CELULAR_INVALIDO] __
+tests\test_cadastro.py:326: in test_ct_c12_ordem_de_validacao_com_dois_erros
+    assert_recusado(cadastrar(svc, **alterados), status)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+_ test_ct_c12_ordem_de_validacao_com_dois_erros[alterados4-CELULAR_INVALIDO] __
+tests\test_cadastro.py:326: in test_ct_c12_ordem_de_validacao_com_dois_erros
+    assert_recusado(cadastrar(svc, **alterados), status)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+__ test_ct_c12_ordem_de_validacao_com_dois_erros[alterados5-EMAIL_INVALIDO] ___
+tests\test_cadastro.py:326: in test_ct_c12_ordem_de_validacao_com_dois_erros
+    assert_recusado(cadastrar(svc, **alterados), status)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+____ test_ct_c12_ordem_de_validacao_com_dois_erros[alterados6-SENHA_FRACA] ____
+tests\test_cadastro.py:326: in test_ct_c12_ordem_de_validacao_com_dois_erros
+    assert_recusado(cadastrar(svc, **alterados), status)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+_________ test_ct_c04_cpf_duplicado_tem_prioridade_sobre_senha_fraca __________
+tests\test_cadastro.py:333: in test_ct_c04_cpf_duplicado_tem_prioridade_sobre_senha_fraca
+    cadastrar(svc)
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+_ test_ct_c04_cpf_duplicado_tem_prioridade_sobre_nome_celular_email_confirmacao[nome_invalido] _
+tests\test_cadastro.py:349: in test_ct_c04_cpf_duplicado_tem_prioridade_sobre_nome_celular_email_confirmacao
+    cadastrar(svc)
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+_ test_ct_c04_cpf_duplicado_tem_prioridade_sobre_nome_celular_email_confirmacao[celular_invalido] _
+tests\test_cadastro.py:349: in test_ct_c04_cpf_duplicado_tem_prioridade_sobre_nome_celular_email_confirmacao
+    cadastrar(svc)
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+_ test_ct_c04_cpf_duplicado_tem_prioridade_sobre_nome_celular_email_confirmacao[email_invalido] _
+tests\test_cadastro.py:349: in test_ct_c04_cpf_duplicado_tem_prioridade_sobre_nome_celular_email_confirmacao
+    cadastrar(svc)
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+_ test_ct_c04_cpf_duplicado_tem_prioridade_sobre_nome_celular_email_confirmacao[confirmacao_diferente] _
+tests\test_cadastro.py:349: in test_ct_c04_cpf_duplicado_tem_prioridade_sobre_nome_celular_email_confirmacao
+    cadastrar(svc)
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+_______________ test_ct_c04_cpf_invalido_vem_antes_de_duplicado _______________
+tests\test_cadastro.py:359: in test_ct_c04_cpf_invalido_vem_antes_de_duplicado
+    cadastrar(svc)
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+_____________ test_ct_c13_campo_vazio_none_ou_tipo_errado[-nome] ______________
+tests\test_cadastro.py:373: in test_ct_c13_campo_vazio_none_ou_tipo_errado
+    assert_recusado(cadastrar(svc, **{campo: valor}), ENTRADA_INVALIDA)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+______________ test_ct_c13_campo_vazio_none_ou_tipo_errado[-cpf] ______________
+tests\test_cadastro.py:373: in test_ct_c13_campo_vazio_none_ou_tipo_errado
+    assert_recusado(cadastrar(svc, **{campo: valor}), ENTRADA_INVALIDA)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+____________ test_ct_c13_campo_vazio_none_ou_tipo_errado[-celular] ____________
+tests\test_cadastro.py:373: in test_ct_c13_campo_vazio_none_ou_tipo_errado
+    assert_recusado(cadastrar(svc, **{campo: valor}), ENTRADA_INVALIDA)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+_____________ test_ct_c13_campo_vazio_none_ou_tipo_errado[-email] _____________
+tests\test_cadastro.py:373: in test_ct_c13_campo_vazio_none_ou_tipo_errado
+    assert_recusado(cadastrar(svc, **{campo: valor}), ENTRADA_INVALIDA)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+_____________ test_ct_c13_campo_vazio_none_ou_tipo_errado[-senha] _____________
+tests\test_cadastro.py:373: in test_ct_c13_campo_vazio_none_ou_tipo_errado
+    assert_recusado(cadastrar(svc, **{campo: valor}), ENTRADA_INVALIDA)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+_______ test_ct_c13_campo_vazio_none_ou_tipo_errado[-confirmacao_senha] _______
+tests\test_cadastro.py:373: in test_ct_c13_campo_vazio_none_ou_tipo_errado
+    assert_recusado(cadastrar(svc, **{campo: valor}), ENTRADA_INVALIDA)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+____________ test_ct_c13_campo_vazio_none_ou_tipo_errado[   -nome] ____________
+tests\test_cadastro.py:373: in test_ct_c13_campo_vazio_none_ou_tipo_errado
+    assert_recusado(cadastrar(svc, **{campo: valor}), ENTRADA_INVALIDA)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+____________ test_ct_c13_campo_vazio_none_ou_tipo_errado[   -cpf] _____________
+tests\test_cadastro.py:373: in test_ct_c13_campo_vazio_none_ou_tipo_errado
+    assert_recusado(cadastrar(svc, **{campo: valor}), ENTRADA_INVALIDA)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+__________ test_ct_c13_campo_vazio_none_ou_tipo_errado[   -celular] ___________
+tests\test_cadastro.py:373: in test_ct_c13_campo_vazio_none_ou_tipo_errado
+    assert_recusado(cadastrar(svc, **{campo: valor}), ENTRADA_INVALIDA)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+___________ test_ct_c13_campo_vazio_none_ou_tipo_errado[   -email] ____________
+tests\test_cadastro.py:373: in test_ct_c13_campo_vazio_none_ou_tipo_errado
+    assert_recusado(cadastrar(svc, **{campo: valor}), ENTRADA_INVALIDA)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+___________ test_ct_c13_campo_vazio_none_ou_tipo_errado[   -senha] ____________
+tests\test_cadastro.py:373: in test_ct_c13_campo_vazio_none_ou_tipo_errado
+    assert_recusado(cadastrar(svc, **{campo: valor}), ENTRADA_INVALIDA)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+_____ test_ct_c13_campo_vazio_none_ou_tipo_errado[   -confirmacao_senha] ______
+tests\test_cadastro.py:373: in test_ct_c13_campo_vazio_none_ou_tipo_errado
+    assert_recusado(cadastrar(svc, **{campo: valor}), ENTRADA_INVALIDA)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+___________ test_ct_c13_campo_vazio_none_ou_tipo_errado[None-nome] ____________
+tests\test_cadastro.py:373: in test_ct_c13_campo_vazio_none_ou_tipo_errado
+    assert_recusado(cadastrar(svc, **{campo: valor}), ENTRADA_INVALIDA)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+____________ test_ct_c13_campo_vazio_none_ou_tipo_errado[None-cpf] ____________
+tests\test_cadastro.py:373: in test_ct_c13_campo_vazio_none_ou_tipo_errado
+    assert_recusado(cadastrar(svc, **{campo: valor}), ENTRADA_INVALIDA)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+__________ test_ct_c13_campo_vazio_none_ou_tipo_errado[None-celular] __________
+tests\test_cadastro.py:373: in test_ct_c13_campo_vazio_none_ou_tipo_errado
+    assert_recusado(cadastrar(svc, **{campo: valor}), ENTRADA_INVALIDA)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+___________ test_ct_c13_campo_vazio_none_ou_tipo_errado[None-email] ___________
+tests\test_cadastro.py:373: in test_ct_c13_campo_vazio_none_ou_tipo_errado
+    assert_recusado(cadastrar(svc, **{campo: valor}), ENTRADA_INVALIDA)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+___________ test_ct_c13_campo_vazio_none_ou_tipo_errado[None-senha] ___________
+tests\test_cadastro.py:373: in test_ct_c13_campo_vazio_none_ou_tipo_errado
+    assert_recusado(cadastrar(svc, **{campo: valor}), ENTRADA_INVALIDA)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+_____ test_ct_c13_campo_vazio_none_ou_tipo_errado[None-confirmacao_senha] _____
+tests\test_cadastro.py:373: in test_ct_c13_campo_vazio_none_ou_tipo_errado
+    assert_recusado(cadastrar(svc, **{campo: valor}), ENTRADA_INVALIDA)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+____________ test_ct_c13_campo_vazio_none_ou_tipo_errado[123-nome] ____________
+tests\test_cadastro.py:373: in test_ct_c13_campo_vazio_none_ou_tipo_errado
+    assert_recusado(cadastrar(svc, **{campo: valor}), ENTRADA_INVALIDA)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+____________ test_ct_c13_campo_vazio_none_ou_tipo_errado[123-cpf] _____________
+tests\test_cadastro.py:373: in test_ct_c13_campo_vazio_none_ou_tipo_errado
+    assert_recusado(cadastrar(svc, **{campo: valor}), ENTRADA_INVALIDA)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+__________ test_ct_c13_campo_vazio_none_ou_tipo_errado[123-celular] ___________
+tests\test_cadastro.py:373: in test_ct_c13_campo_vazio_none_ou_tipo_errado
+    assert_recusado(cadastrar(svc, **{campo: valor}), ENTRADA_INVALIDA)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+___________ test_ct_c13_campo_vazio_none_ou_tipo_errado[123-email] ____________
+tests\test_cadastro.py:373: in test_ct_c13_campo_vazio_none_ou_tipo_errado
+    assert_recusado(cadastrar(svc, **{campo: valor}), ENTRADA_INVALIDA)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+___________ test_ct_c13_campo_vazio_none_ou_tipo_errado[123-senha] ____________
+tests\test_cadastro.py:373: in test_ct_c13_campo_vazio_none_ou_tipo_errado
+    assert_recusado(cadastrar(svc, **{campo: valor}), ENTRADA_INVALIDA)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+_____ test_ct_c13_campo_vazio_none_ou_tipo_errado[123-confirmacao_senha] ______
+tests\test_cadastro.py:373: in test_ct_c13_campo_vazio_none_ou_tipo_errado
+    assert_recusado(cadastrar(svc, **{campo: valor}), ENTRADA_INVALIDA)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+__________ test_ct_c13_campo_vazio_none_ou_tipo_errado[valor4-nome] ___________
+tests\test_cadastro.py:373: in test_ct_c13_campo_vazio_none_ou_tipo_errado
+    assert_recusado(cadastrar(svc, **{campo: valor}), ENTRADA_INVALIDA)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+___________ test_ct_c13_campo_vazio_none_ou_tipo_errado[valor4-cpf] ___________
+tests\test_cadastro.py:373: in test_ct_c13_campo_vazio_none_ou_tipo_errado
+    assert_recusado(cadastrar(svc, **{campo: valor}), ENTRADA_INVALIDA)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+_________ test_ct_c13_campo_vazio_none_ou_tipo_errado[valor4-celular] _________
+tests\test_cadastro.py:373: in test_ct_c13_campo_vazio_none_ou_tipo_errado
+    assert_recusado(cadastrar(svc, **{campo: valor}), ENTRADA_INVALIDA)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+__________ test_ct_c13_campo_vazio_none_ou_tipo_errado[valor4-email] __________
+tests\test_cadastro.py:373: in test_ct_c13_campo_vazio_none_ou_tipo_errado
+    assert_recusado(cadastrar(svc, **{campo: valor}), ENTRADA_INVALIDA)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+__________ test_ct_c13_campo_vazio_none_ou_tipo_errado[valor4-senha] __________
+tests\test_cadastro.py:373: in test_ct_c13_campo_vazio_none_ou_tipo_errado
+    assert_recusado(cadastrar(svc, **{campo: valor}), ENTRADA_INVALIDA)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+____ test_ct_c13_campo_vazio_none_ou_tipo_errado[valor4-confirmacao_senha] ____
+tests\test_cadastro.py:373: in test_ct_c13_campo_vazio_none_ou_tipo_errado
+    assert_recusado(cadastrar(svc, **{campo: valor}), ENTRADA_INVALIDA)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+_ test_ct_c13_entrada_invalida_vem_antes_de_qualquer_outra_validacao[alterados0] _
+tests\test_cadastro.py:386: in test_ct_c13_entrada_invalida_vem_antes_de_qualquer_outra_validacao
+    assert_recusado(cadastrar(svc, **alterados), ENTRADA_INVALIDA)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+_ test_ct_c13_entrada_invalida_vem_antes_de_qualquer_outra_validacao[alterados1] _
+tests\test_cadastro.py:386: in test_ct_c13_entrada_invalida_vem_antes_de_qualquer_outra_validacao
+    assert_recusado(cadastrar(svc, **alterados), ENTRADA_INVALIDA)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+_ test_ct_c13_entrada_invalida_vem_antes_de_qualquer_outra_validacao[alterados2] _
+tests\test_cadastro.py:386: in test_ct_c13_entrada_invalida_vem_antes_de_qualquer_outra_validacao
+    assert_recusado(cadastrar(svc, **alterados), ENTRADA_INVALIDA)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+_ test_ct_c13_entrada_invalida_vem_antes_de_qualquer_outra_validacao[alterados3] _
+tests\test_cadastro.py:386: in test_ct_c13_entrada_invalida_vem_antes_de_qualquer_outra_validacao
+    assert_recusado(cadastrar(svc, **alterados), ENTRADA_INVALIDA)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+_ test_ct_c13_entrada_invalida_vem_antes_de_qualquer_outra_validacao[alterados4] _
+tests\test_cadastro.py:386: in test_ct_c13_entrada_invalida_vem_antes_de_qualquer_outra_validacao
+    assert_recusado(cadastrar(svc, **alterados), ENTRADA_INVALIDA)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+___________ test_ct_c13_entrada_invalida_vem_antes_de_cpf_duplicado ___________
+tests\test_cadastro.py:391: in test_ct_c13_entrada_invalida_vem_antes_de_cpf_duplicado
+    cadastrar(svc)
+tests\test_cadastro.py:69: in cadastrar
+    return svc.cadastrar(**dados)
+           ^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+______________________ test_ct_c13_todos_os_campos_none _______________________
+tests\test_cadastro.py:398: in test_ct_c13_todos_os_campos_none
+    assert_recusado(svc.cadastrar(None, None, None, None, None, None), ENTRADA_INVALIDA)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+nextbank\cadastro.py:62: in cadastrar
+    raise NotImplementedError
+E   NotImplementedError
+=========================== short test summary info ===========================
+FAILED tests/test_cadastro.py::test_ct_c01_cadastro_valido_e_login_funciona
+FAILED tests/test_cadastro.py::test_ct_c01_dados_guardados_e_saldo_zero - Not...
+FAILED tests/test_cadastro.py::test_ct_c01_log_sem_senha_e_com_cpf_mascarado
+FAILED tests/test_cadastro.py::test_ct_c02_cpf_formato_invalido[123] - NotImp...
+FAILED tests/test_cadastro.py::test_ct_c02_cpf_formato_invalido[abc.def.ghi-jk]
+FAILED tests/test_cadastro.py::test_ct_c02_cpf_formato_invalido[390.533.447-0]
+FAILED tests/test_cadastro.py::test_ct_c02_cpf_formato_invalido[390.533.447-055]
+FAILED tests/test_cadastro.py::test_ct_c03_cpf_digitos_verificadores_invalidos[390.533.447-06]
+FAILED tests/test_cadastro.py::test_ct_c03_cpf_digitos_verificadores_invalidos[111.111.111-11]
+FAILED tests/test_cadastro.py::test_ct_c03_cpf_digitos_verificadores_invalidos[12345678900]
+FAILED tests/test_cadastro.py::test_ct_c04_cpf_duplicado_recusado_e_conta_intacta
+FAILED tests/test_cadastro.py::test_ct_c05_mesmo_cpf_com_e_sem_mascara[390.533.447-05-39053344705]
+FAILED tests/test_cadastro.py::test_ct_c05_mesmo_cpf_com_e_sem_mascara[39053344705-390.533.447-05]
+FAILED tests/test_cadastro.py::test_ct_c06_senha_sem_maiuscula - NotImplement...
+FAILED tests/test_cadastro.py::test_ct_c07_senha_sem_minuscula - NotImplement...
+FAILED tests/test_cadastro.py::test_ct_c08_senha_sem_numero - NotImplementedE...
+FAILED tests/test_cadastro.py::test_ct_c09_senha_sem_caractere_especial - Not...
+FAILED tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[!]
+FAILED tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[$]
+FAILED tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[%]
+FAILED tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[^]
+FAILED tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[&]
+FAILED tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[*]
+FAILED tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[(]
+FAILED tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[)]
+FAILED tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[-]
+FAILED tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[_]
+FAILED tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[=]
+FAILED tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[+]
+FAILED tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[[]
+FAILED tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[]]
+FAILED tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[{]
+FAILED tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[}]
+FAILED tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[;]
+FAILED tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[:]
+FAILED tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[,]
+FAILED tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[.]
+FAILED tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[?]
+FAILED tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[/]
+FAILED tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[~]
+FAILED tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[|]
+FAILED tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[<]
+FAILED tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[']
+FAILED tests/test_cadastro.py::test_ct_c09_espaco_nao_conta_como_caractere_especial
+FAILED tests/test_cadastro.py::test_ct_c10_senha_curta - NotImplementedError
+FAILED tests/test_cadastro.py::test_ct_c10_senha_com_64_caracteres_e_aceita
+FAILED tests/test_cadastro.py::test_ct_c10_senha_com_65_caracteres_e_recusada
+FAILED tests/test_cadastro.py::test_ct_c11_confirmacao_de_senha_diferente - N...
+FAILED tests/test_cadastro.py::test_ct_c10_senha_e_preservada_exatamente_como_digitada[Senha@123 ]
+FAILED tests/test_cadastro.py::test_ct_c10_senha_e_preservada_exatamente_como_digitada[Senha @123]
+FAILED tests/test_cadastro.py::test_ct_c12_nome_celular_ou_email_invalido[nome-Jo-NOME_INVALIDO]
+FAILED tests/test_cadastro.py::test_ct_c12_nome_celular_ou_email_invalido[nome-Joao123-NOME_INVALIDO]
+FAILED tests/test_cadastro.py::test_ct_c12_nome_celular_ou_email_invalido[nome-Ana.Maria-NOME_INVALIDO]
+FAILED tests/test_cadastro.py::test_ct_c12_nome_celular_ou_email_invalido[celular-1191234567-CELULAR_INVALIDO]
+FAILED tests/test_cadastro.py::test_ct_c12_nome_celular_ou_email_invalido[celular-11812345678-CELULAR_INVALIDO]
+FAILED tests/test_cadastro.py::test_ct_c12_nome_celular_ou_email_invalido[celular-11a12345678-CELULAR_INVALIDO]
+FAILED tests/test_cadastro.py::test_ct_c12_nome_celular_ou_email_invalido[email-maria.exemplo.com-EMAIL_INVALIDO]
+FAILED tests/test_cadastro.py::test_ct_c12_nome_celular_ou_email_invalido[email-maria@-EMAIL_INVALIDO]
+FAILED tests/test_cadastro.py::test_ct_c12_email_dominio_sem_ponto_recusado
+FAILED tests/test_cadastro.py::test_ct_c12_nome_aceita_acentos_hifen_apostrofo_e_espacos[Jos\xe9 da Silva]
+FAILED tests/test_cadastro.py::test_ct_c12_nome_aceita_acentos_hifen_apostrofo_e_espacos[\xc2ngela M\xfcller Concei\xe7\xe3o]
+FAILED tests/test_cadastro.py::test_ct_c12_nome_aceita_acentos_hifen_apostrofo_e_espacos[Ana-Clara]
+FAILED tests/test_cadastro.py::test_ct_c12_nome_aceita_acentos_hifen_apostrofo_e_espacos[D'\xc1vila]
+FAILED tests/test_cadastro.py::test_ct_c12_nome_aceita_acentos_hifen_apostrofo_e_espacos[Ana Maria]
+FAILED tests/test_cadastro.py::test_ct_c12_nome_aceita_acentos_hifen_apostrofo_e_espacos[Ana]
+FAILED tests/test_cadastro.py::test_ct_c12_nome_espacos_duplos_internos_sao_colapsados
+FAILED tests/test_cadastro.py::test_ct_c12_nome_com_espacos_nas_pontas_e_guardado_sem_eles[  Jos\xe9 da Silva]
+FAILED tests/test_cadastro.py::test_ct_c12_nome_com_espacos_nas_pontas_e_guardado_sem_eles[Jos\xe9 da Silva  ]
+FAILED tests/test_cadastro.py::test_ct_c12_nome_com_espacos_nas_pontas_e_guardado_sem_eles[   Jos\xe9 da Silva   ]
+FAILED tests/test_cadastro.py::test_ct_c12_nome_minimo_de_3_conta_apos_normalizar_espacos[ Jo ]
+FAILED tests/test_cadastro.py::test_ct_c12_nome_minimo_de_3_conta_apos_normalizar_espacos[  Jo]
+FAILED tests/test_cadastro.py::test_ct_c12_nome_minimo_de_3_conta_apos_normalizar_espacos[J  o]
+FAILED tests/test_cadastro.py::test_ct_c12_nome_minimo_de_3_conta_apos_normalizar_espacos[ J o ]
+FAILED tests/test_cadastro.py::test_ct_c12_nome_com_espacos_nas_pontas_e_3_letras_e_aceito
+FAILED tests/test_cadastro.py::test_ct_c12_nome_com_100_caracteres_e_aceito
+FAILED tests/test_cadastro.py::test_ct_c12_nome_com_101_caracteres_e_recusado
+FAILED tests/test_cadastro.py::test_ct_c12_nome_deve_comecar_e_terminar_com_letra[---]
+FAILED tests/test_cadastro.py::test_ct_c12_nome_deve_comecar_e_terminar_com_letra[''']
+FAILED tests/test_cadastro.py::test_ct_c12_nome_deve_comecar_e_terminar_com_letra[-Ana]
+FAILED tests/test_cadastro.py::test_ct_c12_nome_deve_comecar_e_terminar_com_letra[Ana-]
+FAILED tests/test_cadastro.py::test_ct_c12_nome_deve_comecar_e_terminar_com_letra[Ana']
+FAILED tests/test_cadastro.py::test_ct_c12_celular_aceita_com_e_sem_mascara_e_normaliza[(11) 91234-5678]
+FAILED tests/test_cadastro.py::test_ct_c12_celular_aceita_com_e_sem_mascara_e_normaliza[11912345678]
+FAILED tests/test_cadastro.py::test_ct_c12_celular_aceita_com_e_sem_mascara_e_normaliza[(11)912345678]
+FAILED tests/test_cadastro.py::test_ct_c12_celular_aceita_com_e_sem_mascara_e_normaliza[11 91234-5678]
+FAILED tests/test_cadastro.py::test_ct_c12_ordem_de_validacao_com_dois_erros[alterados0-CPF_INVALIDO]
+FAILED tests/test_cadastro.py::test_ct_c12_ordem_de_validacao_com_dois_erros[alterados1-NOME_INVALIDO]
+FAILED tests/test_cadastro.py::test_ct_c12_ordem_de_validacao_com_dois_erros[alterados2-NOME_INVALIDO]
+FAILED tests/test_cadastro.py::test_ct_c12_ordem_de_validacao_com_dois_erros[alterados3-CELULAR_INVALIDO]
+FAILED tests/test_cadastro.py::test_ct_c12_ordem_de_validacao_com_dois_erros[alterados4-CELULAR_INVALIDO]
+FAILED tests/test_cadastro.py::test_ct_c12_ordem_de_validacao_com_dois_erros[alterados5-EMAIL_INVALIDO]
+FAILED tests/test_cadastro.py::test_ct_c12_ordem_de_validacao_com_dois_erros[alterados6-SENHA_FRACA]
+FAILED tests/test_cadastro.py::test_ct_c04_cpf_duplicado_tem_prioridade_sobre_senha_fraca
+FAILED tests/test_cadastro.py::test_ct_c04_cpf_duplicado_tem_prioridade_sobre_nome_celular_email_confirmacao[nome_invalido]
+FAILED tests/test_cadastro.py::test_ct_c04_cpf_duplicado_tem_prioridade_sobre_nome_celular_email_confirmacao[celular_invalido]
+FAILED tests/test_cadastro.py::test_ct_c04_cpf_duplicado_tem_prioridade_sobre_nome_celular_email_confirmacao[email_invalido]
+FAILED tests/test_cadastro.py::test_ct_c04_cpf_duplicado_tem_prioridade_sobre_nome_celular_email_confirmacao[confirmacao_diferente]
+FAILED tests/test_cadastro.py::test_ct_c04_cpf_invalido_vem_antes_de_duplicado
+FAILED tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[-nome]
+FAILED tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[-cpf]
+FAILED tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[-celular]
+FAILED tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[-email]
+FAILED tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[-senha]
+FAILED tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[-confirmacao_senha]
+FAILED tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[   -nome]
+FAILED tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[   -cpf]
+FAILED tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[   -celular]
+FAILED tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[   -email]
+FAILED tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[   -senha]
+FAILED tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[   -confirmacao_senha]
+FAILED tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[None-nome]
+FAILED tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[None-cpf]
+FAILED tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[None-celular]
+FAILED tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[None-email]
+FAILED tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[None-senha]
+FAILED tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[None-confirmacao_senha]
+FAILED tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[123-nome]
+FAILED tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[123-cpf]
+FAILED tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[123-celular]
+FAILED tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[123-email]
+FAILED tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[123-senha]
+FAILED tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[123-confirmacao_senha]
+FAILED tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[valor4-nome]
+FAILED tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[valor4-cpf]
+FAILED tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[valor4-celular]
+FAILED tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[valor4-email]
+FAILED tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[valor4-senha]
+FAILED tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[valor4-confirmacao_senha]
+FAILED tests/test_cadastro.py::test_ct_c13_entrada_invalida_vem_antes_de_qualquer_outra_validacao[alterados0]
+FAILED tests/test_cadastro.py::test_ct_c13_entrada_invalida_vem_antes_de_qualquer_outra_validacao[alterados1]
+FAILED tests/test_cadastro.py::test_ct_c13_entrada_invalida_vem_antes_de_qualquer_outra_validacao[alterados2]
+FAILED tests/test_cadastro.py::test_ct_c13_entrada_invalida_vem_antes_de_qualquer_outra_validacao[alterados3]
+FAILED tests/test_cadastro.py::test_ct_c13_entrada_invalida_vem_antes_de_qualquer_outra_validacao[alterados4]
+FAILED tests/test_cadastro.py::test_ct_c13_entrada_invalida_vem_antes_de_cpf_duplicado
+FAILED tests/test_cadastro.py::test_ct_c13_todos_os_campos_none - NotImplemen...
+============================= 135 failed in 0.82s =============================

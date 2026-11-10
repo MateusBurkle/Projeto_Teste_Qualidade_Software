@@ -1,0 +1,15 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.2, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\Mateus-pc\AppData\Local\Programs\Python\Python314\python.exe
+rootdir: C:\Users\Mateus-pc\OneDrive\6 Semestre\Teste e Qualidade de Software\Projeto\Parte4_TDD\sistema
+configfile: pytest.ini
+testpaths: tests
+plugins: anyio-4.14.2, langsmith-0.11.0, locust-2.47.0
+collecting ... collected 5 items
+
+tests/test_sistema.py::test_st01_fluxo_feliz_login_pix_extrato_consistentes PASSED [ 20%]
+tests/test_sistema.py::test_st02_alto_valor_exige_autenticacao_adicional_e_depois_concilia PASSED [ 40%]
+tests/test_sistema.py::test_st03_pix_retido_em_analise_nao_aparece_no_extrato PASSED [ 60%]
+tests/test_sistema.py::test_st04_conta_bloqueada_nao_faz_pix_nem_ve_extrato PASSED [ 80%]
+tests/test_sistema.py::test_st05_sem_login_ou_token_expirado_e_autenticado_nao_acessa_conta_alheia PASSED [100%]
+
+============================== 5 passed in 0.52s ==============================

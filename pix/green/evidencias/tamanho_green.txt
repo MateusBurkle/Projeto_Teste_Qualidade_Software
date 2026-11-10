@@ -1,0 +1,14 @@
+radon raw / mi - pix/green/nextbank/pix.py (medido em 07/11/2026 pelo atualizador-documento)
+green/nextbank/pix.py
+    LOC: 97
+    LLOC: 87
+    SLOC: 80
+    Comments: 1
+    Single comments: 1
+    Multi: 0
+    Blank: 16
+    - Comment Stats
+        (C % L): 1%
+        (C % S): 1%
+        (C + M % L): 1%
+green/nextbank/pix.py - A (46.54)

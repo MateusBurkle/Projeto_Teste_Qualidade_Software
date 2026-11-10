@@ -1,0 +1,25 @@
+Teste geral M4 (Extrato) - evidencias. Python 3.14.2, pytest 9.2.0, pytest-cov 7.1.0 (--cov-branch), radon 6.0.1 (nao usado nesta etapa).
+Sempre sobre as versoes refactor. Codigo e testes nao foram alterados.
+
+Arquivos
+01 suite extrato/refactor: 7/7 passaram (E01,E02,E03,E04,E07,E08,E10). Cobertura propria: extrato.py 100% instr., 100% ramos (12/12); login.py 76% (so o que o E10 exercita).
+02 suite login/refactor: 14/14 passaram. login.py 98% (1 instrucao e 1 ramo nao cobertos, linha 114).
+03 suite pix/refactor: 20/20 passaram. pix.py 100%; login.py 76%.
+04 regressao CT-R01 (L01, L04, L06) com o pacote nextbank do Extrato: 3/3 passaram. Mesmo criterio de pix/teste_geral/03.
+05 os 14 testes de login contra o pacote do Extrato: 14/14 passaram (cobertura medida sobre o login.py do pacote do Extrato: 98%). login.py do Extrato e byte a byte igual ao de login/refactor e ao de pix/refactor.
+06 integracao Login+Extrato: CT-E10 (AuthService real) passou com o login.py do pacote do Extrato. Esta e a integracao registrada.
+07 cobertura do pacote do Extrato (extrato.py+login.py) com testes do Extrato+Login (21 testes): instrucoes e ramos 99% (extrato.py 100%/100%; login.py 98%).
+08 cobertura consolidada dos tres modulos (41 testes): 99% (259 instr., 1 nao coberta; 52 ramos, 1 parcial). Pacote montado em area temporaria, sem alterar o projeto.
+
+Criterios de saida do Plano
+- Todos os testes executados passando: SIM (7/7, 14/14, 20/20, 41/41 consolidado; regressao 3/3).
+- Cobertura de instrucoes >= 80%: SIM (pacote Extrato 99%; consolidado 99%; extrato.py 100%).
+- Cobertura de decisoes/ramos >= 70%: SIM (extrato.py 100%; pacote 99%; consolidado 99%).
+- Observacao: medindo so a suite do Extrato, login.py fica em 76% (instr.), abaixo de 80%; o login e coberto pela propria suite (98%). Se o criterio for aplicado isoladamente ao login.py com apenas os testes do Extrato, nao seria atendido; a medicao correta e a do pacote com suas suites (07).
+
+Limitacoes
+- CT-E05, CT-E06 e CT-E09 nao foram executados aqui: vao para o Locust (M5); nenhuma carga/estresse/desempenho foi medido.
+- Sem integracao com o PIX: o Extrato e independente do PIX (decisao aprovada); nao existe integracao Extrato+PIX.
+- Integracao feita em memoria (AuthService real e dados em memoria; sem banco, rede ou servico externo).
+- Sem registro de defeitos: nenhum defeito encontrado nem registrado nesta etapa (nada no formato da secao 4.1.8).
+- Os arquivos 04 e 05 usam PYTHONPATH apontando para extrato/refactor e pytest.ini do login com pythonpath vazio, para garantir que o pacote importado seja o do Extrato.

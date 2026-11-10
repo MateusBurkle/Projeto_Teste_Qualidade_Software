@@ -1,0 +1,16 @@
+nextbank/pix.py
+    M 57:4 PixService.transferir - B (9)
+    C 31:0 PixService - A (3)
+    M 79:4 PixService._debitar_e_creditar - A (3)
+    C 16:0 ResultadoPix - A (1)
+    C 23:0 RegistroAuditoria - A (1)
+    M 32:4 PixService.__init__ - A (1)
+    M 43:4 PixService.cadastrar_conta - A (1)
+    M 48:4 PixService.cadastrar_chave - A (1)
+    M 51:4 PixService.saldo - A (1)
+    M 54:4 PixService.saldo_reservado - A (1)
+    M 91:4 PixService._registrar - A (1)
+    M 96:4 PixService.registros_auditoria - A (1)
+
+12 blocks (classes, functions, methods) analyzed.
+Average complexity: A (2.0)

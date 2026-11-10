@@ -1,0 +1,143 @@
+### radon raw
+== login.py
+nextbank/login.py
+    LOC: 159
+    LLOC: 131
+    SLOC: 118
+    Comments: 0
+    Single comments: 2
+    Multi: 5
+    Blank: 34
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 3%
+** Total **
+    LOC: 159
+    LLOC: 131
+    SLOC: 118
+    Comments: 0
+    Single comments: 2
+    Multi: 5
+    Blank: 34
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 3%
+== pix.py
+nextbank/pix.py
+    LOC: 113
+    LLOC: 100
+    SLOC: 91
+    Comments: 1
+    Single comments: 3
+    Multi: 0
+    Blank: 19
+    - Comment Stats
+        (C % L): 1%
+        (C % S): 1%
+        (C + M % L): 1%
+** Total **
+    LOC: 113
+    LLOC: 100
+    SLOC: 91
+    Comments: 1
+    Single comments: 3
+    Multi: 0
+    Blank: 19
+    - Comment Stats
+        (C % L): 1%
+        (C % S): 1%
+        (C + M % L): 1%
+== extrato.py
+nextbank/extrato.py
+    LOC: 96
+    LLOC: 83
+    SLOC: 70
+    Comments: 3
+    Single comments: 4
+    Multi: 0
+    Blank: 22
+    - Comment Stats
+        (C % L): 3%
+        (C % S): 4%
+        (C + M % L): 3%
+** Total **
+    LOC: 96
+    LLOC: 83
+    SLOC: 70
+    Comments: 3
+    Single comments: 4
+    Multi: 0
+    Blank: 22
+    - Comment Stats
+        (C % L): 3%
+        (C % S): 4%
+        (C + M % L): 3%
+== total
+nextbank\extrato.py
+    LOC: 96
+    LLOC: 83
+    SLOC: 70
+    Comments: 3
+    Single comments: 4
+    Multi: 0
+    Blank: 22
+    - Comment Stats
+        (C % L): 3%
+        (C % S): 4%
+        (C + M % L): 3%
+nextbank\login.py
+    LOC: 159
+    LLOC: 131
+    SLOC: 118
+    Comments: 0
+    Single comments: 2
+    Multi: 5
+    Blank: 34
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 3%
+nextbank\pix.py
+    LOC: 113
+    LLOC: 100
+    SLOC: 91
+    Comments: 1
+    Single comments: 3
+    Multi: 0
+    Blank: 19
+    - Comment Stats
+        (C % L): 1%
+        (C % S): 1%
+        (C + M % L): 1%
+nextbank\__init__.py
+    LOC: 0
+    LLOC: 0
+    SLOC: 0
+    Comments: 0
+    Single comments: 0
+    Multi: 0
+    Blank: 0
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 0%
+** Total **
+    LOC: 368
+    LLOC: 314
+    SLOC: 279
+    Comments: 4
+    Single comments: 9
+    Multi: 5
+    Blank: 75
+    - Comment Stats
+        (C % L): 1%
+        (C % S): 1%
+        (C + M % L): 2%
+
+### radon mi -s
+nextbank\extrato.py - A (52.66)
+nextbank\login.py - A (44.62)
+nextbank\pix.py - A (44.62)
+nextbank\__init__.py - A (100.00)

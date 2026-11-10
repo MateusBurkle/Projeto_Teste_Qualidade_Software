@@ -1,0 +1,12 @@
+Teste geral final M6 - evidencias. Python 3.14.2, pytest 9.2.0, pytest-cov 7.1.0 (--cov-branch), coverage 7.17.2, radon 6.0.1, Locust 2.47.0 (plugin carregado; Locust NAO foi reexecutado).
+Codigo medido: login/refactor, pix/refactor, extrato/refactor (nada alterado). Venv e pacote consolidado montados no scratchpad (fora do projeto); COVERAGE_FILE fora do projeto; PYTHONDONTWRITEBYTECODE=1 e -p no:cacheprovider.
+login.py e byte a byte igual nos tres pacotes (cmp).
+
+01_pytest_cov_{login,pix,extrato}_refactor.txt  suites proprias com cobertura (14/14, 20/20, 7/7)
+02_pytest_cov_consolidado.txt                   41 testes sobre o pacote consolidado (extrato.py+login.py+pix.py): 41 passed; 259 instr, 1 nao coberta (login.py:114); 52 ramos, 1 parcial; 99%
+03_regressao_CT_R01.txt                         CT-L01, L04, L06, P01, P06, P08: 6/6 passaram (CT-E05 e E06 sao Locust; evidencia em locust/evidencias)
+04_integracao_CT_P17_CT_E10.txt                 Login+PIX (CT-P17) e Login+Extrato (CT-E10): ambos passaram (AuthService real, em memoria)
+05_radon_cc.txt                                 complexidade ciclomatica por modulo e geral
+06_radon_raw_mi.txt                             LOC/LLOC/SLOC e indice de manutenibilidade
+07_radon_green_comparacao.txt                   radon na fase Green (conferencia com o Word)
+08_locust_resumo.txt                            numeros extraidos das evidencias ja existentes do Locust

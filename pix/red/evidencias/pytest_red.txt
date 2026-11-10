@@ -1,0 +1,192 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.2, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\Mateus-pc\AppData\Local\Programs\Python\Python314\python.exe
+rootdir: C:\Users\Mateus-pc\OneDrive\6 Semestre\Teste e Qualidade de Software\Projeto\Parte4_TDD\pix\red
+configfile: pytest.ini
+testpaths: tests
+plugins: anyio-4.14.2, langsmith-0.11.0
+collecting ... collected 20 items
+
+tests/test_pix.py::test_ct_p01_saldo_suficiente_conclui_transferencia FAILED [  5%]
+tests/test_pix.py::test_ct_p02_saldo_insuficiente_recusa_e_saldo_inalterado FAILED [ 10%]
+tests/test_pix.py::test_ct_p03_valor_igual_ao_saldo_conclui_e_zera_saldo FAILED [ 15%]
+tests/test_pix.py::test_ct_p04_valor_zero_ou_negativo_e_recusado[valor0] FAILED [ 20%]
+tests/test_pix.py::test_ct_p04_valor_zero_ou_negativo_e_recusado[valor1] FAILED [ 25%]
+tests/test_pix.py::test_ct_p05_chave_invalida_ou_inexistente_e_recusada[abc###] FAILED [ 30%]
+tests/test_pix.py::test_ct_p05_chave_invalida_ou_inexistente_e_recusada[111.444.777-35] FAILED [ 35%]
+tests/test_pix.py::test_ct_p06_falha_apos_debito_reverte_o_debito FAILED [ 40%]
+tests/test_pix.py::test_ct_p14_duas_ordens_na_mesma_conta_so_uma_conclui FAILED [ 45%]
+tests/test_pix.py::test_ct_p07_valor_igual_ao_limite_nao_exige_autenticacao_adicional FAILED [ 50%]
+tests/test_pix.py::test_ct_p08_valor_acima_do_limite_exige_autenticacao_adicional FAILED [ 55%]
+tests/test_pix.py::test_ct_p09_tabela_de_decisao_do_pix[regra1] FAILED   [ 60%]
+tests/test_pix.py::test_ct_p09_tabela_de_decisao_do_pix[regra2] FAILED   [ 65%]
+tests/test_pix.py::test_ct_p09_tabela_de_decisao_do_pix[regra3] FAILED   [ 70%]
+tests/test_pix.py::test_ct_p09_tabela_de_decisao_do_pix[regra4a] FAILED  [ 75%]
+tests/test_pix.py::test_ct_p09_tabela_de_decisao_do_pix[regra4b] FAILED  [ 80%]
+tests/test_pix.py::test_ct_p09_tabela_de_decisao_do_pix[regra5] FAILED   [ 85%]
+tests/test_pix.py::test_ct_p10_transferencia_atipica_20x_a_media_as_3h_e_retida FAILED [ 90%]
+tests/test_pix.py::test_ct_p11_alto_valor_gera_log_de_auditoria FAILED   [ 95%]
+tests/test_pix.py::test_ct_p17_usuario_a_autenticado_com_conta_de_origem_de_b_e_negado_e_registrado FAILED [100%]
+
+================================== FAILURES ===================================
+_____________ test_ct_p01_saldo_suficiente_conclui_transferencia ______________
+tests\test_pix.py:90: in test_ct_p01_saldo_suficiente_conclui_transferencia
+    r = pix.transferir(USUARIO_A, CONTA_A, CHAVE_B, D("100.00"))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+nextbank\pix.py:48: in transferir
+    raise NotImplementedError
+E   NotImplementedError
+__________ test_ct_p02_saldo_insuficiente_recusa_e_saldo_inalterado ___________
+tests\test_pix.py:97: in test_ct_p02_saldo_insuficiente_recusa_e_saldo_inalterado
+    r = pix.transferir(USUARIO_A, CONTA_A, CHAVE_B, SALDO_A + D("0.01"))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+nextbank\pix.py:48: in transferir
+    raise NotImplementedError
+E   NotImplementedError
+____________ test_ct_p03_valor_igual_ao_saldo_conclui_e_zera_saldo ____________
+tests\test_pix.py:108: in test_ct_p03_valor_igual_ao_saldo_conclui_e_zera_saldo
+    r = svc.transferir(USUARIO_A, CONTA_A, CHAVE_B, D("500.00"))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+nextbank\pix.py:48: in transferir
+    raise NotImplementedError
+E   NotImplementedError
+____________ test_ct_p04_valor_zero_ou_negativo_e_recusado[valor0] ____________
+tests\test_pix.py:116: in test_ct_p04_valor_zero_ou_negativo_e_recusado
+    r = pix.transferir(USUARIO_A, CONTA_A, CHAVE_B, valor)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+nextbank\pix.py:48: in transferir
+    raise NotImplementedError
+E   NotImplementedError
+____________ test_ct_p04_valor_zero_ou_negativo_e_recusado[valor1] ____________
+tests\test_pix.py:116: in test_ct_p04_valor_zero_ou_negativo_e_recusado
+    r = pix.transferir(USUARIO_A, CONTA_A, CHAVE_B, valor)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+nextbank\pix.py:48: in transferir
+    raise NotImplementedError
+E   NotImplementedError
+________ test_ct_p05_chave_invalida_ou_inexistente_e_recusada[abc###] _________
+tests\test_pix.py:124: in test_ct_p05_chave_invalida_ou_inexistente_e_recusada
+    r = pix.transferir(USUARIO_A, CONTA_A, chave, D("100.00"))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+nextbank\pix.py:48: in transferir
+    raise NotImplementedError
+E   NotImplementedError
+____ test_ct_p05_chave_invalida_ou_inexistente_e_recusada[111.444.777-35] _____
+tests\test_pix.py:124: in test_ct_p05_chave_invalida_ou_inexistente_e_recusada
+    r = pix.transferir(USUARIO_A, CONTA_A, chave, D("100.00"))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+nextbank\pix.py:48: in transferir
+    raise NotImplementedError
+E   NotImplementedError
+_______________ test_ct_p06_falha_apos_debito_reverte_o_debito ________________
+tests\test_pix.py:138: in test_ct_p06_falha_apos_debito_reverte_o_debito
+    r = svc.transferir(USUARIO_A, CONTA_A, CHAVE_B, D("100.00"))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+nextbank\pix.py:48: in transferir
+    raise NotImplementedError
+E   NotImplementedError
+____________ test_ct_p14_duas_ordens_na_mesma_conta_so_uma_conclui ____________
+tests\test_pix.py:150: in test_ct_p14_duas_ordens_na_mesma_conta_so_uma_conclui
+    r1 = svc.transferir(USUARIO_A, CONTA_A, CHAVE_B, D("800.00"))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+nextbank\pix.py:48: in transferir
+    raise NotImplementedError
+E   NotImplementedError
+_____ test_ct_p07_valor_igual_ao_limite_nao_exige_autenticacao_adicional ______
+tests\test_pix.py:160: in test_ct_p07_valor_igual_ao_limite_nao_exige_autenticacao_adicional
+    r = pix.transferir(USUARIO_A, CONTA_A, CHAVE_B, D("7000.00"))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+nextbank\pix.py:48: in transferir
+    raise NotImplementedError
+E   NotImplementedError
+_______ test_ct_p08_valor_acima_do_limite_exige_autenticacao_adicional ________
+tests\test_pix.py:166: in test_ct_p08_valor_acima_do_limite_exige_autenticacao_adicional
+    r = pix.transferir(USUARIO_A, CONTA_A, CHAVE_B, D("7000.01"))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+nextbank\pix.py:48: in transferir
+    raise NotImplementedError
+E   NotImplementedError
+________________ test_ct_p09_tabela_de_decisao_do_pix[regra1] _________________
+tests\test_pix.py:194: in test_ct_p09_tabela_de_decisao_do_pix
+    r = svc.transferir(USUARIO_A, CONTA_A, CHAVE_B, valor, autenticacao_adicional=autenticacao)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+nextbank\pix.py:48: in transferir
+    raise NotImplementedError
+E   NotImplementedError
+________________ test_ct_p09_tabela_de_decisao_do_pix[regra2] _________________
+tests\test_pix.py:194: in test_ct_p09_tabela_de_decisao_do_pix
+    r = svc.transferir(USUARIO_A, CONTA_A, CHAVE_B, valor, autenticacao_adicional=autenticacao)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+nextbank\pix.py:48: in transferir
+    raise NotImplementedError
+E   NotImplementedError
+________________ test_ct_p09_tabela_de_decisao_do_pix[regra3] _________________
+tests\test_pix.py:194: in test_ct_p09_tabela_de_decisao_do_pix
+    r = svc.transferir(USUARIO_A, CONTA_A, CHAVE_B, valor, autenticacao_adicional=autenticacao)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+nextbank\pix.py:48: in transferir
+    raise NotImplementedError
+E   NotImplementedError
+________________ test_ct_p09_tabela_de_decisao_do_pix[regra4a] ________________
+tests\test_pix.py:194: in test_ct_p09_tabela_de_decisao_do_pix
+    r = svc.transferir(USUARIO_A, CONTA_A, CHAVE_B, valor, autenticacao_adicional=autenticacao)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+nextbank\pix.py:48: in transferir
+    raise NotImplementedError
+E   NotImplementedError
+________________ test_ct_p09_tabela_de_decisao_do_pix[regra4b] ________________
+tests\test_pix.py:194: in test_ct_p09_tabela_de_decisao_do_pix
+    r = svc.transferir(USUARIO_A, CONTA_A, CHAVE_B, valor, autenticacao_adicional=autenticacao)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+nextbank\pix.py:48: in transferir
+    raise NotImplementedError
+E   NotImplementedError
+________________ test_ct_p09_tabela_de_decisao_do_pix[regra5] _________________
+tests\test_pix.py:194: in test_ct_p09_tabela_de_decisao_do_pix
+    r = svc.transferir(USUARIO_A, CONTA_A, CHAVE_B, valor, autenticacao_adicional=autenticacao)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+nextbank\pix.py:48: in transferir
+    raise NotImplementedError
+E   NotImplementedError
+________ test_ct_p10_transferencia_atipica_20x_a_media_as_3h_e_retida _________
+tests\test_pix.py:220: in test_ct_p10_transferencia_atipica_20x_a_media_as_3h_e_retida
+    r = svc.transferir(USUARIO_A, CONTA_A, CHAVE_B, valor)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+nextbank\pix.py:48: in transferir
+    raise NotImplementedError
+E   NotImplementedError
+________________ test_ct_p11_alto_valor_gera_log_de_auditoria _________________
+tests\test_pix.py:230: in test_ct_p11_alto_valor_gera_log_de_auditoria
+    r = pix.transferir(USUARIO_A, CONTA_A, CHAVE_B, D("7000.01"), autenticacao_adicional=True)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+nextbank\pix.py:48: in transferir
+    raise NotImplementedError
+E   NotImplementedError
+_ test_ct_p17_usuario_a_autenticado_com_conta_de_origem_de_b_e_negado_e_registrado _
+tests\test_pix.py:282: in test_ct_p17_usuario_a_autenticado_com_conta_de_origem_de_b_e_negado_e_registrado
+    r = svc.transferir(usuario_a, CONTA_B, "111.444.777-35", D("100.00"))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+nextbank\pix.py:48: in transferir
+    raise NotImplementedError
+E   NotImplementedError
+=========================== short test summary info ===========================
+FAILED tests/test_pix.py::test_ct_p01_saldo_suficiente_conclui_transferencia
+FAILED tests/test_pix.py::test_ct_p02_saldo_insuficiente_recusa_e_saldo_inalterado
+FAILED tests/test_pix.py::test_ct_p03_valor_igual_ao_saldo_conclui_e_zera_saldo
+FAILED tests/test_pix.py::test_ct_p04_valor_zero_ou_negativo_e_recusado[valor0]
+FAILED tests/test_pix.py::test_ct_p04_valor_zero_ou_negativo_e_recusado[valor1]
+FAILED tests/test_pix.py::test_ct_p05_chave_invalida_ou_inexistente_e_recusada[abc###]
+FAILED tests/test_pix.py::test_ct_p05_chave_invalida_ou_inexistente_e_recusada[111.444.777-35]
+FAILED tests/test_pix.py::test_ct_p06_falha_apos_debito_reverte_o_debito - No...
+FAILED tests/test_pix.py::test_ct_p14_duas_ordens_na_mesma_conta_so_uma_conclui
+FAILED tests/test_pix.py::test_ct_p07_valor_igual_ao_limite_nao_exige_autenticacao_adicional
+FAILED tests/test_pix.py::test_ct_p08_valor_acima_do_limite_exige_autenticacao_adicional
+FAILED tests/test_pix.py::test_ct_p09_tabela_de_decisao_do_pix[regra1] - NotI...
+FAILED tests/test_pix.py::test_ct_p09_tabela_de_decisao_do_pix[regra2] - NotI...
+FAILED tests/test_pix.py::test_ct_p09_tabela_de_decisao_do_pix[regra3] - NotI...
+FAILED tests/test_pix.py::test_ct_p09_tabela_de_decisao_do_pix[regra4a] - Not...
+FAILED tests/test_pix.py::test_ct_p09_tabela_de_decisao_do_pix[regra4b] - Not...
+FAILED tests/test_pix.py::test_ct_p09_tabela_de_decisao_do_pix[regra5] - NotI...
+FAILED tests/test_pix.py::test_ct_p10_transferencia_atipica_20x_a_media_as_3h_e_retida
+FAILED tests/test_pix.py::test_ct_p11_alto_valor_gera_log_de_auditoria - NotI...
+FAILED tests/test_pix.py::test_ct_p17_usuario_a_autenticado_com_conta_de_origem_de_b_e_negado_e_registrado
+============================= 20 failed in 0.18s ==============================

@@ -1,0 +1,58 @@
+Conferencia feita pelo atualizador-documento em 09/11/2026 (codigo NAO alterado): radon sobre login/refactor, pix/refactor (corrigido) e extrato/refactor.
+### radon cc -a -s
+
+51 blocks (classes, functions, methods) analyzed.
+Average complexity: A (1.9215686274509804)
+### radon raw (total)
+login/refactor/nextbank/login.py
+    LOC: 159
+    LLOC: 131
+    SLOC: 118
+    Comments: 0
+    Single comments: 2
+    Multi: 5
+    Blank: 34
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 3%
+pix/refactor/nextbank/pix.py
+    LOC: 128
+    LLOC: 107
+    SLOC: 97
+    Comments: 1
+    Single comments: 3
+    Multi: 6
+    Blank: 22
+    - Comment Stats
+        (C % L): 1%
+        (C % S): 1%
+        (C + M % L): 5%
+extrato/refactor/nextbank/extrato.py
+    LOC: 96
+    LLOC: 83
+    SLOC: 70
+    Comments: 3
+    Single comments: 4
+    Multi: 0
+    Blank: 22
+    - Comment Stats
+        (C % L): 3%
+        (C % S): 4%
+        (C + M % L): 3%
+** Total **
+    LOC: 383
+    LLOC: 321
+    SLOC: 285
+    Comments: 4
+    Single comments: 9
+    Multi: 11
+    Blank: 78
+    - Comment Stats
+        (C % L): 1%
+        (C % S): 1%
+        (C + M % L): 4%
+### radon mi
+login/refactor/nextbank/login.py - A (44.62)
+pix/refactor/nextbank/pix.py - A (51.65)
+extrato/refactor/nextbank/extrato.py - A (52.66)

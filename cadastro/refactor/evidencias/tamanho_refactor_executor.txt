@@ -1,0 +1,26 @@
+radon raw / mi - cadastro/refactor/nextbank/cadastro.py
+nextbank/cadastro.py
+    LOC: 181
+    LLOC: 125
+    SLOC: 120
+    Comments: 5
+    Single comments: 5
+    Multi: 12
+    Blank: 44
+    - Comment Stats
+        (C % L): 3%
+        (C % S): 4%
+        (C + M % L): 9%
+** Total **
+    LOC: 181
+    LLOC: 125
+    SLOC: 120
+    Comments: 5
+    Single comments: 5
+    Multi: 12
+    Blank: 44
+    - Comment Stats
+        (C % L): 3%
+        (C % S): 4%
+        (C + M % L): 9%
+nextbank/cadastro.py - A (51.67)

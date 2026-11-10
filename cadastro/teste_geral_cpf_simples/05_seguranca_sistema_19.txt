@@ -1,0 +1,28 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.2, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\Mateus-pc\AppData\Local\Programs\Python\Python314\python.exe
+rootdir: C:\Users\Mateus-pc\OneDrive\6 Semestre\Teste e Qualidade de Software\Projeto\Parte4_TDD\seguranca
+configfile: pytest.ini
+plugins: cov-7.1.0, anyio-4.14.2, langsmith-0.11.0, locust-2.47.0
+collecting ... collected 19 items
+
+tests/test_seguranca.py::test_CT_S01_entrada_maliciosa_recusada[' OR 1=1 --] PASSED [  5%]
+tests/test_seguranca.py::test_CT_S01_entrada_maliciosa_recusada[<script>alert(1)</script>] PASSED [ 10%]
+tests/test_seguranca.py::test_CT_S02_bloqueio_na_quinta_tentativa PASSED [ 15%]
+tests/test_seguranca.py::test_CT_S03_token_expira_em_2_min PASSED        [ 21%]
+tests/test_seguranca.py::test_CT_S03_token_nao_reutilizavel PASSED       [ 26%]
+tests/test_seguranca.py::test_CT_S03_token_de_outro_usuario_recusado PASSED [ 31%]
+tests/test_seguranca.py::test_CT_S04_extrato_de_conta_alheia_negado PASSED [ 36%]
+tests/test_seguranca.py::test_CT_S04_pix_de_conta_alheia_negado PASSED   [ 42%]
+tests/test_seguranca.py::test_CT_S05_mensagem_igual_para_cpf_inexistente_e_senha_errada PASSED [ 47%]
+tests/test_seguranca.py::test_CT_S06_cpf_mascarado_nos_logs_e_senha_ausente PASSED [ 52%]
+tests/test_seguranca.py::test_CT_S06_cpf_mascarado_na_auditoria PASSED   [ 57%]
+tests/test_seguranca.py::test_CT_S06_senha_nao_fica_em_texto_puro PASSED [ 63%]
+tests/test_seguranca.py::test_CT_S07_valor_invalido_recusado[valor0] PASSED [ 68%]
+tests/test_seguranca.py::test_CT_S07_valor_invalido_recusado[valor1] PASSED [ 73%]
+tests/test_seguranca.py::test_CT_S07_valor_invalido_recusado[abc] PASSED [ 78%]
+tests/test_seguranca.py::test_CT_S07_valor_invalido_recusado[valor3] PASSED [ 84%]
+tests/test_seguranca.py::test_CT_S08_alto_valor_exige_confirmacao_extra PASSED [ 89%]
+tests/test_seguranca.py::test_CT_S08_alto_valor_nao_contornado_por_valor_texto_ou_flag_falsa PASSED [ 94%]
+tests/test_seguranca.py::test_CT_S08_limite_exato_nao_exige PASSED       [100%]
+
+============================= 19 passed in 0.82s ==============================

@@ -1,0 +1,14 @@
+radon raw / mi - extrato/refactor/nextbank/extrato.py (medido em 07/11/2026)
+nextbank/extrato.py
+    LOC: 96
+    LLOC: 83
+    SLOC: 70
+    Comments: 3
+    Single comments: 4
+    Multi: 0
+    Blank: 22
+    - Comment Stats
+        (C % L): 3%
+        (C % S): 4%
+        (C + M % L): 3%
+nextbank/extrato.py - A (52.66)

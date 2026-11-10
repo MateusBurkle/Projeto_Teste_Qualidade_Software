@@ -1,0 +1,12 @@
+nextbank/cadastro.py
+    M 69:4 CadastroService.cadastrar - D (23)
+    C 39:0 CadastroService - B (9)
+    F 107:0 _cpf_so_digitos_ascii - A (3)
+    C 26:0 ResultadoCadastro - A (1)
+    C 32:0 DadosConta - A (1)
+    M 65:4 CadastroService.__init__ - A (1)
+    M 102:4 CadastroService.dados_conta - A (1)
+
+7 blocks (classes, functions, methods) analyzed.
+Average complexity: B (5.571428571428571)
+nextbank/cadastro.py - A (64.21)

@@ -1,0 +1,75 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.2, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\Mateus-pc\AppData\Local\Programs\Python\Python314\python.exe
+rootdir: C:\Users\Mateus-pc\OneDrive\6 Semestre\Teste e Qualidade de Software\Projeto\Parte4_TDD\extrato\red
+configfile: pytest.ini
+testpaths: tests
+plugins: anyio-4.14.2, langsmith-0.11.0
+collecting ... collected 7 items
+
+tests/test_extrato.py::test_ct_e01_periodo_valido_lista_todos_os_lancamentos FAILED [ 14%]
+tests/test_extrato.py::test_ct_e02_data_final_menor_que_inicial_retorna_erro FAILED [ 28%]
+tests/test_extrato.py::test_ct_e03_periodo_de_um_dia_retorna_lancamentos_do_dia_ate_23_59_59 FAILED [ 42%]
+tests/test_extrato.py::test_ct_e04_periodo_sem_lancamentos_retorna_extrato_vazio_com_saldo_correto FAILED [ 57%]
+tests/test_extrato.py::test_ct_e07_falha_na_geracao_retorna_mensagem_clara_e_nova_tentativa_funciona FAILED [ 71%]
+tests/test_extrato.py::test_ct_e08_dez_mil_lancamentos_sao_gerados_sem_erro_dentro_do_tempo FAILED [ 85%]
+tests/test_extrato.py::test_ct_e10_usuario_a_autenticado_pedindo_extrato_da_conta_de_b_e_negado FAILED [100%]
+
+================================== FAILURES ===================================
+____________ test_ct_e01_periodo_valido_lista_todos_os_lancamentos ____________
+tests\test_extrato.py:60: in test_ct_e01_periodo_valido_lista_todos_os_lancamentos
+    r = extrato.gerar_extrato(USUARIO_A, CONTA_A, date(2026, 10, 1), date(2026, 10, 31))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+nextbank\extrato.py:43: in gerar_extrato
+    raise NotImplementedError
+E   NotImplementedError
+____________ test_ct_e02_data_final_menor_que_inicial_retorna_erro ____________
+tests\test_extrato.py:68: in test_ct_e02_data_final_menor_que_inicial_retorna_erro
+    r = extrato.gerar_extrato(USUARIO_A, CONTA_A, date(2026, 10, 31), date(2026, 10, 1))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+nextbank\extrato.py:43: in gerar_extrato
+    raise NotImplementedError
+E   NotImplementedError
+____ test_ct_e03_periodo_de_um_dia_retorna_lancamentos_do_dia_ate_23_59_59 ____
+tests\test_extrato.py:87: in test_ct_e03_periodo_de_um_dia_retorna_lancamentos_do_dia_ate_23_59_59
+    r = svc.gerar_extrato(USUARIO_A, CONTA_A, date(2026, 10, 15), date(2026, 10, 15))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+nextbank\extrato.py:43: in gerar_extrato
+    raise NotImplementedError
+E   NotImplementedError
+_ test_ct_e04_periodo_sem_lancamentos_retorna_extrato_vazio_com_saldo_correto _
+tests\test_extrato.py:96: in test_ct_e04_periodo_sem_lancamentos_retorna_extrato_vazio_com_saldo_correto
+    r = extrato.gerar_extrato(USUARIO_A, CONTA_A, date(2026, 8, 1), date(2026, 8, 31))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+nextbank\extrato.py:43: in gerar_extrato
+    raise NotImplementedError
+E   NotImplementedError
+_ test_ct_e07_falha_na_geracao_retorna_mensagem_clara_e_nova_tentativa_funciona _
+tests\test_extrato.py:116: in test_ct_e07_falha_na_geracao_retorna_mensagem_clara_e_nova_tentativa_funciona
+    r1 = svc.gerar_extrato(USUARIO_A, CONTA_A, date(2026, 10, 1), date(2026, 10, 31))
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+nextbank\extrato.py:43: in gerar_extrato
+    raise NotImplementedError
+E   NotImplementedError
+____ test_ct_e08_dez_mil_lancamentos_sao_gerados_sem_erro_dentro_do_tempo _____
+tests\test_extrato.py:135: in test_ct_e08_dez_mil_lancamentos_sao_gerados_sem_erro_dentro_do_tempo
+    r = svc.gerar_extrato(USUARIO_A, CONTA_A, date(2026, 10, 1), date(2026, 10, 31))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+nextbank\extrato.py:43: in gerar_extrato
+    raise NotImplementedError
+E   NotImplementedError
+__ test_ct_e10_usuario_a_autenticado_pedindo_extrato_da_conta_de_b_e_negado ___
+tests\test_extrato.py:182: in test_ct_e10_usuario_a_autenticado_pedindo_extrato_da_conta_de_b_e_negado
+    r = svc.gerar_extrato(usuario_a, CONTA_B, date(2026, 10, 1), date(2026, 10, 31))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+nextbank\extrato.py:43: in gerar_extrato
+    raise NotImplementedError
+E   NotImplementedError
+=========================== short test summary info ===========================
+FAILED tests/test_extrato.py::test_ct_e01_periodo_valido_lista_todos_os_lancamentos
+FAILED tests/test_extrato.py::test_ct_e02_data_final_menor_que_inicial_retorna_erro
+FAILED tests/test_extrato.py::test_ct_e03_periodo_de_um_dia_retorna_lancamentos_do_dia_ate_23_59_59
+FAILED tests/test_extrato.py::test_ct_e04_periodo_sem_lancamentos_retorna_extrato_vazio_com_saldo_correto
+FAILED tests/test_extrato.py::test_ct_e07_falha_na_geracao_retorna_mensagem_clara_e_nova_tentativa_funciona
+FAILED tests/test_extrato.py::test_ct_e08_dez_mil_lancamentos_sao_gerados_sem_erro_dentro_do_tempo
+FAILED tests/test_extrato.py::test_ct_e10_usuario_a_autenticado_pedindo_extrato_da_conta_de_b_e_negado
+============================== 7 failed in 0.15s ==============================

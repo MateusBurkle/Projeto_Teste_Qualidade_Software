@@ -1,0 +1,242 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.2, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\Mateus-pc\AppData\Local\Programs\Python\Python314\python.exe
+rootdir: C:\Users\Mateus-pc\OneDrive\6 Semestre\Teste e Qualidade de Software\Projeto\Parte4_TDD\seguranca
+configfile: pytest_cadastro.ini
+testpaths: tests_cadastro
+plugins: cov-7.1.0, anyio-4.14.2, langsmith-0.11.0, locust-2.47.0
+collecting ... collected 109 items
+
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S09_senha_nunca_em_claro PASSED [  0%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S10_cpf_mascarado_em_logs_e_mensagens PASSED [  1%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S11_entrada_maliciosa_recusada[nome-' OR 1=1 --] PASSED [  2%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S11_entrada_maliciosa_recusada[nome-<script>alert(1)</script>] PASSED [  3%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S11_entrada_maliciosa_recusada[nome-'; DROP TABLE contas;--] PASSED [  4%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S11_entrada_maliciosa_recusada[nome-a\x00b] PASSED [  5%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S11_entrada_maliciosa_recusada[nome-a\x01b\x1b[31m] PASSED [  6%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S11_entrada_maliciosa_recusada[nome-a\r\nb] PASSED [  7%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S11_entrada_maliciosa_recusada[cpf-' OR 1=1 --] PASSED [  8%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S11_entrada_maliciosa_recusada[cpf-<script>alert(1)</script>] PASSED [  9%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S11_entrada_maliciosa_recusada[cpf-'; DROP TABLE contas;--] PASSED [ 10%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S11_entrada_maliciosa_recusada[cpf-a\x00b] PASSED [ 11%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S11_entrada_maliciosa_recusada[cpf-a\x01b\x1b[31m] PASSED [ 11%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S11_entrada_maliciosa_recusada[cpf-a\r\nb] PASSED [ 12%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S11_entrada_maliciosa_recusada[cel-' OR 1=1 --] PASSED [ 13%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S11_entrada_maliciosa_recusada[cel-<script>alert(1)</script>] PASSED [ 14%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S11_entrada_maliciosa_recusada[cel-'; DROP TABLE contas;--] PASSED [ 15%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S11_entrada_maliciosa_recusada[cel-a\x00b] PASSED [ 16%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S11_entrada_maliciosa_recusada[cel-a\x01b\x1b[31m] PASSED [ 17%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S11_entrada_maliciosa_recusada[cel-a\r\nb] PASSED [ 18%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S11_entrada_maliciosa_recusada[email-' OR 1=1 --] PASSED [ 19%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S11_entrada_maliciosa_recusada[email-<script>alert(1)</script>] PASSED [ 20%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S11_entrada_maliciosa_recusada[email-'; DROP TABLE contas;--] PASSED [ 21%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S11_entrada_maliciosa_recusada[email-a\x00b] PASSED [ 22%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S11_entrada_maliciosa_recusada[email-a\x01b\x1b[31m] PASSED [ 22%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S11_entrada_maliciosa_recusada[email-a\r\nb] PASSED [ 23%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S11_entrada_maliciosa_recusada[senha-' OR 1=1 --] PASSED [ 24%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S11_entrada_maliciosa_recusada[senha-<script>alert(1)</script>] PASSED [ 25%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S11_entrada_maliciosa_recusada[senha-'; DROP TABLE contas;--] PASSED [ 26%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S11_entrada_maliciosa_recusada[senha-a\x00b] PASSED [ 27%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S11_entrada_maliciosa_recusada[senha-a\x01b\x1b[31m] PASSED [ 28%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S11_entrada_maliciosa_recusada[senha-a\r\nb] PASSED [ 29%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S12_email_com_controle_ou_tag_recusado[a\x00@exemplo.com] FAILED [ 30%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S12_email_com_controle_ou_tag_recusado[a\x01@exemplo.com] FAILED [ 31%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S12_email_com_controle_ou_tag_recusado[<script>alert(1)</script>@exemplo.com] FAILED [ 32%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S12_email_com_controle_ou_tag_recusado[a\x7f@exemplo.com] FAILED [ 33%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S13_senha_com_surrogate_sem_excecao FAILED [ 33%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S14_strings_enormes_sem_travar[a-nome] PASSED [ 34%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S14_strings_enormes_sem_travar[a-cpf] PASSED [ 35%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S14_strings_enormes_sem_travar[a-cel] PASSED [ 36%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S14_strings_enormes_sem_travar[a-email] PASSED [ 37%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S14_strings_enormes_sem_travar[a-senha] PASSED [ 38%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S14_strings_enormes_sem_travar[a@-nome] PASSED [ 39%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S14_strings_enormes_sem_travar[a@-cpf] PASSED [ 40%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S14_strings_enormes_sem_travar[a@-cel] PASSED [ 41%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S14_strings_enormes_sem_travar[a@-email] PASSED [ 42%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S14_strings_enormes_sem_travar[a@-senha] PASSED [ 43%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S14_strings_enormes_sem_travar[a.-nome] PASSED [ 44%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S14_strings_enormes_sem_travar[a.-cpf] PASSED [ 44%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S14_strings_enormes_sem_travar[a.-cel] PASSED [ 45%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S14_strings_enormes_sem_travar[a.-email] PASSED [ 46%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S14_strings_enormes_sem_travar[a.-senha] PASSED [ 47%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S14_strings_enormes_sem_travar[1-nome] PASSED [ 48%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S14_strings_enormes_sem_travar[1-cpf] PASSED [ 49%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S14_strings_enormes_sem_travar[1-cel] PASSED [ 50%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S14_strings_enormes_sem_travar[1-email] PASSED [ 51%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S14_strings_enormes_sem_travar[1-senha] PASSED [ 52%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S14_strings_enormes_sem_travar[ -nome] PASSED [ 53%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S14_strings_enormes_sem_travar[ -cpf] PASSED [ 54%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S14_strings_enormes_sem_travar[ -cel] PASSED [ 55%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S14_strings_enormes_sem_travar[ -email] PASSED [ 55%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S14_strings_enormes_sem_travar[ -senha] PASSED [ 56%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S14_strings_enormes_sem_travar[-'-nome] PASSED [ 57%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S14_strings_enormes_sem_travar[-'-cpf] PASSED [ 58%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S14_strings_enormes_sem_travar[-'-cel] PASSED [ 59%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S14_strings_enormes_sem_travar[-'-email] PASSED [ 60%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S14_strings_enormes_sem_travar[-'-senha] PASSED [ 61%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S14_strings_enormes_sem_travar[\u0661-nome] PASSED [ 62%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S14_strings_enormes_sem_travar[\u0661-cpf] PASSED [ 63%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S14_strings_enormes_sem_travar[\u0661-cel] PASSED [ 64%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S14_strings_enormes_sem_travar[\u0661-email] PASSED [ 65%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S14_strings_enormes_sem_travar[\u0661-senha] PASSED [ 66%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S15_email_gigante_valido_recusado FAILED [ 66%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S16_cpf_unicode_nao_cria_duplicada[fullwidth] FAILED [ 67%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S16_cpf_unicode_nao_cria_duplicada[arabe] FAILED [ 68%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S17_cpf_unicode_chave_somente_latina[fullwidth] FAILED [ 69%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S17_cpf_unicode_chave_somente_latina[arabe] FAILED [ 70%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S18_celular_unicode[\uff11\uff11\uff19\uff11\uff12\uff13\uff14\uff15\uff16\uff17\uff18] PASSED [ 71%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S18_celular_unicode[\u0661\u0661\u0669\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668] PASSED [ 72%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S18_celular_unicode[\uff11\uff11912345678] FAILED [ 73%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S18_celular_unicode[\u0661\u06619\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668] FAILED [ 74%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S19_duplicidade_com_variacoes[39053344705] PASSED [ 75%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S19_duplicidade_com_variacoes[390533447-05] PASSED [ 76%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S19_duplicidade_com_variacoes[390.53344705] PASSED [ 77%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S19_duplicidade_com_variacoes[ 390.533.447-05] PASSED [ 77%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S19_duplicidade_com_variacoes[390.533.447-05 ] PASSED [ 78%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S19_duplicidade_com_variacoes[390.533.447-05\n] PASSED [ 79%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S19_duplicidade_com_variacoes[390 533 447 05] PASSED [ 80%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S19_duplicidade_com_variacoes[\uff13\uff19\uff10\uff15\uff13\uff13\uff14\uff14\uff17\uff10\uff15] FAILED [ 81%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S19_duplicidade_com_variacoes[\uff13\uff19\uff10.\uff15\uff13\uff13.\uff14\uff14\uff17-\uff10\uff15] FAILED [ 82%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S19_duplicidade_com_variacoes[\u0663\u0669\u0660\u0665\u0663\u0663\u0664\u0664\u0667\u0660\u0665] FAILED [ 83%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S20_LC04_enumeracao_registrada PASSED [ 84%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S21_tempo_duplicado_vs_invalido PASSED [ 85%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S22_forca_bruta_cadastro PASSED [ 86%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S23_conta_nasce_sem_privilegios PASSED [ 87%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S24_dados_conta_entrada_estranha[] PASSED [ 88%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S24_dados_conta_entrada_estranha[None] PASSED [ 88%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S24_dados_conta_entrada_estranha[123] PASSED [ 89%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S24_dados_conta_entrada_estranha[' OR 1=1 --] PASSED [ 90%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S24_dados_conta_entrada_estranha[*] PASSED [ 91%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S24_dados_conta_entrada_estranha[%] PASSED [ 92%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S24_dados_conta_entrada_estranha[390.533.447-0] PASSED [ 93%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S24_dados_conta_entrada_estranha[390.533.447-05' --] PASSED [ 94%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S24_dados_conta_entrada_estranha[..] PASSED [ 95%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S24_dados_conta_entrada_estranha[entrada9] PASSED [ 96%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S24_dados_conta_entrada_estranha[39053344705] PASSED [ 97%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S24_dados_conta_entrada_estranha[\uff13\uff19\uff10\uff15\uff13\uff13\uff14\uff14\uff17\uff10\uff15] PASSED [ 98%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S24_dados_conta_entrada_estranha[390.533.447-05\x00] PASSED [ 99%]
+tests_cadastro/test_seguranca_cadastro.py::test_CT_S24_dados_conta_entrada_estranha[123.456.789-09] PASSED [100%]
+
+================================== FAILURES ===================================
+______ test_CT_S12_email_com_controle_ou_tag_recusado[a\x00@exemplo.com] ______
+tests_cadastro\test_seguranca_cadastro.py:117: in test_CT_S12_email_com_controle_ou_tag_recusado
+    assert cad(svc, email=email).status != CONTA_CRIADA
+E   AssertionError: assert 'CONTA_CRIADA' != 'CONTA_CRIADA'
+E    +  where 'CONTA_CRIADA' = ResultadoCadastro(status='CONTA_CRIADA', mensagem='Conta criada com sucesso.').status
+E    +    where ResultadoCadastro(status='CONTA_CRIADA', mensagem='Conta criada com sucesso.') = cad(<nextbank.cadastro.CadastroService object at 0x0000020B593F5BB0>, email='a\x00@exemplo.com')
+______ test_CT_S12_email_com_controle_ou_tag_recusado[a\x01@exemplo.com] ______
+tests_cadastro\test_seguranca_cadastro.py:117: in test_CT_S12_email_com_controle_ou_tag_recusado
+    assert cad(svc, email=email).status != CONTA_CRIADA
+E   AssertionError: assert 'CONTA_CRIADA' != 'CONTA_CRIADA'
+E    +  where 'CONTA_CRIADA' = ResultadoCadastro(status='CONTA_CRIADA', mensagem='Conta criada com sucesso.').status
+E    +    where ResultadoCadastro(status='CONTA_CRIADA', mensagem='Conta criada com sucesso.') = cad(<nextbank.cadastro.CadastroService object at 0x0000020B593F6E10>, email='a\x01@exemplo.com')
+_ test_CT_S12_email_com_controle_ou_tag_recusado[<script>alert(1)</script>@exemplo.com] _
+tests_cadastro\test_seguranca_cadastro.py:117: in test_CT_S12_email_com_controle_ou_tag_recusado
+    assert cad(svc, email=email).status != CONTA_CRIADA
+E   AssertionError: assert 'CONTA_CRIADA' != 'CONTA_CRIADA'
+E    +  where 'CONTA_CRIADA' = ResultadoCadastro(status='CONTA_CRIADA', mensagem='Conta criada com sucesso.').status
+E    +    where ResultadoCadastro(status='CONTA_CRIADA', mensagem='Conta criada com sucesso.') = cad(<nextbank.cadastro.CadastroService object at 0x0000020B593F6F90>, email='<script>alert(1)</script>@exemplo.com')
+______ test_CT_S12_email_com_controle_ou_tag_recusado[a\x7f@exemplo.com] ______
+tests_cadastro\test_seguranca_cadastro.py:117: in test_CT_S12_email_com_controle_ou_tag_recusado
+    assert cad(svc, email=email).status != CONTA_CRIADA
+E   AssertionError: assert 'CONTA_CRIADA' != 'CONTA_CRIADA'
+E    +  where 'CONTA_CRIADA' = ResultadoCadastro(status='CONTA_CRIADA', mensagem='Conta criada com sucesso.').status
+E    +    where ResultadoCadastro(status='CONTA_CRIADA', mensagem='Conta criada com sucesso.') = cad(<nextbank.cadastro.CadastroService object at 0x0000020B593F73B0>, email='a\x7f@exemplo.com')
+_________________ test_CT_S13_senha_com_surrogate_sem_excecao _________________
+tests_cadastro\test_seguranca_cadastro.py:126: in test_CT_S13_senha_com_surrogate_sem_excecao
+    r = cad(svc, senha=senha)
+        ^^^^^^^^^^^^^^^^^^^^^
+tests_cadastro\test_seguranca_cadastro.py:60: in cad
+    return svc.cadastrar(nome, cpf, cel, email, senha, senha if conf is None else conf)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\cadastro\refactor\nextbank\cadastro.py:146: in cadastrar
+    self._gravar(normalizar_cpf(cpf), _normalizar_nome(nome),
+..\cadastro\refactor\nextbank\cadastro.py:179: in _gravar
+    self._auth.cadastrar_usuario(cpf_n, senha)
+..\cadastro\refactor\nextbank\login.py:105: in cadastrar_usuario
+    self._usuarios[normalizar_cpf(cpf)] = Usuario(_hash_senha(senha, sal), sal)
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^
+..\cadastro\refactor\nextbank\login.py:67: in _hash_senha
+    return hashlib.pbkdf2_hmac("sha256", senha.encode(), sal, _ITERACOES_HASH)
+                                         ^^^^^^^^^^^^^^
+E   UnicodeEncodeError: 'utf-8' codec can't encode character '\ud800' in position 8: surrogates not allowed
+
+During handling of the above exception, another exception occurred:
+tests_cadastro\test_seguranca_cadastro.py:128: in test_CT_S13_senha_com_surrogate_sem_excecao
+    pytest.fail(f"excecao interna: {type(e).__name__}: {e}")
+E   Failed: excecao interna: UnicodeEncodeError: 'utf-8' codec can't encode character '\ud800' in position 8: surrogates not allowed
+__________________ test_CT_S15_email_gigante_valido_recusado __________________
+tests_cadastro\test_seguranca_cadastro.py:153: in test_CT_S15_email_gigante_valido_recusado
+    assert cad(svc, email=email).status != CONTA_CRIADA
+E   AssertionError: assert 'CONTA_CRIADA' != 'CONTA_CRIADA'
+E    +  where 'CONTA_CRIADA' = ResultadoCadastro(status='CONTA_CRIADA', mensagem='Conta criada com sucesso.').status
+E    +    where ResultadoCadastro(status='CONTA_CRIADA', mensagem='Conta criada com sucesso.') = cad(<nextbank.cadastro.CadastroService object at 0x0000020B594396D0>, email='aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa...aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@exemplo.com')
+____________ test_CT_S16_cpf_unicode_nao_cria_duplicada[fullwidth] ____________
+tests_cadastro\test_seguranca_cadastro.py:162: in test_CT_S16_cpf_unicode_nao_cria_duplicada
+    assert r.status != CONTA_CRIADA
+E   AssertionError: assert 'CONTA_CRIADA' != 'CONTA_CRIADA'
+E    +  where 'CONTA_CRIADA' = ResultadoCadastro(status='CONTA_CRIADA', mensagem='Conta criada com sucesso.').status
+______________ test_CT_S16_cpf_unicode_nao_cria_duplicada[arabe] ______________
+tests_cadastro\test_seguranca_cadastro.py:162: in test_CT_S16_cpf_unicode_nao_cria_duplicada
+    assert r.status != CONTA_CRIADA
+E   AssertionError: assert 'CONTA_CRIADA' != 'CONTA_CRIADA'
+E    +  where 'CONTA_CRIADA' = ResultadoCadastro(status='CONTA_CRIADA', mensagem='Conta criada com sucesso.').status
+___________ test_CT_S17_cpf_unicode_chave_somente_latina[fullwidth] ___________
+tests_cadastro\test_seguranca_cadastro.py:172: in test_CT_S17_cpf_unicode_chave_somente_latina
+    assert all(k.isascii() for k in svc._contas)
+E   assert False
+E    +  where False = all(<generator object test_CT_S17_cpf_unicode_chave_somente_latina.<locals>.<genexpr> at 0x0000020B593F3AC0>)
+_____________ test_CT_S17_cpf_unicode_chave_somente_latina[arabe] _____________
+tests_cadastro\test_seguranca_cadastro.py:172: in test_CT_S17_cpf_unicode_chave_somente_latina
+    assert all(k.isascii() for k in svc._contas)
+E   assert False
+E    +  where False = all(<generator object test_CT_S17_cpf_unicode_chave_somente_latina.<locals>.<genexpr> at 0x0000020B59648A00>)
+_____________ test_CT_S18_celular_unicode[\uff11\uff11912345678] ______________
+tests_cadastro\test_seguranca_cadastro.py:185: in test_CT_S18_celular_unicode
+    assert svc.dados_conta(CPF).celular.isascii()
+E   AssertionError: assert False
+E    +  where False = <built-in method isascii of str object at 0x0000020B59629660>()
+E    +    where <built-in method isascii of str object at 0x0000020B59629660> = '\uff11\uff11912345678'.isascii
+E    +      where '\uff11\uff11912345678' = DadosConta(nome='Maria da Silva', celular='\uff11\uff11912345678', email='maria.silva@exemplo.com', saldo=Decimal('0.00')).celular
+E    +        where DadosConta(nome='Maria da Silva', celular='\uff11\uff11912345678', email='maria.silva@exemplo.com', saldo=Decimal('0.00')) = dados_conta('390.533.447-05')
+E    +          where dados_conta = <nextbank.cadastro.CadastroService object at 0x0000020B593F7050>.dados_conta
+_ test_CT_S18_celular_unicode[\u0661\u06619\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668] _
+tests_cadastro\test_seguranca_cadastro.py:185: in test_CT_S18_celular_unicode
+    assert svc.dados_conta(CPF).celular.isascii()
+E   AssertionError: assert False
+E    +  where False = <built-in method isascii of str object at 0x0000020B59629840>()
+E    +    where <built-in method isascii of str object at 0x0000020B59629840> = '\u0661\u06619\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668'.isascii
+E    +      where '\u0661\u06619\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668' = DadosConta(nome='Maria da Silva', celular='\u0661\u06619\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668', email='maria.silva@exemplo.com', saldo=Decimal('0.00')).celular
+E    +        where DadosConta(nome='Maria da Silva', celular='\u0661\u06619\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668', email='maria.silva@exemplo.com', saldo=Decimal('0.00')) = dados_conta('390.533.447-05')
+E    +          where dados_conta = <nextbank.cadastro.CadastroService object at 0x0000020B593F6E10>.dados_conta
+_ test_CT_S19_duplicidade_com_variacoes[\uff13\uff19\uff10\uff15\uff13\uff13\uff14\uff14\uff17\uff10\uff15] _
+tests_cadastro\test_seguranca_cadastro.py:197: in test_CT_S19_duplicidade_com_variacoes
+    assert total_contas(svc) == 1
+E   assert 2 == 1
+E    +  where 2 = total_contas(<nextbank.cadastro.CadastroService object at 0x0000020B593F6E70>)
+_ test_CT_S19_duplicidade_com_variacoes[\uff13\uff19\uff10.\uff15\uff13\uff13.\uff14\uff14\uff17-\uff10\uff15] _
+tests_cadastro\test_seguranca_cadastro.py:197: in test_CT_S19_duplicidade_com_variacoes
+    assert total_contas(svc) == 1
+E   assert 2 == 1
+E    +  where 2 = total_contas(<nextbank.cadastro.CadastroService object at 0x0000020B5943A630>)
+_ test_CT_S19_duplicidade_com_variacoes[\u0663\u0669\u0660\u0665\u0663\u0663\u0664\u0664\u0667\u0660\u0665] _
+tests_cadastro\test_seguranca_cadastro.py:197: in test_CT_S19_duplicidade_com_variacoes
+    assert total_contas(svc) == 1
+E   assert 2 == 1
+E    +  where 2 = total_contas(<nextbank.cadastro.CadastroService object at 0x0000020B594399D0>)
+=========================== short test summary info ===========================
+FAILED tests_cadastro/test_seguranca_cadastro.py::test_CT_S12_email_com_controle_ou_tag_recusado[a\x00@exemplo.com]
+FAILED tests_cadastro/test_seguranca_cadastro.py::test_CT_S12_email_com_controle_ou_tag_recusado[a\x01@exemplo.com]
+FAILED tests_cadastro/test_seguranca_cadastro.py::test_CT_S12_email_com_controle_ou_tag_recusado[<script>alert(1)</script>@exemplo.com]
+FAILED tests_cadastro/test_seguranca_cadastro.py::test_CT_S12_email_com_controle_ou_tag_recusado[a\x7f@exemplo.com]
+FAILED tests_cadastro/test_seguranca_cadastro.py::test_CT_S13_senha_com_surrogate_sem_excecao
+FAILED tests_cadastro/test_seguranca_cadastro.py::test_CT_S15_email_gigante_valido_recusado
+FAILED tests_cadastro/test_seguranca_cadastro.py::test_CT_S16_cpf_unicode_nao_cria_duplicada[fullwidth]
+FAILED tests_cadastro/test_seguranca_cadastro.py::test_CT_S16_cpf_unicode_nao_cria_duplicada[arabe]
+FAILED tests_cadastro/test_seguranca_cadastro.py::test_CT_S17_cpf_unicode_chave_somente_latina[fullwidth]
+FAILED tests_cadastro/test_seguranca_cadastro.py::test_CT_S17_cpf_unicode_chave_somente_latina[arabe]
+FAILED tests_cadastro/test_seguranca_cadastro.py::test_CT_S18_celular_unicode[\uff11\uff11912345678]
+FAILED tests_cadastro/test_seguranca_cadastro.py::test_CT_S18_celular_unicode[\u0661\u06619\u0661\u0662\u0663\u0664\u0665\u0666\u0667\u0668]
+FAILED tests_cadastro/test_seguranca_cadastro.py::test_CT_S19_duplicidade_com_variacoes[\uff13\uff19\uff10\uff15\uff13\uff13\uff14\uff14\uff17\uff10\uff15]
+FAILED tests_cadastro/test_seguranca_cadastro.py::test_CT_S19_duplicidade_com_variacoes[\uff13\uff19\uff10.\uff15\uff13\uff13.\uff14\uff14\uff17-\uff10\uff15]
+FAILED tests_cadastro/test_seguranca_cadastro.py::test_CT_S19_duplicidade_com_variacoes[\u0663\u0669\u0660\u0665\u0663\u0663\u0664\u0664\u0667\u0660\u0665]
+======================== 15 failed, 94 passed in 1.76s ========================

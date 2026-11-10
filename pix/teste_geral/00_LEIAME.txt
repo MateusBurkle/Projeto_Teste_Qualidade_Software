@@ -1,0 +1,4 @@
+Teste geral M3 (PIX) - evidencias. Python 3.14.2, pytest 9.2.0, pytest-cov 7.1.0 (--cov-branch).
+01 suite pix/refactor (20 testes); 02 suite login/refactor (14); 03 regressao CT-R01 (L01,L04,L06 contra o pacote nextbank de pix/refactor);
+04 os 14 testes de login contra o pacote de pix/refactor. CT-P17 (em 01) usa AuthService real.
+Nao executado: carga/estresse/Locust (M5).

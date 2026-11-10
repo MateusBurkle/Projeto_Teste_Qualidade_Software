@@ -1,0 +1,17 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.2, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\Mateus-pc\AppData\Local\Temp\claude\599449adf1f9746c\aedbb6f7-05fd-42f8-b3cb-e4519a108de4\scratchpad\venv\Scripts\python.exe
+rootdir: C:\Users\Mateus-pc\OneDrive\6 Semestre\Teste e Qualidade de Software\Projeto\Parte4_TDD\extrato\green
+configfile: pytest.ini
+testpaths: tests
+plugins: cov-7.1.0
+collecting ... collected 7 items
+
+tests/test_extrato.py::test_ct_e01_periodo_valido_lista_todos_os_lancamentos PASSED [ 14%]
+tests/test_extrato.py::test_ct_e02_data_final_menor_que_inicial_retorna_erro PASSED [ 28%]
+tests/test_extrato.py::test_ct_e03_periodo_de_um_dia_retorna_lancamentos_do_dia_ate_23_59_59 PASSED [ 42%]
+tests/test_extrato.py::test_ct_e04_periodo_sem_lancamentos_retorna_extrato_vazio_com_saldo_correto PASSED [ 57%]
+tests/test_extrato.py::test_ct_e07_falha_na_geracao_retorna_mensagem_clara_e_nova_tentativa_funciona PASSED [ 71%]
+tests/test_extrato.py::test_ct_e08_dez_mil_lancamentos_sao_gerados_sem_erro_dentro_do_tempo PASSED [ 85%]
+tests/test_extrato.py::test_ct_e10_usuario_a_autenticado_pedindo_extrato_da_conta_de_b_e_negado PASSED [100%]
+
+============================== 7 passed in 0.10s ==============================

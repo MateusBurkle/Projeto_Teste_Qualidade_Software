@@ -1,0 +1,40 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.2, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\MATEUS~1\AppData\Local\Temp\claude\599449adf1f9746c\47ca2da7-544c-4b14-aa0c-4b40e82e26b1\scratchpad\venv\Scripts\python.exe
+rootdir: C:\Users\Mateus-pc\OneDrive\6 Semestre\Teste e Qualidade de Software\Projeto\Parte4_TDD\pix\refactor
+configfile: pytest.ini
+testpaths: tests
+plugins: locust-2.47.0, cov-7.1.0
+collecting ... collected 20 items
+
+tests/test_pix.py::test_ct_p01_saldo_suficiente_conclui_transferencia PASSED [  5%]
+tests/test_pix.py::test_ct_p02_saldo_insuficiente_recusa_e_saldo_inalterado PASSED [ 10%]
+tests/test_pix.py::test_ct_p03_valor_igual_ao_saldo_conclui_e_zera_saldo PASSED [ 15%]
+tests/test_pix.py::test_ct_p04_valor_zero_ou_negativo_e_recusado[valor0] PASSED [ 20%]
+tests/test_pix.py::test_ct_p04_valor_zero_ou_negativo_e_recusado[valor1] PASSED [ 25%]
+tests/test_pix.py::test_ct_p05_chave_invalida_ou_inexistente_e_recusada[abc###] PASSED [ 30%]
+tests/test_pix.py::test_ct_p05_chave_invalida_ou_inexistente_e_recusada[111.444.777-35] PASSED [ 35%]
+tests/test_pix.py::test_ct_p06_falha_apos_debito_reverte_o_debito PASSED [ 40%]
+tests/test_pix.py::test_ct_p14_duas_ordens_na_mesma_conta_so_uma_conclui PASSED [ 45%]
+tests/test_pix.py::test_ct_p07_valor_igual_ao_limite_nao_exige_autenticacao_adicional PASSED [ 50%]
+tests/test_pix.py::test_ct_p08_valor_acima_do_limite_exige_autenticacao_adicional PASSED [ 55%]
+tests/test_pix.py::test_ct_p09_tabela_de_decisao_do_pix[regra1] PASSED   [ 60%]
+tests/test_pix.py::test_ct_p09_tabela_de_decisao_do_pix[regra2] PASSED   [ 65%]
+tests/test_pix.py::test_ct_p09_tabela_de_decisao_do_pix[regra3] PASSED   [ 70%]
+tests/test_pix.py::test_ct_p09_tabela_de_decisao_do_pix[regra4a] PASSED  [ 75%]
+tests/test_pix.py::test_ct_p09_tabela_de_decisao_do_pix[regra4b] PASSED  [ 80%]
+tests/test_pix.py::test_ct_p09_tabela_de_decisao_do_pix[regra5] PASSED   [ 85%]
+tests/test_pix.py::test_ct_p10_transferencia_atipica_20x_a_media_as_3h_e_retida PASSED [ 90%]
+tests/test_pix.py::test_ct_p11_alto_valor_gera_log_de_auditoria PASSED   [ 95%]
+tests/test_pix.py::test_ct_p17_usuario_a_autenticado_com_conta_de_origem_de_b_e_negado_e_registrado PASSED [100%]
+
+=============================== tests coverage ================================
+_______________ coverage: platform win32, python 3.14.2-final-0 _______________
+
+Name                   Stmts   Miss Branch BrPart  Cover   Missing
+------------------------------------------------------------------
+nextbank\__init__.py       0      0      0      0   100%
+nextbank\login.py        112     21     20      9    76%   58, 86, 88, 110-111, 114, 116, 118, 128, 130, 135, 138, 145-149, 153-154, 158-159
+nextbank\pix.py           82      0     20      0   100%
+------------------------------------------------------------------
+TOTAL                    194     21     40      9    86%
+============================= 20 passed in 0.15s ==============================

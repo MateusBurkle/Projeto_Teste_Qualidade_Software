@@ -1,0 +1,20 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.2, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\MATEUS~1\AppData\Local\Temp\claude\599449adf1f9746c\47ca2da7-544c-4b14-aa0c-4b40e82e26b1\scratchpad\venv\Scripts\python.exe
+rootdir: C:\Users\Mateus-pc\AppData\Local\Temp\claude\599449adf1f9746c\47ca2da7-544c-4b14-aa0c-4b40e82e26b1\scratchpad\merged
+configfile: \\.\nul
+plugins: locust-2.47.0, cov-7.1.0
+collecting ... collected 20 items / 19 deselected / 1 selected
+
+t_p/test_pix.py::test_ct_p17_usuario_a_autenticado_com_conta_de_origem_de_b_e_negado_e_registrado PASSED [100%]
+
+====================== 1 passed, 19 deselected in 0.87s =======================
+============================= test session starts =============================
+platform win32 -- Python 3.14.2, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\MATEUS~1\AppData\Local\Temp\claude\599449adf1f9746c\47ca2da7-544c-4b14-aa0c-4b40e82e26b1\scratchpad\venv\Scripts\python.exe
+rootdir: C:\Users\Mateus-pc\AppData\Local\Temp\claude\599449adf1f9746c\47ca2da7-544c-4b14-aa0c-4b40e82e26b1\scratchpad\merged
+configfile: \\.\nul
+plugins: locust-2.47.0, cov-7.1.0
+collecting ... collected 7 items / 6 deselected / 1 selected
+
+t_e/test_extrato.py::test_ct_e10_usuario_a_autenticado_pedindo_extrato_da_conta_de_b_e_negado PASSED [100%]
+
+======================= 1 passed, 6 deselected in 0.86s =======================

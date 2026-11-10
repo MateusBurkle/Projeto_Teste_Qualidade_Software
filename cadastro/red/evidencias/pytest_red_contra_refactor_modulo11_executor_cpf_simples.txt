@@ -1,0 +1,204 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.2, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\Mateus-pc\AppData\Local\Programs\Python\Python314\python.exe
+rootdir: C:\Users\Mateus-pc\OneDrive\6 Semestre\Teste e Qualidade de Software\Projeto\Parte4_TDD\cadastro\red
+configfile: pytest.ini
+testpaths: tests
+plugins: cov-7.1.0, anyio-4.14.2, langsmith-0.11.0, locust-2.47.0
+collecting ... collected 152 items
+
+tests/test_cadastro.py::test_ct_c01_cadastro_valido_e_login_funciona PASSED [  0%]
+tests/test_cadastro.py::test_ct_c01_dados_guardados_e_saldo_zero PASSED  [  1%]
+tests/test_cadastro.py::test_ct_c01_log_sem_senha_e_com_cpf_mascarado PASSED [  1%]
+tests/test_cadastro.py::test_ct_c02_cpf_formato_invalido[123] PASSED     [  2%]
+tests/test_cadastro.py::test_ct_c02_cpf_formato_invalido[abc.def.ghi-jk] PASSED [  3%]
+tests/test_cadastro.py::test_ct_c02_cpf_formato_invalido[390.533.447-0] PASSED [  3%]
+tests/test_cadastro.py::test_ct_c02_cpf_formato_invalido[390.533.447-055] PASSED [  4%]
+tests/test_cadastro.py::test_ct_c03_cpf_digitos_verificadores_nao_sao_validados[390.533.447-06] FAILED [  5%]
+tests/test_cadastro.py::test_ct_c03_cpf_digitos_verificadores_nao_sao_validados[123.456.789-00] FAILED [  5%]
+tests/test_cadastro.py::test_ct_c03_cpf_digitos_verificadores_nao_sao_validados[12345678900] FAILED [  6%]
+tests/test_cadastro.py::test_ct_c03_cpf_digitos_verificadores_nao_sao_validados[39053344700] FAILED [  7%]
+tests/test_cadastro.py::test_ct_c03_cpf_sequencia_repetida_recusada[111.111.111-11] PASSED [  7%]
+tests/test_cadastro.py::test_ct_c03_cpf_sequencia_repetida_recusada[00000000000] PASSED [  8%]
+tests/test_cadastro.py::test_ct_c03_cpf_sequencia_repetida_recusada[000.000.000-00] PASSED [  9%]
+tests/test_cadastro.py::test_ct_c03_cpf_sequencia_repetida_recusada[999.999.999-99] PASSED [  9%]
+tests/test_cadastro.py::test_ct_c03_cpf_sequencia_repetida_recusada[22222222222] PASSED [ 10%]
+tests/test_cadastro.py::test_ct_c03_cpf_valido_continua_aceito[390.533.447-05] PASSED [ 11%]
+tests/test_cadastro.py::test_ct_c03_cpf_valido_continua_aceito[39053344705] PASSED [ 11%]
+tests/test_cadastro.py::test_ct_c03_cpf_valido_continua_aceito[123.456.789-09] PASSED [ 12%]
+tests/test_cadastro.py::test_ct_c03_cpf_valido_continua_aceito[52998224725] PASSED [ 13%]
+tests/test_cadastro.py::test_ct_c03_cpf_digitos_unicode_recusados[\uff13\uff19\uff10.\uff15\uff13\uff13.\uff14\uff14\uff17-\uff10\uff15] PASSED [ 13%]
+tests/test_cadastro.py::test_ct_c03_cpf_digitos_unicode_recusados[\uff13\uff19\uff10\uff15\uff13\uff13\uff14\uff14\uff17\uff10\uff15] PASSED [ 14%]
+tests/test_cadastro.py::test_ct_c03_cpf_digitos_unicode_recusados[\u0663\u0669\u0660\u0665\u0663\u0663\u0664\u0664\u0667\u0660\u0665] PASSED [ 15%]
+tests/test_cadastro.py::test_ct_c03_cpf_digitos_unicode_recusados[390.533.447-\u0660\u0665] PASSED [ 15%]
+tests/test_cadastro.py::test_ct_c03_cpf_digitos_unicode_recusados[\xb3\u2079\u2070.533.447-05] PASSED [ 16%]
+tests/test_cadastro.py::test_ct_c03_cpf_dv_errado_aceito_nao_duplica_com_mascara FAILED [ 17%]
+tests/test_cadastro.py::test_ct_c04_cpf_duplicado_recusado_e_conta_intacta PASSED [ 17%]
+tests/test_cadastro.py::test_ct_c05_mesmo_cpf_com_e_sem_mascara[390.533.447-05-39053344705] PASSED [ 18%]
+tests/test_cadastro.py::test_ct_c05_mesmo_cpf_com_e_sem_mascara[39053344705-390.533.447-05] PASSED [ 19%]
+tests/test_cadastro.py::test_ct_c06_senha_sem_maiuscula PASSED           [ 19%]
+tests/test_cadastro.py::test_ct_c07_senha_sem_minuscula PASSED           [ 20%]
+tests/test_cadastro.py::test_ct_c08_senha_sem_numero PASSED              [ 21%]
+tests/test_cadastro.py::test_ct_c09_senha_sem_caractere_especial PASSED  [ 21%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[!] PASSED [ 22%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[$] PASSED [ 23%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[%] PASSED [ 23%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[^] PASSED [ 24%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[&] PASSED [ 25%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[*] PASSED [ 25%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[(] PASSED [ 26%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[)] PASSED [ 26%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[-] PASSED [ 27%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[_] PASSED [ 28%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[=] PASSED [ 28%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[+] PASSED [ 29%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[[] PASSED [ 30%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[]] PASSED [ 30%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[{] PASSED [ 31%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[}] PASSED [ 32%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[;] PASSED [ 32%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[:] PASSED [ 33%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[,] PASSED [ 34%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[.] PASSED [ 34%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[?] PASSED [ 35%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[/] PASSED [ 36%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[~] PASSED [ 36%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[|] PASSED [ 37%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito[<] PASSED [ 38%]
+tests/test_cadastro.py::test_ct_c09_qualquer_simbolo_nao_alfanumerico_e_aceito['] PASSED [ 38%]
+tests/test_cadastro.py::test_ct_c09_espaco_nao_conta_como_caractere_especial PASSED [ 39%]
+tests/test_cadastro.py::test_ct_c10_senha_curta PASSED                   [ 40%]
+tests/test_cadastro.py::test_ct_c10_senha_com_64_caracteres_e_aceita PASSED [ 40%]
+tests/test_cadastro.py::test_ct_c10_senha_com_65_caracteres_e_recusada PASSED [ 41%]
+tests/test_cadastro.py::test_ct_c11_confirmacao_de_senha_diferente PASSED [ 42%]
+tests/test_cadastro.py::test_ct_c10_senha_e_preservada_exatamente_como_digitada[Senha@123 ] PASSED [ 42%]
+tests/test_cadastro.py::test_ct_c10_senha_e_preservada_exatamente_como_digitada[Senha @123] PASSED [ 43%]
+tests/test_cadastro.py::test_ct_c12_nome_celular_ou_email_invalido[nome-Jo-NOME_INVALIDO] PASSED [ 44%]
+tests/test_cadastro.py::test_ct_c12_nome_celular_ou_email_invalido[nome-Joao123-NOME_INVALIDO] PASSED [ 44%]
+tests/test_cadastro.py::test_ct_c12_nome_celular_ou_email_invalido[nome-Ana.Maria-NOME_INVALIDO] PASSED [ 45%]
+tests/test_cadastro.py::test_ct_c12_nome_celular_ou_email_invalido[celular-1191234567-CELULAR_INVALIDO] PASSED [ 46%]
+tests/test_cadastro.py::test_ct_c12_nome_celular_ou_email_invalido[celular-11812345678-CELULAR_INVALIDO] PASSED [ 46%]
+tests/test_cadastro.py::test_ct_c12_nome_celular_ou_email_invalido[celular-11a12345678-CELULAR_INVALIDO] PASSED [ 47%]
+tests/test_cadastro.py::test_ct_c12_nome_celular_ou_email_invalido[email-maria.exemplo.com-EMAIL_INVALIDO] PASSED [ 48%]
+tests/test_cadastro.py::test_ct_c12_nome_celular_ou_email_invalido[email-maria@-EMAIL_INVALIDO] PASSED [ 48%]
+tests/test_cadastro.py::test_ct_c12_email_dominio_sem_ponto_recusado PASSED [ 49%]
+tests/test_cadastro.py::test_ct_c12_nome_aceita_acentos_hifen_apostrofo_e_espacos[Jos\xe9 da Silva] PASSED [ 50%]
+tests/test_cadastro.py::test_ct_c12_nome_aceita_acentos_hifen_apostrofo_e_espacos[\xc2ngela M\xfcller Concei\xe7\xe3o] PASSED [ 50%]
+tests/test_cadastro.py::test_ct_c12_nome_aceita_acentos_hifen_apostrofo_e_espacos[Ana-Clara] PASSED [ 51%]
+tests/test_cadastro.py::test_ct_c12_nome_aceita_acentos_hifen_apostrofo_e_espacos[D'\xc1vila] PASSED [ 51%]
+tests/test_cadastro.py::test_ct_c12_nome_aceita_acentos_hifen_apostrofo_e_espacos[Ana Maria] PASSED [ 52%]
+tests/test_cadastro.py::test_ct_c12_nome_aceita_acentos_hifen_apostrofo_e_espacos[Ana] PASSED [ 53%]
+tests/test_cadastro.py::test_ct_c12_nome_espacos_duplos_internos_sao_colapsados PASSED [ 53%]
+tests/test_cadastro.py::test_ct_c12_nome_com_espacos_nas_pontas_e_guardado_sem_eles[  Jos\xe9 da Silva] PASSED [ 54%]
+tests/test_cadastro.py::test_ct_c12_nome_com_espacos_nas_pontas_e_guardado_sem_eles[Jos\xe9 da Silva  ] PASSED [ 55%]
+tests/test_cadastro.py::test_ct_c12_nome_com_espacos_nas_pontas_e_guardado_sem_eles[   Jos\xe9 da Silva   ] PASSED [ 55%]
+tests/test_cadastro.py::test_ct_c12_nome_minimo_de_3_conta_apos_normalizar_espacos[ Jo ] PASSED [ 56%]
+tests/test_cadastro.py::test_ct_c12_nome_minimo_de_3_conta_apos_normalizar_espacos[  Jo] PASSED [ 57%]
+tests/test_cadastro.py::test_ct_c12_nome_minimo_de_3_conta_apos_normalizar_espacos[J  o] PASSED [ 57%]
+tests/test_cadastro.py::test_ct_c12_nome_minimo_de_3_conta_apos_normalizar_espacos[ J o ] PASSED [ 58%]
+tests/test_cadastro.py::test_ct_c12_nome_com_espacos_nas_pontas_e_3_letras_e_aceito PASSED [ 59%]
+tests/test_cadastro.py::test_ct_c12_nome_com_100_caracteres_e_aceito PASSED [ 59%]
+tests/test_cadastro.py::test_ct_c12_nome_com_101_caracteres_e_recusado PASSED [ 60%]
+tests/test_cadastro.py::test_ct_c12_nome_deve_comecar_e_terminar_com_letra[---] PASSED [ 61%]
+tests/test_cadastro.py::test_ct_c12_nome_deve_comecar_e_terminar_com_letra['''] PASSED [ 61%]
+tests/test_cadastro.py::test_ct_c12_nome_deve_comecar_e_terminar_com_letra[-Ana] PASSED [ 62%]
+tests/test_cadastro.py::test_ct_c12_nome_deve_comecar_e_terminar_com_letra[Ana-] PASSED [ 63%]
+tests/test_cadastro.py::test_ct_c12_nome_deve_comecar_e_terminar_com_letra[Ana'] PASSED [ 63%]
+tests/test_cadastro.py::test_ct_c12_celular_aceita_com_e_sem_mascara_e_normaliza[(11) 91234-5678] PASSED [ 64%]
+tests/test_cadastro.py::test_ct_c12_celular_aceita_com_e_sem_mascara_e_normaliza[11912345678] PASSED [ 65%]
+tests/test_cadastro.py::test_ct_c12_celular_aceita_com_e_sem_mascara_e_normaliza[(11)912345678] PASSED [ 65%]
+tests/test_cadastro.py::test_ct_c12_celular_aceita_com_e_sem_mascara_e_normaliza[11 91234-5678] PASSED [ 66%]
+tests/test_cadastro.py::test_ct_c12_ordem_de_validacao_com_dois_erros[alterados0-CPF_INVALIDO] PASSED [ 67%]
+tests/test_cadastro.py::test_ct_c12_ordem_de_validacao_com_dois_erros[alterados1-NOME_INVALIDO] PASSED [ 67%]
+tests/test_cadastro.py::test_ct_c12_ordem_de_validacao_com_dois_erros[alterados2-NOME_INVALIDO] PASSED [ 68%]
+tests/test_cadastro.py::test_ct_c12_ordem_de_validacao_com_dois_erros[alterados3-CELULAR_INVALIDO] PASSED [ 69%]
+tests/test_cadastro.py::test_ct_c12_ordem_de_validacao_com_dois_erros[alterados4-CELULAR_INVALIDO] PASSED [ 69%]
+tests/test_cadastro.py::test_ct_c12_ordem_de_validacao_com_dois_erros[alterados5-EMAIL_INVALIDO] PASSED [ 70%]
+tests/test_cadastro.py::test_ct_c12_ordem_de_validacao_com_dois_erros[alterados6-SENHA_FRACA] PASSED [ 71%]
+tests/test_cadastro.py::test_ct_c04_cpf_duplicado_tem_prioridade_sobre_senha_fraca PASSED [ 71%]
+tests/test_cadastro.py::test_ct_c04_cpf_duplicado_tem_prioridade_sobre_nome_celular_email_confirmacao[nome_invalido] PASSED [ 72%]
+tests/test_cadastro.py::test_ct_c04_cpf_duplicado_tem_prioridade_sobre_nome_celular_email_confirmacao[celular_invalido] PASSED [ 73%]
+tests/test_cadastro.py::test_ct_c04_cpf_duplicado_tem_prioridade_sobre_nome_celular_email_confirmacao[email_invalido] PASSED [ 73%]
+tests/test_cadastro.py::test_ct_c04_cpf_duplicado_tem_prioridade_sobre_nome_celular_email_confirmacao[confirmacao_diferente] PASSED [ 74%]
+tests/test_cadastro.py::test_ct_c04_cpf_invalido_vem_antes_de_duplicado[111.111.111-11] PASSED [ 75%]
+tests/test_cadastro.py::test_ct_c04_cpf_invalido_vem_antes_de_duplicado[390.533.447-0] PASSED [ 75%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[-nome] PASSED [ 76%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[-cpf] PASSED [ 76%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[-celular] PASSED [ 77%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[-email] PASSED [ 78%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[-senha] PASSED [ 78%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[-confirmacao_senha] PASSED [ 79%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[   -nome] PASSED [ 80%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[   -cpf] PASSED [ 80%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[   -celular] PASSED [ 81%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[   -email] PASSED [ 82%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[   -senha] PASSED [ 82%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[   -confirmacao_senha] PASSED [ 83%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[None-nome] PASSED [ 84%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[None-cpf] PASSED [ 84%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[None-celular] PASSED [ 85%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[None-email] PASSED [ 86%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[None-senha] PASSED [ 86%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[None-confirmacao_senha] PASSED [ 87%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[123-nome] PASSED [ 88%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[123-cpf] PASSED [ 88%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[123-celular] PASSED [ 89%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[123-email] PASSED [ 90%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[123-senha] PASSED [ 90%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[123-confirmacao_senha] PASSED [ 91%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[valor4-nome] PASSED [ 92%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[valor4-cpf] PASSED [ 92%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[valor4-celular] PASSED [ 93%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[valor4-email] PASSED [ 94%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[valor4-senha] PASSED [ 94%]
+tests/test_cadastro.py::test_ct_c13_campo_vazio_none_ou_tipo_errado[valor4-confirmacao_senha] PASSED [ 95%]
+tests/test_cadastro.py::test_ct_c13_entrada_invalida_vem_antes_de_qualquer_outra_validacao[alterados0] PASSED [ 96%]
+tests/test_cadastro.py::test_ct_c13_entrada_invalida_vem_antes_de_qualquer_outra_validacao[alterados1] PASSED [ 96%]
+tests/test_cadastro.py::test_ct_c13_entrada_invalida_vem_antes_de_qualquer_outra_validacao[alterados2] PASSED [ 97%]
+tests/test_cadastro.py::test_ct_c13_entrada_invalida_vem_antes_de_qualquer_outra_validacao[alterados3] PASSED [ 98%]
+tests/test_cadastro.py::test_ct_c13_entrada_invalida_vem_antes_de_qualquer_outra_validacao[alterados4] PASSED [ 98%]
+tests/test_cadastro.py::test_ct_c13_entrada_invalida_vem_antes_de_cpf_duplicado PASSED [ 99%]
+tests/test_cadastro.py::test_ct_c13_todos_os_campos_none PASSED          [100%]
+
+================================== FAILURES ===================================
+___ test_ct_c03_cpf_digitos_verificadores_nao_sao_validados[390.533.447-06] ___
+tests\test_cadastro.py:125: in test_ct_c03_cpf_digitos_verificadores_nao_sao_validados
+    assert res.status == CONTA_CRIADA
+E   AssertionError: assert 'CPF_INVALIDO' == 'CONTA_CRIADA'
+E     
+E     - CONTA_CRIADA
+E     + CPF_INVALIDO
+___ test_ct_c03_cpf_digitos_verificadores_nao_sao_validados[123.456.789-00] ___
+tests\test_cadastro.py:125: in test_ct_c03_cpf_digitos_verificadores_nao_sao_validados
+    assert res.status == CONTA_CRIADA
+E   AssertionError: assert 'CPF_INVALIDO' == 'CONTA_CRIADA'
+E     
+E     - CONTA_CRIADA
+E     + CPF_INVALIDO
+____ test_ct_c03_cpf_digitos_verificadores_nao_sao_validados[12345678900] _____
+tests\test_cadastro.py:125: in test_ct_c03_cpf_digitos_verificadores_nao_sao_validados
+    assert res.status == CONTA_CRIADA
+E   AssertionError: assert 'CPF_INVALIDO' == 'CONTA_CRIADA'
+E     
+E     - CONTA_CRIADA
+E     + CPF_INVALIDO
+____ test_ct_c03_cpf_digitos_verificadores_nao_sao_validados[39053344700] _____
+tests\test_cadastro.py:125: in test_ct_c03_cpf_digitos_verificadores_nao_sao_validados
+    assert res.status == CONTA_CRIADA
+E   AssertionError: assert 'CPF_INVALIDO' == 'CONTA_CRIADA'
+E     
+E     - CONTA_CRIADA
+E     + CPF_INVALIDO
+__________ test_ct_c03_cpf_dv_errado_aceito_nao_duplica_com_mascara ___________
+tests\test_cadastro.py:155: in test_ct_c03_cpf_dv_errado_aceito_nao_duplica_com_mascara
+    assert cadastrar(svc, cpf="123.456.789-00").status == CONTA_CRIADA
+E   AssertionError: assert 'CPF_INVALIDO' == 'CONTA_CRIADA'
+E     
+E     - CONTA_CRIADA
+E     + CPF_INVALIDO
+=========================== short test summary info ===========================
+FAILED tests/test_cadastro.py::test_ct_c03_cpf_digitos_verificadores_nao_sao_validados[390.533.447-06]
+FAILED tests/test_cadastro.py::test_ct_c03_cpf_digitos_verificadores_nao_sao_validados[123.456.789-00]
+FAILED tests/test_cadastro.py::test_ct_c03_cpf_digitos_verificadores_nao_sao_validados[12345678900]
+FAILED tests/test_cadastro.py::test_ct_c03_cpf_digitos_verificadores_nao_sao_validados[39053344700]
+FAILED tests/test_cadastro.py::test_ct_c03_cpf_dv_errado_aceito_nao_duplica_com_mascara
+======================== 5 failed, 147 passed in 1.97s ========================

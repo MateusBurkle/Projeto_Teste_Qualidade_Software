@@ -1,0 +1,43 @@
+TESTE GERAL DEPOIS DA RESOLUCAO DE INC-S03 - 2026-11-08. Python 3.14.2, pytest 9.1.1, coverage 7.17.2 (--cov-branch).
+PYTHONDONTWRITEBYTECODE=1, -p no:cacheprovider, COVERAGE_FILE no scratchpad (fora do projeto). Nada apagado, nenhum codigo alterado.
+
+== 1. Suites (pytest dentro de cada pasta) ==
+login/refactor   : 14 passed
+pix/refactor     : 20 passed
+extrato/refactor :  7 passed   -> refactor = 41/41
+sistema          :  5 passed
+seguranca        : 19 passed   -> total 65/65, 0 falhas
+
+== 2. CT-R01 (pacote consolidado montado no scratchpad com login/pix/extrato de refactor) ==
+CT-L01 PASSED | CT-L04 PASSED | CT-L06 PASSED | CT-P01 PASSED | CT-P06 PASSED | CT-P08 PASSED  -> 6 passed, 28 deselected (6/6)
+CT-E05/E06 sao Locust; nao reexecutados.
+
+== 3. Cobertura (instrucoes e ramos) ==
+(a) Refactor 41 testes (login+pix+extrato refactor consolidados):
+  extrato.py 65 instr 0 perdidas, 12 ramos 0 parciais, 100%
+  login.py  112 instr 1 perdida (linha 114), 20 ramos 1 parcial, 98%
+  pix.py     88 instr 1 perdida (linha 95), 22 ramos 1 parcial, 98%
+  TOTAL 265 instr, 2 perdidas (263 cobertas), 54 ramos, 2 parciais (52 cobertos), 99%
+(b) Refactor + sistema + seguranca (65 testes): 265 instr, 0 perdidas; 54 ramos, 0 parciais; 100%.
+Comparacao:
+  teste_geral_final (baseline): 259 instr, 1 perdida (258), 52 ramos, 1 parcial (51), 99%, 41 passed
+  teste_geral_depois (antes INC-S03): 41 -> 39 passed (2 falhas: CT-P11, CT-P17); 265 instr/54 ramos, 2 perdidas/2 parciais, 99%; com sistema+seguranca 63/65, 100%
+  agora: 41/41 passed; 265 instr/54 ramos; 2 perdidas/2 parciais (login:114, pix:95), 99%; com sistema+seguranca 65/65, 100%
+O que mudou e por que:
+  - 259 -> 265 instr e 52 -> 54 ramos vs baseline: pix.py cresceu de 82 para 88 instr (correcao INC-S01/S02: mascaramento do usuario na auditoria, validacao de valor RS-07 bool/nao numerico, etc.). Os 6 instr/2 ramos novos sao cobertos, exceto pix.py:95 (return False do valor nao numerico/bool), nao exercitado pelos 20 CT-P; e coberto por sistema/seguranca.
+  - 39/41 -> 41/41: CT-P11 e CT-P17 foram alinhados ao CPF mascarado (RS-05/RS-06); os 2 falhavam por esperar CPF/usuario em claro. Nao houve mudanca de codigo de producao nesta etapa.
+  - login.py:114 (usuario inexistente -> _negar) continua nao coberto nos testes refactor; coberto por seguranca.
+
+== 4. Diff (--strip-trailing-cr) ==
+pix/refactor/nextbank/pix.py x sistema/nextbank/pix.py : IDENTICO (sem diferencas)
+login.py: login/refactor, pix/refactor, extrato/refactor x sistema : IDENTICO (cmp byte a byte login/refactor x sistema tambem igual)
+extrato.py: extrato/refactor x sistema : IDENTICO
+
+== 5. Evidencia 'antes' pix/refactor/evidencias/antes_INC-S03 ==
+7 arquivos presentes (LEIAME, pytest_refactor, cobertura_refactor, complexidade, tamanho, nextbank/pix.py, tests/test_pix.py); datas 2026-11-07, anteriores ao pix.py atual (2026-11-08).
+pix.py antigo sem 'mascarar' (0 ocorrencias; o atual tem 7); test antigo ainda espera CPF em claro (CPF_A = "390.533.447-05"); pytest_refactor.txt: 20 passed; cobertura_refactor.txt: pix.py 82 instr 100%.
+Reexecucao (copia no scratchpad: pix.py antigo + login.py + test_pix.py antigo): 20 passed -> evidencia intacta e ainda reproduzivel.
+(Sem hash anterior registrado; integridade verificada por conteudo, datas e reexecucao.)
+
+== Defeitos ==
+Nenhum novo defeito. Observacao: existem .coverage/__pycache__ pre-existentes em login/green e login/red (anteriores a esta execucao; nao removidos).

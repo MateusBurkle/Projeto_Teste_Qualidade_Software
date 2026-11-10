@@ -1,0 +1,21 @@
+== login green: login.py
+8 blocks (classes, functions, methods) analyzed.
+Average complexity: A (2.875)
+    M 40:4 AuthService.login - B (7)
+    M 67:4 AuthService.confirmar_segundo_fator - B (7)
+    SLOC: 75
+login/green/nextbank/login.py - A (39.02)
+== pix green: pix.py
+12 blocks (classes, functions, methods) analyzed.
+Average complexity: A (2.0)
+    M 57:4 PixService.transferir - B (9)
+    C 31:0 PixService - A (3)
+    SLOC: 80
+pix/green/nextbank/pix.py - A (46.54)
+== extrato green: extrato.py
+9 blocks (classes, functions, methods) analyzed.
+Average complexity: A (2.4444444444444446)
+    M 57:4 ExtratoService._gerar - B (8)
+    C 36:0 ExtratoService - A (4)
+    SLOC: 57
+extrato/green/nextbank/extrato.py - A (56.08)

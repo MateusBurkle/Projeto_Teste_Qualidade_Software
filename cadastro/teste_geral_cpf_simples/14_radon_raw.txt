@@ -1,0 +1,72 @@
+cadastro.py
+    LOC: 197
+    LLOC: 135
+    SLOC: 128
+    Comments: 9
+    Single comments: 11
+    Multi: 12
+    Blank: 46
+    - Comment Stats
+        (C % L): 5%
+        (C % S): 7%
+        (C + M % L): 11%
+extrato.py
+    LOC: 96
+    LLOC: 83
+    SLOC: 70
+    Comments: 3
+    Single comments: 4
+    Multi: 0
+    Blank: 22
+    - Comment Stats
+        (C % L): 3%
+        (C % S): 4%
+        (C + M % L): 3%
+login.py
+    LOC: 159
+    LLOC: 131
+    SLOC: 118
+    Comments: 0
+    Single comments: 2
+    Multi: 5
+    Blank: 34
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 3%
+pix.py
+    LOC: 128
+    LLOC: 107
+    SLOC: 97
+    Comments: 1
+    Single comments: 3
+    Multi: 6
+    Blank: 22
+    - Comment Stats
+        (C % L): 1%
+        (C % S): 1%
+        (C + M % L): 5%
+__init__.py
+    LOC: 0
+    LLOC: 0
+    SLOC: 0
+    Comments: 0
+    Single comments: 0
+    Multi: 0
+    Blank: 0
+    - Comment Stats
+        (C % L): 0%
+        (C % S): 0%
+        (C + M % L): 0%
+** Total **
+    LOC: 580
+    LLOC: 456
+    SLOC: 413
+    Comments: 13
+    Single comments: 20
+    Multi: 23
+    Blank: 124
+    - Comment Stats
+        (C % L): 2%
+        (C % S): 3%
+        (C + M % L): 6%

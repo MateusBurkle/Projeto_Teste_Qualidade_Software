@@ -1,0 +1,26 @@
+radon raw / mi - pix/refactor/nextbank/pix.py (medido em 08/11/2026 apos correcao INC-S03)
+nextbank/pix.py
+    LOC: 128
+    LLOC: 107
+    SLOC: 97
+    Comments: 1
+    Single comments: 3
+    Multi: 6
+    Blank: 22
+    - Comment Stats
+        (C % L): 1%
+        (C % S): 1%
+        (C + M % L): 5%
+** Total **
+    LOC: 128
+    LLOC: 107
+    SLOC: 97
+    Comments: 1
+    Single comments: 3
+    Multi: 6
+    Blank: 22
+    - Comment Stats
+        (C % L): 1%
+        (C % S): 1%
+        (C + M % L): 5%
+nextbank/pix.py - A (51.65)

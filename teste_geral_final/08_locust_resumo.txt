@@ -1,0 +1,8 @@
+Extraido de locust/evidencias/*.txt (veredito) e *_stats.csv. Execucao de 08/11/2026 (Locust 2.47.0, em memoria). Nada reexecutado.
+Duracoes reais (timestamps do log): carga 5 min; pico 3,5 min; estresse 6,5 min; resistencia 30 min.
+CT-P12 carga 100 usuarios: 14.790 req (veredito) / 0 falhas; media 0,011 ms; P95 0 ms; sucesso 100%.   [meta: media<=2 s, P95<=3 s, sucesso>=99,9%]
+CT-P13 pico 10x (1.000 usuarios): 30.591 req no pico, erro 0,000%; recuperacao 5.987 req, media 0,012 ms, P95 0 ms. [meta: erro<1%]
+CT-P15 estresse ate 20x (2.000 usuarios): 158.802 req, 0 falhas; recuperacao 6.428 req, media 0,012 ms; 4.000 contas, 0 divergentes. [meta: recuperar em ate 2 min; sem perda/duplicidade]
+CT-P16 resistencia 30 min: 89.494 req, erro 0%; media 0,015 -> 0,016 ms (+3,2%, piso de ruido 1 ms); memoria 1.400 -> 1.857 KiB; 200 contas, 0 divergentes. [meta: +20% no maximo]
+CT-E09: 1.000 req, 100%, media 0,034 ms; CT-E05 e E06: 0 inconsistencias (N=50).
+Observacoes: (1) os *_stats.csv trazem contagens um pouco menores que o veredito (ex.: P12 14.759 x 14.790; E09 958 x 1.000) porque o CSV e gravado periodicamente e fechou antes das ultimas requisicoes; o Word usa o veredito. (2) Tempos em microssegundos: execucao em memoria, sem rede, banco ou latencia injetada (limitacao ja registrada no Word 4.5.4). (3) Tracebacks do writer de CSV do Locust no encerramento do cenario do extrato (ferramenta, severidade baixa).

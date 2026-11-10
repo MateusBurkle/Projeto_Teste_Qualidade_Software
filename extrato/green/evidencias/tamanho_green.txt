@@ -1,0 +1,14 @@
+radon raw / mi - extrato/green/nextbank/extrato.py (medido em 07/11/2026)
+nextbank/extrato.py
+    LOC: 72
+    LLOC: 67
+    SLOC: 57
+    Comments: 3
+    Single comments: 1
+    Multi: 0
+    Blank: 14
+    - Comment Stats
+        (C % L): 4%
+        (C % S): 5%
+        (C + M % L): 4%
+nextbank/extrato.py - A (56.08)

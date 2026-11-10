@@ -1,0 +1,19 @@
+NOTA: pytest-cov e radon NAO estao instalados (requirements.txt os lista). Fallback stdlib: trace (linhas) e ast (McCabe aprox. radon). Sem cobertura de decisoes (branch).
+.....                                                                    [100%]
+5 passed in 1.17s
+pytest rc=0
+Cobertura de instrucoes (linhas, stdlib trace) pix.py: 85/92 = 92.4%
+Linhas sem cobertura: [78, 80, 82, 102, 104, 105, 106]
+  __init__ (linha 34) CC=1
+  cadastrar_conta (linha 45) CC=1
+  cadastrar_chave (linha 50) CC=1
+  saldo (linha 53) CC=1
+  saldo_reservado (linha 56) CC=1
+  transferir (linha 59) CC=5
+  _validar_basico (linha 72) CC=7
+  _exigir_autenticacao (linha 85) CC=2
+  _reter_para_analise (linha 92) CC=1
+  _debitar_e_creditar (linha 97) CC=3
+  _registrar (linha 109) CC=1
+  registros_auditoria (linha 114) CC=1
+CC media=2.08 maxima=7

@@ -1,0 +1,7 @@
+Evidencias M6 - teste de sistema (ST-01..ST-05), executado em 2026-11-08. Nenhum teste/codigo alterado.
+diff_modulos.txt      diff + SHA-256: login/pix/extrato do sistema identicos aos de */refactor.
+pytest_rodada1..3.txt 3 execucoes (PYTHONDONTWRITEBYTECODE=1, -p no:cacheprovider): 5 passed cada (0,48-0,52 s).
+cobertura_sistema.txt pytest-cov (--cov=nextbank --cov-branch), venv do scratchpad (python do sistema nao tem pytest-cov);
+                      arquivo .coverage gravado fora do projeto. Total 90% (259 instr., 19 perdidas; 52 ramos, 13 parciais).
+regressao_refactor.txt regressao rapida dos modulos: login 14, pix 20, extrato 7 passed.
+Limitacao: Sessao (porteiro) e definida no proprio teste; os modulos reais nao verificam sessao.

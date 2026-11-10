@@ -1,0 +1,15 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.2, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\Mateus-pc\AppData\Local\Programs\Python\Python314\python.exe
+rootdir: C:\Users\Mateus-pc\OneDrive\6 Semestre\Teste e Qualidade de Software\Projeto\Parte4_TDD\demo
+configfile: pytest.ini
+testpaths: tests
+plugins: cov-7.1.0, anyio-4.14.2, langsmith-0.11.0, locust-2.47.0
+collecting ... collected 5 items
+
+tests/test_demo.py::test_auto_termina_com_sucesso PASSED                 [ 20%]
+tests/test_demo.py::test_conta_criada_e_cpf_duplicado_recusado PASSED    [ 40%]
+tests/test_demo.py::test_login_com_segundo_fator_liberado PASSED         [ 60%]
+tests/test_demo.py::test_saldo_credito_pix_e_extrato PASSED              [ 80%]
+tests/test_demo.py::test_saida_mensagens_cpf_mascarado_e_sem_senha PASSED [100%]
+
+============================== 5 passed in 0.36s ==============================

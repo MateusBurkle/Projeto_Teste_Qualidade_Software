@@ -1,0 +1,68 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-9.2.0, pluggy-1.7.0 -- /usr/bin/python3
+rootdir: /sessions/rcw-01sxdnqmpeatoj79kt4b9b74/mnt/Projeto/Parte4_TDD/login/red
+configfile: pytest.ini
+testpaths: tests
+plugins: cov-7.1.0
+collecting ... collected 14 items
+
+tests/test_login.py::test_ct_l01_credenciais_validas_solicitam_segundo_fator FAILED [  7%]
+tests/test_login.py::test_ct_l02_senha_invalida_negada_com_mensagem_generica FAILED [ 14%]
+tests/test_login.py::test_ct_l03_quarta_tentativa_invalida_conta_ainda_ativa FAILED [ 21%]
+tests/test_login.py::test_ct_l04_quinta_tentativa_invalida_bloqueia_conta FAILED [ 28%]
+tests/test_login.py::test_ct_l05_token_valido_dentro_do_prazo FAILED     [ 35%]
+tests/test_login.py::test_ct_l06_token_expirado FAILED                   [ 42%]
+tests/test_login.py::test_ct_l07_token_nao_pode_ser_reutilizado FAILED   [ 50%]
+tests/test_login.py::test_ct_l08_regra1_senha_ok_token_ok_conta_ativa_libera FAILED [ 57%]
+tests/test_login.py::test_ct_l08_regra2_senha_ok_token_invalido_nega FAILED [ 64%]
+tests/test_login.py::test_ct_l08_regra3_senha_errada_nega_e_conta_tentativa FAILED [ 71%]
+tests/test_login.py::test_ct_l08_regra4_senha_ok_token_ok_conta_bloqueada_nega FAILED [ 78%]
+tests/test_login.py::test_ct_l09_injecao_sql_no_cpf_e_rejeitada[' OR '1'='1] FAILED [ 85%]
+tests/test_login.py::test_ct_l09_injecao_sql_no_cpf_e_rejeitada[52998224725'; DROP TABLE usuarios;--] FAILED [ 92%]
+tests/test_login.py::test_ct_l10_senha_nao_aparece_em_resposta_nem_em_log FAILED [100%]
+
+=================================== FAILURES ===================================
+E   NotImplementedError
+/sessions/rcw-01sxdnqmpeatoj79kt4b9b74/mnt/Projeto/Parte4_TDD/login/red/nextbank/login.py:25: NotImplementedError
+E   NotImplementedError
+/sessions/rcw-01sxdnqmpeatoj79kt4b9b74/mnt/Projeto/Parte4_TDD/login/red/nextbank/login.py:25: NotImplementedError
+E   NotImplementedError
+/sessions/rcw-01sxdnqmpeatoj79kt4b9b74/mnt/Projeto/Parte4_TDD/login/red/nextbank/login.py:25: NotImplementedError
+E   NotImplementedError
+/sessions/rcw-01sxdnqmpeatoj79kt4b9b74/mnt/Projeto/Parte4_TDD/login/red/nextbank/login.py:25: NotImplementedError
+E   NotImplementedError
+/sessions/rcw-01sxdnqmpeatoj79kt4b9b74/mnt/Projeto/Parte4_TDD/login/red/nextbank/login.py:25: NotImplementedError
+E   NotImplementedError
+/sessions/rcw-01sxdnqmpeatoj79kt4b9b74/mnt/Projeto/Parte4_TDD/login/red/nextbank/login.py:25: NotImplementedError
+E   NotImplementedError
+/sessions/rcw-01sxdnqmpeatoj79kt4b9b74/mnt/Projeto/Parte4_TDD/login/red/nextbank/login.py:25: NotImplementedError
+E   NotImplementedError
+/sessions/rcw-01sxdnqmpeatoj79kt4b9b74/mnt/Projeto/Parte4_TDD/login/red/nextbank/login.py:25: NotImplementedError
+E   NotImplementedError
+/sessions/rcw-01sxdnqmpeatoj79kt4b9b74/mnt/Projeto/Parte4_TDD/login/red/nextbank/login.py:25: NotImplementedError
+E   NotImplementedError
+/sessions/rcw-01sxdnqmpeatoj79kt4b9b74/mnt/Projeto/Parte4_TDD/login/red/nextbank/login.py:25: NotImplementedError
+E   NotImplementedError
+/sessions/rcw-01sxdnqmpeatoj79kt4b9b74/mnt/Projeto/Parte4_TDD/login/red/nextbank/login.py:25: NotImplementedError
+E   NotImplementedError
+/sessions/rcw-01sxdnqmpeatoj79kt4b9b74/mnt/Projeto/Parte4_TDD/login/red/nextbank/login.py:25: NotImplementedError
+E   NotImplementedError
+/sessions/rcw-01sxdnqmpeatoj79kt4b9b74/mnt/Projeto/Parte4_TDD/login/red/nextbank/login.py:25: NotImplementedError
+E   NotImplementedError
+/sessions/rcw-01sxdnqmpeatoj79kt4b9b74/mnt/Projeto/Parte4_TDD/login/red/nextbank/login.py:25: NotImplementedError
+=========================== short test summary info ============================
+FAILED tests/test_login.py::test_ct_l01_credenciais_validas_solicitam_segundo_fator
+FAILED tests/test_login.py::test_ct_l02_senha_invalida_negada_com_mensagem_generica
+FAILED tests/test_login.py::test_ct_l03_quarta_tentativa_invalida_conta_ainda_ativa
+FAILED tests/test_login.py::test_ct_l04_quinta_tentativa_invalida_bloqueia_conta
+FAILED tests/test_login.py::test_ct_l05_token_valido_dentro_do_prazo - NotImp...
+FAILED tests/test_login.py::test_ct_l06_token_expirado - NotImplementedError
+FAILED tests/test_login.py::test_ct_l07_token_nao_pode_ser_reutilizado - NotI...
+FAILED tests/test_login.py::test_ct_l08_regra1_senha_ok_token_ok_conta_ativa_libera
+FAILED tests/test_login.py::test_ct_l08_regra2_senha_ok_token_invalido_nega
+FAILED tests/test_login.py::test_ct_l08_regra3_senha_errada_nega_e_conta_tentativa
+FAILED tests/test_login.py::test_ct_l08_regra4_senha_ok_token_ok_conta_bloqueada_nega
+FAILED tests/test_login.py::test_ct_l09_injecao_sql_no_cpf_e_rejeitada[' OR '1'='1]
+FAILED tests/test_login.py::test_ct_l09_injecao_sql_no_cpf_e_rejeitada[52998224725'; DROP TABLE usuarios;--]
+FAILED tests/test_login.py::test_ct_l10_senha_nao_aparece_em_resposta_nem_em_log
+============================== 14 failed in 0.08s ==============================

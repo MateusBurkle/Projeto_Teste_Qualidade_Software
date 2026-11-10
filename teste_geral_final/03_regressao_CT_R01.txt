@@ -1,0 +1,16 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.2, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\MATEUS~1\AppData\Local\Temp\claude\599449adf1f9746c\47ca2da7-544c-4b14-aa0c-4b40e82e26b1\scratchpad\venv\Scripts\python.exe
+rootdir: C:\Users\Mateus-pc\AppData\Local\Temp\claude\599449adf1f9746c\47ca2da7-544c-4b14-aa0c-4b40e82e26b1\scratchpad\merged
+configfile: \\.\nul
+plugins: locust-2.47.0, cov-7.1.0
+collecting ... collected 41 items / 35 deselected / 6 selected
+
+t_l/test_login.py::test_ct_l01_credenciais_validas_solicitam_segundo_fator PASSED [ 16%]
+t_l/test_login.py::test_ct_l04_quinta_tentativa_invalida_bloqueia_conta PASSED [ 33%]
+t_l/test_login.py::test_ct_l06_token_expirado PASSED                     [ 50%]
+t_p/test_pix.py::test_ct_p01_saldo_suficiente_conclui_transferencia PASSED [ 66%]
+t_p/test_pix.py::test_ct_p06_falha_apos_debito_reverte_o_debito PASSED   [ 83%]
+t_p/test_pix.py::test_ct_p08_valor_acima_do_limite_exige_autenticacao_adicional PASSED [100%]
+
+====================== 6 passed, 35 deselected in 1.13s =======================
+NOTA: CT-E05 e CT-E06 sao do Locust (ver locust/evidencias/CT-E05_E06_E09_extrato.txt); nao sao pytest.

@@ -1,0 +1,17 @@
+nextbank/extrato.py
+    M 88:4 ExtratoService._separar_lancamentos - A (4)
+    C 53:0 ExtratoService - A (3)
+    M 66:4 ExtratoService.gerar_extrato - A (3)
+    M 74:4 ExtratoService._gerar - A (3)
+    F 39:0 _movimento - A (2)
+    F 44:0 _somar_movimentos - A (2)
+    M 85:4 ExtratoService._conta_do_usuario - A (2)
+    F 48:0 _limites_do_periodo - A (1)
+    C 23:0 Lancamento - A (1)
+    C 31:0 ResultadoExtrato - A (1)
+    M 54:4 ExtratoService.__init__ - A (1)
+    M 59:4 ExtratoService.cadastrar_conta - A (1)
+    M 63:4 ExtratoService.registrar_lancamento - A (1)
+
+13 blocks (classes, functions, methods) analyzed.
+Average complexity: A (1.9230769230769231)

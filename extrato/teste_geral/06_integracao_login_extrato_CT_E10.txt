@@ -1,0 +1,19 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.2, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\Mateus-pc\AppData\Local\Temp\claude\599449adf1f9746c\aedbb6f7-05fd-42f8-b3cb-e4519a108de4\scratchpad\venv\Scripts\python.exe
+rootdir: C:\Users\Mateus-pc\OneDrive\6 Semestre\Teste e Qualidade de Software\Projeto\Parte4_TDD\extrato\refactor
+configfile: pytest.ini
+testpaths: tests
+plugins: cov-7.1.0
+collecting ... collected 7 items / 6 deselected / 1 selected
+
+tests/test_extrato.py::test_ct_e10_usuario_a_autenticado_pedindo_extrato_da_conta_de_b_e_negado PASSED [100%]
+
+=============================== tests coverage ================================
+_______________ coverage: platform win32, python 3.14.2-final-0 _______________
+
+Name                Stmts   Miss Branch BrPart  Cover   Missing
+---------------------------------------------------------------
+nextbank\login.py     112     21     20      9    76%   58, 86, 88, 110-111, 114, 116, 118, 128, 130, 135, 138, 145-149, 153-154, 158-159
+---------------------------------------------------------------
+TOTAL                 112     21     20      9    76%
+======================= 1 passed, 6 deselected in 0.12s =======================

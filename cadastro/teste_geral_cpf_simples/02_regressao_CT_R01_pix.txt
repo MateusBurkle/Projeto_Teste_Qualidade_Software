@@ -1,0 +1,12 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.2, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\Mateus-pc\AppData\Local\Programs\Python\Python314\python.exe
+rootdir: C:\Users\Mateus-pc\OneDrive\6 Semestre\Teste e Qualidade de Software\Projeto\Parte4_TDD\pix\refactor
+configfile: pytest.ini
+plugins: cov-7.1.0, anyio-4.14.2, langsmith-0.11.0, locust-2.47.0
+collecting ... collected 20 items / 17 deselected / 3 selected
+
+tests/test_pix.py::test_ct_p01_saldo_suficiente_conclui_transferencia PASSED [ 33%]
+tests/test_pix.py::test_ct_p06_falha_apos_debito_reverte_o_debito PASSED [ 66%]
+tests/test_pix.py::test_ct_p08_valor_acima_do_limite_exige_autenticacao_adicional PASSED [100%]
+
+====================== 3 passed, 17 deselected in 0.03s =======================

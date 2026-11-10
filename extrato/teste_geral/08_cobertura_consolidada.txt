@@ -1,0 +1,61 @@
+Cobertura consolidada (extrato + login + pix): 41 testes (7+14+20). Pacote montado em scratchpad com extrato.py/login.py de extrato/refactor e pix.py de pix/refactor (login.py identico nos pacotes).
+============================= test session starts =============================
+platform win32 -- Python 3.14.2, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\MATEUS~1\AppData\Local\Temp\claude\599449adf1f9746c\aedbb6f7-05fd-42f8-b3cb-e4519a108de4\scratchpad\venv\Scripts\python.exe
+rootdir: C:\Users\Mateus-pc\AppData\Local\Temp\claude\599449adf1f9746c\188a2e9b-4be2-4548-8870-e675fcdc001d\scratchpad\merged
+plugins: cov-7.1.0
+collecting ... collected 41 items
+
+t_e/test_extrato.py::test_ct_e01_periodo_valido_lista_todos_os_lancamentos PASSED [  2%]
+t_e/test_extrato.py::test_ct_e02_data_final_menor_que_inicial_retorna_erro PASSED [  4%]
+t_e/test_extrato.py::test_ct_e03_periodo_de_um_dia_retorna_lancamentos_do_dia_ate_23_59_59 PASSED [  7%]
+t_e/test_extrato.py::test_ct_e04_periodo_sem_lancamentos_retorna_extrato_vazio_com_saldo_correto PASSED [  9%]
+t_e/test_extrato.py::test_ct_e07_falha_na_geracao_retorna_mensagem_clara_e_nova_tentativa_funciona PASSED [ 12%]
+t_e/test_extrato.py::test_ct_e08_dez_mil_lancamentos_sao_gerados_sem_erro_dentro_do_tempo PASSED [ 14%]
+t_e/test_extrato.py::test_ct_e10_usuario_a_autenticado_pedindo_extrato_da_conta_de_b_e_negado PASSED [ 17%]
+t_l/test_login.py::test_ct_l01_credenciais_validas_solicitam_segundo_fator PASSED [ 19%]
+t_l/test_login.py::test_ct_l02_senha_invalida_negada_com_mensagem_generica PASSED [ 21%]
+t_l/test_login.py::test_ct_l03_quarta_tentativa_invalida_conta_ainda_ativa PASSED [ 24%]
+t_l/test_login.py::test_ct_l04_quinta_tentativa_invalida_bloqueia_conta PASSED [ 26%]
+t_l/test_login.py::test_ct_l05_token_valido_dentro_do_prazo PASSED       [ 29%]
+t_l/test_login.py::test_ct_l06_token_expirado PASSED                     [ 31%]
+t_l/test_login.py::test_ct_l07_token_nao_pode_ser_reutilizado PASSED     [ 34%]
+t_l/test_login.py::test_ct_l08_regra1_senha_ok_token_ok_conta_ativa_libera PASSED [ 36%]
+t_l/test_login.py::test_ct_l08_regra2_senha_ok_token_invalido_nega PASSED [ 39%]
+t_l/test_login.py::test_ct_l08_regra3_senha_errada_nega_e_conta_tentativa PASSED [ 41%]
+t_l/test_login.py::test_ct_l08_regra4_senha_ok_token_ok_conta_bloqueada_nega PASSED [ 43%]
+t_l/test_login.py::test_ct_l09_injecao_sql_no_cpf_e_rejeitada[' OR '1'='1] PASSED [ 46%]
+t_l/test_login.py::test_ct_l09_injecao_sql_no_cpf_e_rejeitada[52998224725'; DROP TABLE usuarios;--] PASSED [ 48%]
+t_l/test_login.py::test_ct_l10_senha_nao_aparece_em_resposta_nem_em_log PASSED [ 51%]
+t_p/test_pix.py::test_ct_p01_saldo_suficiente_conclui_transferencia PASSED [ 53%]
+t_p/test_pix.py::test_ct_p02_saldo_insuficiente_recusa_e_saldo_inalterado PASSED [ 56%]
+t_p/test_pix.py::test_ct_p03_valor_igual_ao_saldo_conclui_e_zera_saldo PASSED [ 58%]
+t_p/test_pix.py::test_ct_p04_valor_zero_ou_negativo_e_recusado[valor0] PASSED [ 60%]
+t_p/test_pix.py::test_ct_p04_valor_zero_ou_negativo_e_recusado[valor1] PASSED [ 63%]
+t_p/test_pix.py::test_ct_p05_chave_invalida_ou_inexistente_e_recusada[abc###] PASSED [ 65%]
+t_p/test_pix.py::test_ct_p05_chave_invalida_ou_inexistente_e_recusada[111.444.777-35] PASSED [ 68%]
+t_p/test_pix.py::test_ct_p06_falha_apos_debito_reverte_o_debito PASSED   [ 70%]
+t_p/test_pix.py::test_ct_p14_duas_ordens_na_mesma_conta_so_uma_conclui PASSED [ 73%]
+t_p/test_pix.py::test_ct_p07_valor_igual_ao_limite_nao_exige_autenticacao_adicional PASSED [ 75%]
+t_p/test_pix.py::test_ct_p08_valor_acima_do_limite_exige_autenticacao_adicional PASSED [ 78%]
+t_p/test_pix.py::test_ct_p09_tabela_de_decisao_do_pix[regra1] PASSED     [ 80%]
+t_p/test_pix.py::test_ct_p09_tabela_de_decisao_do_pix[regra2] PASSED     [ 82%]
+t_p/test_pix.py::test_ct_p09_tabela_de_decisao_do_pix[regra3] PASSED     [ 85%]
+t_p/test_pix.py::test_ct_p09_tabela_de_decisao_do_pix[regra4a] PASSED    [ 87%]
+t_p/test_pix.py::test_ct_p09_tabela_de_decisao_do_pix[regra4b] PASSED    [ 90%]
+t_p/test_pix.py::test_ct_p09_tabela_de_decisao_do_pix[regra5] PASSED     [ 92%]
+t_p/test_pix.py::test_ct_p10_transferencia_atipica_20x_a_media_as_3h_e_retida PASSED [ 95%]
+t_p/test_pix.py::test_ct_p11_alto_valor_gera_log_de_auditoria PASSED     [ 97%]
+t_p/test_pix.py::test_ct_p17_usuario_a_autenticado_com_conta_de_origem_de_b_e_negado_e_registrado PASSED [100%]
+
+=============================== tests coverage ================================
+_______________ coverage: platform win32, python 3.14.2-final-0 _______________
+
+Name                   Stmts   Miss Branch BrPart  Cover   Missing
+------------------------------------------------------------------
+nextbank\__init__.py       0      0      0      0   100%
+nextbank\extrato.py       65      0     12      0   100%
+nextbank\login.py        112      1     20      1    98%   114
+nextbank\pix.py           82      0     20      0   100%
+------------------------------------------------------------------
+TOTAL                    259      1     52      1    99%
+============================= 41 passed in 1.14s ==============================

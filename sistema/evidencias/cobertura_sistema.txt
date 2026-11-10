@@ -1,0 +1,26 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.2, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\MATEUS~1\AppData\Local\Temp\claude\599449adf1f9746c\47ca2da7-544c-4b14-aa0c-4b40e82e26b1\scratchpad\venv\Scripts\python.exe
+rootdir: C:\Users\Mateus-pc\OneDrive\6 Semestre\Teste e Qualidade de Software\Projeto\Parte4_TDD\sistema
+configfile: pytest.ini
+testpaths: tests
+plugins: locust-2.47.0, cov-7.1.0
+collecting ... collected 5 items
+
+tests/test_sistema.py::test_st01_fluxo_feliz_login_pix_extrato_consistentes PASSED [ 20%]
+tests/test_sistema.py::test_st02_alto_valor_exige_autenticacao_adicional_e_depois_concilia PASSED [ 40%]
+tests/test_sistema.py::test_st03_pix_retido_em_analise_nao_aparece_no_extrato PASSED [ 60%]
+tests/test_sistema.py::test_st04_conta_bloqueada_nao_faz_pix_nem_ve_extrato PASSED [ 80%]
+tests/test_sistema.py::test_st05_sem_login_ou_token_expirado_e_autenticado_nao_acessa_conta_alheia PASSED [100%]
+
+=============================== tests coverage ================================
+_______________ coverage: platform win32, python 3.14.2-final-0 _______________
+
+Name                   Stmts   Miss Branch BrPart  Cover   Missing
+------------------------------------------------------------------
+nextbank\__init__.py       0      0      0      0   100%
+nextbank\extrato.py       65      5     12      4    88%   69, 71-72, 78, 93, 94->91
+nextbank\login.py        112      7     20      5    91%   58, 88, 110-111, 114, 128, 135
+nextbank\pix.py           82      7     20      4    89%   76, 78, 80, 100, 102-104
+------------------------------------------------------------------
+TOTAL                    259     19     52     13    90%
+============================== 5 passed in 0.62s ==============================

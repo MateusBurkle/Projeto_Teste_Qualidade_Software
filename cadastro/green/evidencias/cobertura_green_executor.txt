@@ -1,0 +1,23 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.2, pytest-9.1.1, pluggy-1.6.0
+rootdir: C:\Users\Mateus-pc\OneDrive\6 Semestre\Teste e Qualidade de Software\Projeto\Parte4_TDD\cadastro\green
+configfile: pytest.ini
+testpaths: tests
+plugins: cov-7.1.0, anyio-4.14.2, langsmith-0.11.0, locust-2.47.0
+collected 135 items
+
+tests\test_cadastro.py ................................................. [ 36%]
+........................................................................ [ 89%]
+..............                                                           [100%]
+
+=============================== tests coverage ================================
+_______________ coverage: platform win32, python 3.14.2-final-0 _______________
+
+Name                   Stmts   Miss Branch BrPart  Cover   Missing
+------------------------------------------------------------------
+nextbank\__init__.py       0      0      0      0   100%
+nextbank\cadastro.py      65      0     24      0   100%
+nextbank\login.py        112     25     20      3    73%   84-90, 93, 110-111, 116, 125-132, 135, 138, 147-148, 158-159
+------------------------------------------------------------------
+TOTAL                    177     25     44      3    84%
+============================= 135 passed in 1.78s =============================

@@ -1,0 +1,57 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.2, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\Mateus-pc\AppData\Local\Programs\Python\Python314\python.exe
+rootdir: C:\Users\Mateus-pc\OneDrive\6 Semestre\Teste e Qualidade de Software\Projeto\Parte4_TDD\seguranca
+configfile: pytest.ini
+testpaths: tests
+plugins: anyio-4.14.2, langsmith-0.11.0, locust-2.47.0
+collecting ... collected 19 items
+
+tests/test_seguranca.py::test_CT_S01_entrada_maliciosa_recusada[' OR 1=1 --] PASSED [  5%]
+tests/test_seguranca.py::test_CT_S01_entrada_maliciosa_recusada[<script>alert(1)</script>] PASSED [ 10%]
+tests/test_seguranca.py::test_CT_S02_bloqueio_na_quinta_tentativa PASSED [ 15%]
+tests/test_seguranca.py::test_CT_S03_token_expira_em_2_min PASSED        [ 21%]
+tests/test_seguranca.py::test_CT_S03_token_nao_reutilizavel PASSED       [ 26%]
+tests/test_seguranca.py::test_CT_S03_token_de_outro_usuario_recusado PASSED [ 31%]
+tests/test_seguranca.py::test_CT_S04_extrato_de_conta_alheia_negado PASSED [ 36%]
+tests/test_seguranca.py::test_CT_S04_pix_de_conta_alheia_negado PASSED   [ 42%]
+tests/test_seguranca.py::test_CT_S05_mensagem_igual_para_cpf_inexistente_e_senha_errada PASSED [ 47%]
+tests/test_seguranca.py::test_CT_S06_cpf_mascarado_nos_logs_e_senha_ausente PASSED [ 52%]
+tests/test_seguranca.py::test_CT_S06_cpf_mascarado_na_auditoria FAILED   [ 57%]
+tests/test_seguranca.py::test_CT_S06_senha_nao_fica_em_texto_puro PASSED [ 63%]
+tests/test_seguranca.py::test_CT_S07_valor_invalido_recusado[valor0] PASSED [ 68%]
+tests/test_seguranca.py::test_CT_S07_valor_invalido_recusado[valor1] PASSED [ 73%]
+tests/test_seguranca.py::test_CT_S07_valor_invalido_recusado[abc] FAILED [ 78%]
+tests/test_seguranca.py::test_CT_S07_valor_invalido_recusado[valor3] PASSED [ 84%]
+tests/test_seguranca.py::test_CT_S08_alto_valor_exige_confirmacao_extra PASSED [ 89%]
+tests/test_seguranca.py::test_CT_S08_alto_valor_nao_contornado_por_valor_texto_ou_flag_falsa PASSED [ 94%]
+tests/test_seguranca.py::test_CT_S08_limite_exato_nao_exige PASSED       [100%]
+
+================================== FAILURES ===================================
+___________________ test_CT_S06_cpf_mascarado_na_auditoria ____________________
+tests\test_seguranca.py:166: in test_CT_S06_cpf_mascarado_na_auditoria
+    assert ID_A not in str(reg) and CPF_A not in str(reg)
+E   AssertionError: assert ('39053344705' not in 'RegistroAud..., 7, 14, 0))'
+E     
+E     '39053344705' is contained here:
+E       RegistroAuditoria(evento='PIX', usuario='39053344705', valor=Decimal('8000.00'), destino='chave-b', data_hora=datetime.datetime(2026, 11, 7, 14, 0))
+E     ?                                          +++++++++++)
+__________________ test_CT_S07_valor_invalido_recusado[abc] ___________________
+tests\test_seguranca.py:181: in test_CT_S07_valor_invalido_recusado
+    r = pix.transferir(ID_A, CONTA_A, CHAVE_B, valor)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\sistema\nextbank\pix.py:58: in transferir
+    resultado = self._validar_basico(usuario, conta_origem, chave_destino, valor)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\sistema\nextbank\pix.py:75: in _validar_basico
+    if valor <= 0:
+       ^^^^^^^^^^
+E   TypeError: '<=' not supported between instances of 'str' and 'int'
+
+During handling of the above exception, another exception occurred:
+tests\test_seguranca.py:183: in test_CT_S07_valor_invalido_recusado
+    pytest.fail(f"erro interno ao receber valor {valor!r}: {type(erro).__name__}")
+E   Failed: erro interno ao receber valor 'abc': TypeError
+=========================== short test summary info ===========================
+FAILED tests/test_seguranca.py::test_CT_S06_cpf_mascarado_na_auditoria - Asse...
+FAILED tests/test_seguranca.py::test_CT_S07_valor_invalido_recusado[abc] - Fa...
+======================== 2 failed, 17 passed in 1.67s =========================

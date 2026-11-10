@@ -1,0 +1,15 @@
+RESUMO - Validacao FASE RED - Cadastro (M8)  [executor de testes]
+Python 3.14.2 | pytest 9.1.1 | pytest-cov 7.1.0 | radon 6.0.1
+Comando: python -m pytest -v --tb=short -p no:cacheprovider (PYTHONDONTWRITEBYTECODE=1)
+Resultado: 135 coletados, 135 FAILED, 0 passed, 0 error. Todas as falhas = NotImplementedError (135 linhas "E NotImplementedError").
+Erros de coleta/import/sintaxe/fixture: 0.
+nextbank/login.py: SHA-256 11ff0889bcf9e756b368247bd176b0dea6fc81722305dff7909ff16bdfee2c75 identico a login/refactor/nextbank/login.py (diff sem diferencas).
+Mapeamento: C01=3 C02=4 C03=3 C04=7 C05=2 C06=1 C07=1 C08=1 C09=28 C10=5 C11=1 C12=42 C13=37 (soma 135), todos FAILED; nenhum teste fora de CT-C01..C13.
+Cobertura (informativa no Red):
+Name                   Stmts   Miss Branch BrPart  Cover
+nextbank\__init__.py       0      0      0      0   100%
+nextbank\cadastro.py      24      1      0      0    96%
+nextbank\login.py        112     53     20      0    45%
+TOTAL                    136     54     20      0    53%
+Complexidade (radon, cadastro.py): media A (1.17), 6 blocos, maxima A (1) - stub.
+VEREDITO: RED VALIDO.

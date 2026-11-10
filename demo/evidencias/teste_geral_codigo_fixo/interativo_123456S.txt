@@ -1,0 +1,31 @@
+NextBank - DEMONSTRACAO (memoria, SMS falso, dados ficticios)
+
+=== Cadastro: informe seus dados ===
+Nome completo: CPF: Celular: E-mail: Senha: Confirme a senha:   Resultado: CONTA_CRIADA - Conta criada com sucesso.
+  Titular: Maria Souza Lima | CPF ***05 | saldo no cadastro: R$ 0,00
+
+=== Conta de destino do PIX ===
+  Conta de destino do PIX (Joao Pereira Santos, CPF ***09): CONTA_CRIADA
+
+=== Login com segundo fator ===
+  [SMS FALSO] Codigo para o CPF ***05: 039689
+  Senha: SEGUNDO_FATOR_NECESSARIO - Informe o código enviado.
+  Codigo de demonstracao (so nesta demo): 123456
+Digite o codigo recebido por SMS:   Segundo fator: ACESSO_LIBERADO - Acesso liberado.
+
+=== Saldo inicial da demo: R$ 1.000,00 ===
+  (parametro da demo; o cadastro nasce com saldo zero)
+  Saldo disponivel: R$ 1.000,00
+
+=== PIX de R$ 250,00 ===
+  Resultado: CONCLUIDA - Transferencia concluida.
+  Saldo disponivel: R$ 750,00
+
+=== Extrato de hoje ===
+  Resultado: GERADO - Extrato gerado.
+  Saldo inicial: R$ 0,00
+  13:07:39  CREDITO     +R$ 1.000,00  credito inicial (demo)
+  13:07:39  DEBITO        -R$ 250,00  pix enviado
+  Saldo final:   R$ 750,00
+
+Fim da demonstracao.

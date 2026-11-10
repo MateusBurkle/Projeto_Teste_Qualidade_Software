@@ -1,0 +1,23 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.2, pytest-9.2.0, pluggy-1.7.0 -- C:\Users\MATEUS~1\AppData\Local\Temp\claude\599449adf1f9746c\aedbb6f7-05fd-42f8-b3cb-e4519a108de4\scratchpad\venv\Scripts\python.exe
+rootdir: C:\Users\Mateus-pc\OneDrive\6 Semestre\Teste e Qualidade de Software\Projeto\Parte4_TDD\login\refactor
+configfile: pytest.ini
+testpaths: tests
+plugins: cov-7.1.0
+collecting ... collected 14 items / 11 deselected / 3 selected
+
+tests/test_login.py::test_ct_l01_credenciais_validas_solicitam_segundo_fator PASSED [ 33%]
+tests/test_login.py::test_ct_l04_quinta_tentativa_invalida_bloqueia_conta PASSED [ 66%]
+tests/test_login.py::test_ct_l06_token_expirado PASSED                   [100%]
+
+=============================== tests coverage ================================
+_______________ coverage: platform win32, python 3.14.2-final-0 _______________
+
+Name                                                                                                                            Stmts   Miss Branch BrPart  Cover   Missing
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+C:\Users\Mateus-pc\OneDrive\6 Semestre\Teste e Qualidade de Software\Projeto\Parte4_TDD\extrato\refactor\nextbank\__init__.py       0      0      0      0   100%
+C:\Users\Mateus-pc\OneDrive\6 Semestre\Teste e Qualidade de Software\Projeto\Parte4_TDD\extrato\refactor\nextbank\extrato.py       65     65     12      0     0%   2-96
+C:\Users\Mateus-pc\OneDrive\6 Semestre\Teste e Qualidade de Software\Projeto\Parte4_TDD\extrato\refactor\nextbank\login.py        112     12     20      6    85%   58, 87-90, 110-111, 114, 128, 131-132, 135
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TOTAL                                                                                                                             177     77     32      6    54%
+====================== 3 passed, 11 deselected in 0.31s =======================

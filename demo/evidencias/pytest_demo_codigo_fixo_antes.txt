@@ -1,0 +1,70 @@
+......FFF                                                                [100%]
+================================== FAILURES ===================================
+________ test_interativo_codigo_fixo_123456_libera_e_chega_ao_extrato _________
+
+    def test_interativo_codigo_fixo_123456_libera_e_chega_ao_extrato():
+        estado = _executar_interativo(lambda sms: "123456")
+>       assert estado.res_fator.status == ACESSO_LIBERADO
+E       AssertionError: assert 'NEGADO' == 'ACESSO_LIBERADO'
+E         
+E         - ACESSO_LIBERADO
+E         + NEGADO
+
+tests\test_demo.py:96: AssertionError
+---------------------------- Captured stdout call -----------------------------
+NextBank - DEMONSTRACAO (memoria, SMS falso, dados ficticios)
+
+=== Cadastro: informe seus dados ===
+  Resultado: CONTA_CRIADA - Conta criada com sucesso.
+  Titular: Maria Souza Lima | CPF ***05 | saldo no cadastro: R$ 0,00
+
+=== Conta de destino do PIX ===
+  Conta de destino do PIX (Joao Pereira Santos, CPF ***09): CONTA_CRIADA
+
+=== Login com segundo fator ===
+  [SMS FALSO] Codigo para o CPF ***05: 353495
+  Senha: SEGUNDO_FATOR_NECESSARIO - Informe o código enviado.
+  Segundo fator: NEGADO - Código inválido ou expirado.
+____________ test_interativo_codigo_fixo_com_espaco_no_fim_libera _____________
+
+    def test_interativo_codigo_fixo_com_espaco_no_fim_libera():
+        estado = _executar_interativo(lambda sms: "123456 ")
+>       assert estado.res_fator.status == ACESSO_LIBERADO
+E       AssertionError: assert 'NEGADO' == 'ACESSO_LIBERADO'
+E         
+E         - ACESSO_LIBERADO
+E         + NEGADO
+
+tests\test_demo.py:102: AssertionError
+---------------------------- Captured stdout call -----------------------------
+NextBank - DEMONSTRACAO (memoria, SMS falso, dados ficticios)
+
+=== Cadastro: informe seus dados ===
+  Resultado: CONTA_CRIADA - Conta criada com sucesso.
+  Titular: Maria Souza Lima | CPF ***05 | saldo no cadastro: R$ 0,00
+
+=== Conta de destino do PIX ===
+  Conta de destino do PIX (Joao Pereira Santos, CPF ***09): CONTA_CRIADA
+
+=== Login com segundo fator ===
+  [SMS FALSO] Codigo para o CPF ***05: 041453
+  Senha: SEGUNDO_FATOR_NECESSARIO - Informe o código enviado.
+  Segundo fator: NEGADO - Código inválido ou expirado.
+__________ test_interativo_aviso_do_codigo_de_demonstracao_na_saida ___________
+
+capsys = <_pytest.capture.CaptureFixture object at 0x000001EE0C292850>
+
+    def test_interativo_aviso_do_codigo_de_demonstracao_na_saida(capsys):
+        _executar_interativo(lambda sms: "123456")
+>       assert "123456" in capsys.readouterr().out
+E       AssertionError: assert '123456' in 'NextBank - DEMONSTRACAO (memoria, SMS falso, dados ficticios)\n\n=== Cadastro: informe seus dados ===\n  Resultado: C... Senha: SEGUNDO_FATOR_NECESSARIO - Informe o código enviado.\n  Segundo fator: NEGADO - Código inválido ou expirado.\n'
+E        +  where 'NextBank - DEMONSTRACAO (memoria, SMS falso, dados ficticios)\n\n=== Cadastro: informe seus dados ===\n  Resultado: C... Senha: SEGUNDO_FATOR_NECESSARIO - Informe o código enviado.\n  Segundo fator: NEGADO - Código inválido ou expirado.\n' = CaptureResult(out='NextBank - DEMONSTRACAO (memoria, SMS falso, dados ficticios)\n\n=== Cadastro: informe seus dados =...EGUNDO_FATOR_NECESSARIO - Informe o código enviado.\n  Segundo fator: NEGADO - Código inválido ou expirado.\n', err='').out
+E        +    where CaptureResult(out='NextBank - DEMONSTRACAO (memoria, SMS falso, dados ficticios)\n\n=== Cadastro: informe seus dados =...EGUNDO_FATOR_NECESSARIO - Informe o código enviado.\n  Segundo fator: NEGADO - Código inválido ou expirado.\n', err='') = readouterr()
+E        +      where readouterr = <_pytest.capture.CaptureFixture object at 0x000001EE0C292850>.readouterr
+
+tests\test_demo.py:108: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_demo.py::test_interativo_codigo_fixo_123456_libera_e_chega_ao_extrato
+FAILED tests/test_demo.py::test_interativo_codigo_fixo_com_espaco_no_fim_libera
+FAILED tests/test_demo.py::test_interativo_aviso_do_codigo_de_demonstracao_na_saida
+3 failed, 6 passed in 0.67s

@@ -1,0 +1,12 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.2, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\Mateus-pc\AppData\Local\Programs\Python\Python314\python.exe
+rootdir: C:\Users\Mateus-pc\OneDrive\6 Semestre\Teste e Qualidade de Software\Projeto\Parte4_TDD\cadastro\teste_geral_cpf_simples
+plugins: cov-7.1.0, anyio-4.14.2, langsmith-0.11.0, locust-2.47.0
+collecting ... collected 4 items
+
+cadastro\teste_geral_cpf_simples\test_integracao_login_cadastro.py::test_cadastro_seguido_de_login_com_segundo_fator PASSED [ 25%]
+cadastro\teste_geral_cpf_simples\test_integracao_login_cadastro.py::test_login_antes_do_cadastro_e_negado PASSED [ 50%]
+cadastro\teste_geral_cpf_simples\test_integracao_login_cadastro.py::test_cpf_duplicado_nao_sobrescreve_conta_existente PASSED [ 75%]
+cadastro\teste_geral_cpf_simples\test_integracao_login_cadastro.py::test_cpf_formato_valido_com_dv_errado_cria_conta_e_faz_login PASSED [100%]
+
+============================== 4 passed in 0.18s ==============================

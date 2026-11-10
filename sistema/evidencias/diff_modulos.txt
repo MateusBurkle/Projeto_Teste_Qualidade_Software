@@ -1,0 +1,12 @@
+== login
+diff: identicos
+11ff0889bcf9e756b368247bd176b0dea6fc81722305dff7909ff16bdfee2c75 *sistema/nextbank/login.py
+11ff0889bcf9e756b368247bd176b0dea6fc81722305dff7909ff16bdfee2c75 *login/refactor/nextbank/login.py
+== pix
+diff: identicos
+953492fb91cfe150b75ae7a4fbfc2fd72f20414b910e3beac04881c8f7d90442 *sistema/nextbank/pix.py
+953492fb91cfe150b75ae7a4fbfc2fd72f20414b910e3beac04881c8f7d90442 *pix/refactor/nextbank/pix.py
+== extrato
+diff: identicos
+69f5daf5b9480ecd5f539231bc78a398efeaec1dc003677c48a2148528d50b0e *sistema/nextbank/extrato.py
+69f5daf5b9480ecd5f539231bc78a398efeaec1dc003677c48a2148528d50b0e *extrato/refactor/nextbank/extrato.py

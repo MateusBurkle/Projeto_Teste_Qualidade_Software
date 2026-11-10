@@ -1,0 +1,25 @@
+nextbank/cadastro.py
+    LOC: 197
+    LLOC: 135
+    SLOC: 128
+    Comments: 9
+    Single comments: 11
+    Multi: 12
+    Blank: 46
+    - Comment Stats
+        (C % L): 5%
+        (C % S): 7%
+        (C + M % L): 11%
+** Total **
+    LOC: 197
+    LLOC: 135
+    SLOC: 128
+    Comments: 9
+    Single comments: 11
+    Multi: 12
+    Blank: 46
+    - Comment Stats
+        (C % L): 5%
+        (C % S): 7%
+        (C + M % L): 11%
+nextbank/cadastro.py - A (51.05)

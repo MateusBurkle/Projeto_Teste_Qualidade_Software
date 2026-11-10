@@ -1,0 +1,7 @@
+Copia preservada ANTES da sincronizacao com o pix.py corrigido (INC-S01 / INC-S02).
+Data: 2026-11-08.
+Motivo: a decisao do usuario foi alinhar CT-P11 e CT-P17 ao requisito RS-05/RS-06
+(auditoria com CPF mascarado) e sincronizar pix/refactor com sistema/nextbank/pix.py.
+Conteudo: nextbank/pix.py antigo, tests/test_pix.py antigo (20/20 passando com o
+codigo antigo) e as evidencias pytest/cobertura/complexidade/tamanho da epoca.
+Nada foi apagado; pix/red e pix/green nao foram alterados.

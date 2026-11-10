@@ -1,0 +1,42 @@
+Hashes SHA-256 dos testes (Refactor):
+f8dc2e14cae040a81ec37a713bf924e7522d3b3d2b58e1bcc307425c8b06bc05 *seguranca/tests/test_seguranca.py
+74f5afdebc363beeeb5a19a6c015fb39e3a94a5344bddcb6ee3ffde2fe300142 *sistema/tests/test_sistema.py
+mtime testes: seguranca 23:22:14, sistema 20:40:08; red_pytest 23:22:54 e green 23:23:48 (testes anteriores ao Red; nao modificados desde). Nao havia hash gravado no Green: comparacao por mtime.
+
+testpaths: tests
+plugins: cov-7.1.0, anyio-4.14.2, langsmith-0.11.0, locust-2.47.0
+collected 5 items
+
+tests\test_sistema.py .....                                              [100%]
+
+=============================== tests coverage ================================
+_______________ coverage: platform win32, python 3.14.2-final-0 _______________
+
+Name              Stmts   Miss Branch BrPart  Cover   Missing
+-------------------------------------------------------------
+nextbank\pix.py      88      8     22      5    88%   84, 86, 88, 95, 115, 117-119
+-------------------------------------------------------------
+TOTAL                88      8     22      5    88%
+============================== 5 passed in 0.82s ==============================
+
+nextbank/pix.py
+    M 65:4 PixService.transferir - A (5)
+    M 78:4 PixService._validar_basico - A (5)
+    C 39:0 PixService - A (3)
+    M 92:4 PixService._valor_valido - A (3)
+    M 110:4 PixService._debitar_e_creditar - A (3)
+    M 98:4 PixService._exigir_autenticacao - A (2)
+    C 24:0 ResultadoPix - A (1)
+    C 31:0 RegistroAuditoria - A (1)
+    M 40:4 PixService.__init__ - A (1)
+    M 51:4 PixService.cadastrar_conta - A (1)
+    M 56:4 PixService.cadastrar_chave - A (1)
+    M 59:4 PixService.saldo - A (1)
+    M 62:4 PixService.saldo_reservado - A (1)
+    M 105:4 PixService._reter_para_analise - A (1)
+    M 122:4 PixService._registrar - A (1)
+    M 127:4 PixService.registros_auditoria - A (1)
+
+16 blocks (classes, functions, methods) analyzed.
+Average complexity: A (1.9375)
+CC max 5 media 1.9375
