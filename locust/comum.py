@@ -6,9 +6,14 @@ estado compartilhado entre os usuarios virtuais e os cenarios.
 """
 import importlib.util
 import os
+import sys
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent  # Parte4_TDD
+
+# pix.py faz "from nextbank.login import mascarar"; o login.py e identico em todos os modulos,
+# entao basta a pasta do pix/refactor estar no caminho de imports.
+sys.path.insert(0, str(RAIZ / "pix" / "refactor"))
 
 
 def carregar_modulo(nome, caminho):
